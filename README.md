@@ -1,25 +1,23 @@
 # Título do Projeto
 
-`CURSO`
+`Análise e Desenvolvimento de Sistemas - PUC Minas`
 
-`DISCIPLINA`
+`Desenvolvimento de Aplicação Web Front-End`
 
-`SEMESTRE`
+`2024.1 - Turma 3`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-* Nome completo do aluno 6
+* Alanis Graciele de Pinho Tavares
+* Felipe Oliveira
+* Lucas de Araújo Rocha Lima
+* Tais Rocha Nogueira
 
 ## Orientador
 
-* Nome completo do professor
+* Simone Alves Nogueira
 
 # Documentação
 
