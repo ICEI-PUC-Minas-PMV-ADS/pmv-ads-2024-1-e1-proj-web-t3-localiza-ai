@@ -6,18 +6,18 @@
 
 `2024.1 - Turma 3`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto desenvolvido.
+O projeto visa desenvolver uma aplicação web que funcione como uma plataforma de intermediação entre consumidores e empresas de assistência técnica. O site terá como propósito principal reunir empresas e profissionais reconhecidos no segmento, permitindo que consumidores encontrem facilmente serviços de qualidade. Além disso, busca-se aumentar a visibilidade e alcance das empresas participantes, proporcionando benefícios para ambos os lados do mercado.
 
 ## Integrantes
 
-* Alanis Graciele de Pinho Tavares
-* Felipe Oliveira
-* Lucas de Araújo Rocha Lima
-* Tais Rocha Nogueira
+- [Alanis Graciele](https://github.com/alanis-tavares)
+- [Felipe Oliveira](https://github.com/Felipe0liveira14)
+- [Lucas de Araújo](https://github.com/lucas-arl)
+- [Tais Rocha](https://github.com/taisrochan)
 
 ## Orientador
 
-* Simone Alves Nogueira
+- [Simone Alves Nogueira](https://github.com/sianogueira):sparkling_heart:
 
 # Documentação
 
