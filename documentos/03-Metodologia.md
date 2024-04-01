@@ -76,4 +76,4 @@ Os artefatos do projeto são desenvolvidos a partir das plataformas GitHub e Fig
 
 ### Estratégia de Organização de Codificação 
 
-Todos os artefatos relacionados a implementação e visualização dos conteúdos do projeto do site deverão ser inseridos na pasta [codigo-fonte](http://https://github.com/ICEI-PUC-Minas-PMV-ADS/WebApplicationProject-Template-v2/tree/main/codigo-fonte). Consulte também a nossa sugestão referente a estratégia de organização de codificação a ser adotada pela equipe de desenvolvimento do projeto.
+Todos os artefatos relacionados a implementação e visualização dos conteúdos do projeto do site deverão ser inseridos na pasta [codigo-fonte](http://https://github.com/ICEI-PUC-Minas-PMV-ADS/WebApplicationProject-Template-v2/tree/main/codigo-fonte). Também deve ser consultado a nossa sugestão referente a estratégia de organização de codificação a ser adotada pela equipe de desenvolvimento.
