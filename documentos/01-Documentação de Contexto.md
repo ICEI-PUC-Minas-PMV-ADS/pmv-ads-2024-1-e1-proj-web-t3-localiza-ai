@@ -53,9 +53,3 @@ Para uma melhor compreensão do perfil e necessidades do público-alvo, foi cria
 5.	Em relação às respostas dos proprietários/colaboradores de empresas do setor, obtivemos apenas uma participação, o que limitou significativamente o volume de dados disponíveis para análise. Porém ele afirmou que considera que sua empresa se beneficiaria caso estivesse em uma plataforma como a que o projeto se propõe a criar. 
 
 Essas informações fornecem uma base para o desenvolvimento de soluções que atendam às necessidades do público-alvo e melhorem a experiência geral relacionada aos serviços de reparo e manutenção de equipamentos de informática.
-
-## Especificação do Projeto
-Perfis de Usuários
-
-
-
