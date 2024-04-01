@@ -63,16 +63,16 @@ As ferramentas empregadas no projeto são:
   <li>Ferramenta de desenho de tela (wireframing)</li>
 </ul>
 
-O editor de código foi escolhido porque ele possui uma integração com o sistema de versão. Utilizamos também a ferramenta website wireframing para captar melhor as necessidades da solução proposta.
+O editor de código foi escolhido porque ele possui uma integração com o sistema de versão. Utilizamos também a ferramenta website wireframing para captar melhor as necessidades do design de interface da solução proposta.
 
 Os artefatos do projeto são desenvolvidos a partir das plataformas GitHub e Figma, apresentadas com seu propósito na tabela que se segue.
 
 | AMBIENTE                            | PLATAFORMA                         | LINK DE ACESSO                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
-| Repositório de código fonte         | GitHub                             | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/blob/14e52396c01ef84f3e95135d719b13399f528c14/README.md                            |
-| Documentos do projeto               | GitHub                             | http://....                            |
+| Repositório de código fonte         | GitHub                             | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai                            |
+| Documentos do projeto               | GitHub                             | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/tree/b5adae6e8a568a66d801c0170289104679752496/documentos                            |
 | Projeto de Interface                | Figma                              | http://....                            |
-| Gerenciamento do Projeto            | GitHub Projects                    | http://....                            |
+| Gerenciamento do Projeto            | GitHub Projects                    | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/projects                            |
 | Hospedagem                          | GitHub Pages                       | http://....                            |
 
 
