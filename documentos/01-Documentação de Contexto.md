@@ -38,12 +38,24 @@ Portanto, a resolução do problema não apenas atende às demandas imediatas do
 
 ## Público-Alvo
 
-[Aqui é necessário descrever os atores envolvidos no problema, destacando os diferentes perfis de usuários. O propósito é apresentar as características, necessidades, conhecimentos prévios e experiência com a tecnologia do público-alvo.
+O público-alvo deste trabalho são pessoas que necessitem de serviços prestados por empresas especializadas em assistência técnica e, também, colaboradores/donos dessas empresas. 
 
-Sugere-se que a equipe utilize questionários e/ou entrevistas a fim de conhecer os atores que compõem o público alvo.]
+Para uma melhor compreensão do perfil e necessidades do público-alvo, foi criado um formulário que obteve 51 respostas, sendo 50 de consumidores de serviços de reparo eletrônico e 1 de dono/colaborador de empresa de assistência técnica. Através das respostas do formulário conseguimos aferir alguns pontos importantes, como os seguintes:
 
-Os links abaixo podem ajudar a equipe a conhecer um pouco mais sobre o público-alvo. 
+1.	52,9% dos respondentes encontram empresas especializadas em manutenção técnica através de indicação de amigos e familiares, 37,3% através do Google, 5,9% através de redes sociais e 3,9% através de indicação do fabricante do produto a ser reparado;
 
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
+2.	29,4% dos respondentes relataram terem tido dificuldade de encontrar empresas do setor quando tiveram necessidade;
+
+3.	43,8% dos respondentes alegam não terem ficado totalmente satisfeitos com a qualidade do serviço prestado pelas empresas;
+   
+4.	94,1% dos participantes forneceram sugestões sobre áreas que consideram passíveis de melhoria no que diz respeito à prestação desse tipo de serviço. As sugestões predominantes destacaram a necessidade de maior agilidade no atendimento e aprimoramento na transparência e comunicação durante o processo de contratação do serviço.
+   
+5.	Em relação às respostas dos proprietários/colaboradores de empresas do setor, obtivemos apenas uma participação, o que limitou significativamente o volume de dados disponíveis para análise. Porém ele afirmou que considera que sua empresa se beneficiaria caso estivesse em uma plataforma como a que o projeto se propõe a criar. 
+
+Essas informações fornecem uma base para o desenvolvimento de soluções que atendam às necessidades do público-alvo e melhorem a experiência geral relacionada aos serviços de reparo e manutenção de equipamentos de informática.
+
+## Especificação do Projeto
+Perfis de Usuários
+
+
 
