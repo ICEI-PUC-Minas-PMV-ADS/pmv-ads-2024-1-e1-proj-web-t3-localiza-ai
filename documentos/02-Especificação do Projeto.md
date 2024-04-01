@@ -10,7 +10,8 @@
 <th colspan="2">Perfis de Usuários </th>
 </tr>
 <tr>
-<td width="150px"><b>Descrição</b>oi</td>
+<td width="150px"><b>Descrição</b></td>
+<td width="150px"><b>Descrição</b></td>
 <td width="600px">Homens e mulheres que precisam contratar empresas para dar 
 reparo/manutenção em equipamentos eletrônicos</td>
 </tr>
