@@ -10,7 +10,8 @@
 <th colspan="2">Perfis de Usuários </th>
 </tr>
 <tr>
-<td width="150px"><b>Perfil 01: Consumidor </b></td>
+<td width="150px"><b>Perfil 01:</b></td>
+<td width="600px">Consumidor</td>
 </tr>
 <tr>
 <td width="150px"><b>Descrição</b></td>
