@@ -96,8 +96,17 @@ histórias que representam melhor as questões dos clientes e Donos
 
 |ID      | Descrição               |Prioridade |
 |--------|-------------------------|----|
-| RNF-01 |  ...                    | ...   | 
-| ...    |  ...                    | ...   | 
+| RNF-01 |O sistema deve fazer com que o cadastro de cliente e colaborador leve em média 3 minutos para ser concluído.|Baixa| 
+| RNF-02 |O sistema deve ser desenvolvido e implementado usando CSS3, HTML5 e linguagens de programação como Javascript e Biblioteca React.|Alta| 
+| RNF-03 |O sistema deve ser manutenção passiva podendo ser implementado novas ferramentas e ser migrado para outras plataformas e sistemas em até 4 semanas|Média| 
+| RNF-04 |O sistema deve se recuperar de uma falha no sistema em até 5 segundos.|Média| 
+| RNF-05 |O sistema deve ser capaz de fazer a busca de colaboradores utilizando o sistema de localização em até 8 segundos.|Média| 
+| RNF-06 |O sistema deve ter integrado uma API de localização.|Média| 
+| RNF-07 |O sistema deve ser acessível na web|Alta  | 
+| RNF-08 |O sistema deve ser responsivel para diversos aparelhos (computadores, celulares, notebooks, tablets etc...)|Alta| 
+| RNF-09 |O sistema deve utilizar um banco de dados Oracle e MySQL para persistência e gerenciamento das informações do usuário e colaborador.|Alta| 
+| RNF-10 |O sistema deve estar acessível 98% do tempo em relação a 24 horas do dia e 7 dias da semana.|Alta| 
+| RNF-11 |O sistema de ser capaz de ser utilizado de acordo com uma determinada versão operacional.|Média| 
 
 **Prioridade: Alta / Média / Baixa. 
 
