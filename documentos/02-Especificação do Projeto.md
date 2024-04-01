@@ -36,7 +36,7 @@ empresa.</td>
 <table>
 <tbody>
 <tr align=center>
-<th colspan="2">Perfis de Usuários </th>
+<th colspan="2">Perfil de Usuários </th>
 </tr>
 <tr>
 <td width="150px"><b>Perfil 01:</b></td>
