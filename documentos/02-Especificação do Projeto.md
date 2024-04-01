@@ -86,7 +86,7 @@ histórias que representam melhor as questões dos clientes e Donos
 |RF-09 |O sistema deve levar em consideração estabelecimentos mais próximos ao usuário.|Média| 
 |RF-10 |O sistema deve notificar ou acionar o colaborador/dono quando estiver sendo cotado para prestar um serviço.|Alta|
 |RF-11 | O sistema deve possibilitar o contato entre cliente e empresa por meio de um chat.|Média|
-|RF-12 |O sistema deve permitir o usuário avaliar o colaborador que lhe prestou serviço|Alta|
+|RF-12 |O sistema deve permitir o usuário avaliar o colaborador que lhe prestou serviço.|Alta|
  
 **Prioridade: Alta / Média / Baixa. 
 
