@@ -52,7 +52,8 @@ empresa/serviço</td>
 > **Link Útil**:
 > - [Como escrever boas histórias de usuário](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
 
-[Utilize o modelo de tabela abaixo para apresentar as histórias de usuários.]
+Dado o grande volume de respostas e o fato de que muitas se repetem, selecionamos 7
+histórias que representam melhor as questões dos clientes e Donos
 
 |EU COMO... `QUEM`   | QUERO/PRECISO ... `O QUE` |PARA ... `PORQUE`|
 |--------------------|------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
@@ -74,9 +75,19 @@ empresa/serviço</td>
 
 |ID    | Descrição                | Prioridade |
 |-------|---------------------------------|----|
-| RF-01 |  ...                    | ...   | 
-|  ...  |  ...                    | ...   |
-
+| RF-01 |O sistema deve dar opções de cadastro de colaborador/dono ou cliente.|Alta| 
+|RF-02| A aplicação deve permitir ao usuário fazer o login da sua conta.   | Alta | 
+|RF-03 |O sistema deve pedir as informações de e-mail e senha para o usuário e realizar a validação através de um e-mail de confirmação.|Alta| 
+|RF-04 |O sistema deve possibilitar ao usuário solicitar a redefinição de sua senha, informando o e-mail cadastrado.|Alta| 
+|RF-05 |O sistema deve pedir ao colaborador/dono nome, empresa,localidade, horário de atendimento, contato, quantidade de funcionários, etc...|Alta| 
+|RF-06 |O sistema deve pedir para o cliente mencionar sua localidade, o problema e qual tipo de aparelho e sistema para ser resolvido.|Alta| 
+|RF-07 | O sistema deve pedir para o cliente informar se deseja atendimento em domicílio.|Médio| 
+|RF-08 |O sistema deve buscar e mostrar quais profissionais adeptos para o tipo de problema e necessidades do cliente.|Alta| 
+|RF-09 |O sistema deve levar em consideração estabelecimentos mais próximos ao usuário.|Média| 
+|RF-10 |O sistema deve notificar ou acionar o colaborador/dono quando estiver sendo cotado para prestar um serviço.|Alta|
+|RF-11 | O sistema deve possibilitar o contato entre cliente e empresa por meio de um chat.|Média|
+|RF-12 |O sistema deve permitir o usuário avaliar o colaborador que lhe prestou serviço|Alta|
+ 
 **Prioridade: Alta / Média / Baixa. 
 
 ### Requisitos não Funcionais
