@@ -61,8 +61,7 @@ empresa/serviço</td>
 | Cliente |Saber quais empresas são mais transparentes em relação ao serviço prestado|Entender melhor o problema antes de contratar/pagar pelo serviço.|
 | Cliente |Saber quais empresas prestam serviçoa domicílio|Não ter que deslocar para entregar/buscar a material a ser reparado.|
 | Cliente |Saber quais empresas cumprem com os prazos estipulados e quais possuem melhores prazos|Não sentir que o produto está demorando além do necessário na manutenção (especialmente em casos em que o equipamento é de uso diário e tem muita importância na rotina do cliente).|
-| Cliente |Saber quais empresas responder melhor os clientes em seus canais de atendimento|Ter mais tranquilidade na comunicação com a empresa 
-em caso de necessidade.|
+| Cliente |Saber quais empresas responder melhor os clientes em seus canais de atendimento|Ter mais tranquilidade na comunicação com a empresa em caso de necessidade.|
 | Colaborador |Ter mais um canal de divulgação da empresa|Aumentar a prospecção de clientes.|
 
 ## Requisitos do Projeto
