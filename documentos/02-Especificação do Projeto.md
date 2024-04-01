@@ -55,8 +55,7 @@ empresa/serviço</td>
 [Utilize o modelo de tabela abaixo para apresentar as histórias de usuários.]
 
 |EU COMO... `QUEM`   | QUERO/PRECISO ... `O QUE` |PARA ... `PORQUE`                 |
-|--------------------|------------------------------------|------------------------------------------
-----------------------|
+|--------------------|------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
 | Cliente| Comparar diferentes empresas pela avaliação de cada uma|Escolher uma que tenha uma reputação melhor 
 entre os clientes.|
 | Cliente |Saber quais empresas cobram um valor melhor|Não gastar além do necessário.|
