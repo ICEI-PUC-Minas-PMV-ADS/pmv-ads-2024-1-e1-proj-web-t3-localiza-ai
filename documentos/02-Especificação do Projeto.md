@@ -11,7 +11,8 @@
 </tr>
 <tr>
 <td width="150px"><b>Descrição</b>oi</td>
-<td width="600px">...</td>
+<td width="600px">Homens e mulheres que precisam contratar empresas para dar 
+reparo/manutenção em equipamentos eletrônicos</td>
 </tr>
 <tr>
 <td><b>Necessidades</b></td>
