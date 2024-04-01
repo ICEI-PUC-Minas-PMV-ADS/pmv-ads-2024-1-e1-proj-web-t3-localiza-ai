@@ -12,10 +12,10 @@ A metodologia ágil escolhida para o desenvolvimento deste projeto foi o SCRUM, 
 ### Divisão de Papéis
 
 A equipe utiliza o Scrum como base para definição do processo de desenvolvimento, a equipe foi organizada da seguinte maneira.
-- Scrum Master: Lucas Rocha.
-- Product Owner: Tais.
-- Equipe de Desenvolvimento:Alanis Tavares, Felipe Oliveira, Lucas Rocha e Tais.
-- Equipe de Design:Alanis Tavares, Felipe Olieveira, Lucas Rocha e Tais.
+- Scrum Master: Lucas Rocha
+- Product Owner: Tais
+- Equipe de Desenvolvimento:Alanis Tavares, Felipe Oliveira, Lucas Rocha e Tais
+- Equipe de Design:Alanis Tavares, Felipe Olieveira, Lucas Rocha e Tais
 > **Links Úteis**:
 > - [11 Passos Essenciais para Implantar Scrum no seu 
 > Projeto](https://mindmaster.com.br/scrum-11-passos/)
