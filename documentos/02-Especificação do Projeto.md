@@ -56,8 +56,14 @@ empresa/serviço</td>
 
 |EU COMO... `QUEM`   | QUERO/PRECISO ... `O QUE` |PARA ... `PORQUE`                 |
 |--------------------|---------------------------|----------------------------------|
-| ...                | ...                       | ...                              |
-| ...                | ...                       | ...                              |
+| Cliente            | Comparar diferentes empresas 
+pela avaliação de cada uma
+                     | ...                              |
+| Cliente            | ...                       | ...                              |
+| Cliente            | ...                       | ...                              |
+| Cliente            | ...                       | ...                              |
+| Cliente            | ...                       | ...                              |
+| Cliente            | ...                       | ...                              |
 
 ## Requisitos do Projeto
 
