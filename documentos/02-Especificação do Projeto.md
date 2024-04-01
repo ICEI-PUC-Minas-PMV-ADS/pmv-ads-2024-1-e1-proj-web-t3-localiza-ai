@@ -36,20 +36,12 @@ empresa.</td>
 </tr>
 <tr>
 <td width="150px"><b>Descrição</b></td>
-<td width="600px">Homens e mulheres que precisam contratar empresas para dar 
-reparo/manutenção em equipamentos eletrônicos</td>
+<td width="600px">Homens e mulheres que sejam donos ou funcionários de empresa do setor</td>
 </tr>
 <tr>
 <td><b>Necessidades</b></td>
-<td>1. Encontrar empresas confiáveis;
-2. Sentir maior confiança ao contratar o serviço pois, por se tratar de 
-assunto muito técnico, muitas pessoas relatam não entender se 
-estão pagando um preço justo ou se, até mesmo, estão 
-contratando um serviço adequado para o problema que o aparelho 
-eletrônico apresenta;
-3. Saber quais empresas prestam serviço a domicílio;
-4. Poder checar avaliações feitas por outros clientes em relação a 
-empresa.</td>
+<td>1. Ter mais uma opção de plataforma para divulgar a 
+empresa/serviço</td>
 </tr>
 </tbody>
 </table>
