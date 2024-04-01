@@ -5,9 +5,7 @@ Esta seção descreve a organização da equipe para a execução das tarefas do
 
 
 ## Gerenciamento de Projeto
-A metodologia ágil escolhida para o desenvolvimento deste projeto foi o SCRUM, pois como citam Amaral, Fleury e Isoni (2019, p. 68), seus benefícios são a
-
-“visão clara dos resultados a entregar; ritmo e disciplina necessários à execução; definição de papéis e responsabilidades dos integrantes do projeto (Scrum Owner, Scrum Master e Team); empoderamento dos membros da equipe de projetos para atingir o desafio; conhecimento distribuído e compartilhado de forma colaborativa; ambiência favorável para crítica às ideias e não às pessoas.”
+A metodologia ágil escolhida para o desenvolvimento deste projeto foi o SCRUM, pois acreditamos que ele irá nos possibilitar desenvolver o projeto de forma mais ágil, com alto grau de transparência e colaboração entre todos os membros da equipe. Faremos, inicialmente, duas reuniões semanais que irão ter objetivo similar aos das Daily's, porém pelo fato de não acontecerem diariamente, não reberão este nome. Ou seja, o objetivo é que o projeto seja constantemente acompanhado, tanto em relação a avanços quanto em relação a impedimentos que possam estar atrapalhando o seguimento das tarefas.  
 
 ### Divisão de Papéis
 
@@ -23,17 +21,14 @@ A equipe utiliza o Scrum como base para definição do processo de desenvolvimen
 
 ### Processo
 
-[Adicione informações sobre detalhes da implementação do Scrum seguido pela equipe. A equipe poderá fazer uso de ferramentas on-line (GitHub Project ou Trello) para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução. O quadro Kanban deverá apresentar a estrutura abaixo. Inserir despois das informações uma imagem do Kanban do projeto.]
-- Backlog: recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista. 
-- To Do: Esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando. 
-- Doing: Quando uma tarefa tiver sido iniciada, ela é movida para cá. 
-- Done: nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.
+A equipe irá utilizar o Trello para realizar a gestão das tarefas do projeto. As listas de tarefas serão organizadas da seguinte forma: 
 
-> **Links Úteis**:
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+- Backlog: recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista. 
+- Refined: Contém as tarefas que já foram analisadas e compreendidas pelos integrantes da equipe. Esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando. 
+- Planned: Contém as tarefas que serão realizadas na Sprint.
+- In Progress: Quando uma tarefa tiver sido iniciada, ela é movida para cá. 
+- Homol: Tarefas que, quando finalizadas, estarão sob análise e correção antes de serem incorporadas ao projeto. 
+- Done: Terafas finalizadas e devidamente corrigidas. 
 
 
 ### Etiquetas
