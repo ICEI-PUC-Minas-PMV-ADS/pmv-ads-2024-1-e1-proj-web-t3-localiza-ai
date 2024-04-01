@@ -56,8 +56,8 @@ empresa/serviço</td>
 
 |EU COMO... `QUEM`   | QUERO/PRECISO ... `O QUE` |PARA ... `PORQUE`                 |
 |--------------------|---------------------------|----------------------------------|
-| Cliente            | Comparar diferentes empresas 
-pela avaliação de cada uma                       | ...                              |
+| Cliente| Comparar diferentes empresas pela avaliação de cada uma|Escolher uma que tenha uma 
+reputação melhor entre os clientes|
 | Cliente            | ...                       | ...                              |
 | Cliente            | ...                       | ...                              |
 | Cliente            | ...                       | ...                              |
