@@ -3,17 +3,17 @@
 
 Esta seção descreve a organização da equipe para a execução das tarefas do projeto e as ferramentas utilizadas para a manutenção dos códigos e demais artefatos.
 
-
 ## Gerenciamento de Projeto
-A metodologia ágil escolhida para o desenvolvimento deste projeto foi o SCRUM, pois acreditamos que ele irá nos possibilitar desenvolver o projeto de forma mais ágil, com alto grau de transparência e colaboração entre todos os membros da equipe. Faremos, inicialmente, duas reuniões semanais que irão ter objetivo similar aos das Daily's, porém pelo fato de não acontecerem diariamente, não reberão este nome. Ou seja, o objetivo é que o projeto seja constantemente acompanhado, tanto em relação a avanços quanto em relação a impedimentos que possam estar atrapalhando o seguimento das tarefas.  
+
+A metodologia ágil escolhida para o desenvolvimento deste projeto foi o SCRUM, pois acreditamos que ele irá nos possibilitar desenvolver o projeto de forma mais ágil, com alto grau de transparência e colaboração entre todos os membros da equipe. Faremos, inicialmente, duas reuniões semanais que irão ter objetivos similares aos das Daily's, porém pelo fato de não acontecerem diariamente, não receberão este nome. Ou seja, o objetivo é que o projeto seja constantemente acompanhado, tanto em relação a avanços quanto em relação a impedimentos que possam estar atrapalhando a execução das tarefas.  
 
 ### Divisão de Papéis
 
-A equipe utiliza o Scrum como base para definição do processo de desenvolvimento, a equipe foi organizada da seguinte maneira.
+A equipe utiliza o Scrum como base para definição do processo de desenvolvimento, a equipe foi organizada da seguinte maneira: 
 - Scrum Master: Lucas Rocha
-- Product Owner: Tais
-- Equipe de Desenvolvimento: Alanis Tavares, Felipe Oliveira, Lucas Rocha e Tais
-- Equipe de Design: Alanis Tavares, Felipe Olieveira, Lucas Rocha e Tais
+- Product Owner: Tais Rocha
+- Equipe de Desenvolvimento: Alanis Tavares, Felipe Oliveira, Lucas Rocha e Tais Rocha
+- Equipe de Design: Alanis Tavares, Felipe Olieveira, Lucas Rocha e Tais Rocha
 > **Links Úteis**:
 > - [11 Passos Essenciais para Implantar Scrum no seu 
 > Projeto](https://mindmaster.com.br/scrum-11-passos/)
