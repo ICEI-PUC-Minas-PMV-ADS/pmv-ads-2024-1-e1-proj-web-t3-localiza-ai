@@ -14,10 +14,6 @@ A equipe utiliza o Scrum como base para definição do processo de desenvolvimen
 - Product Owner: Tais Rocha
 - Equipe de Desenvolvimento: Alanis Tavares, Felipe Oliveira, Lucas Rocha e Tais Rocha
 - Equipe de Design: Alanis Tavares, Felipe Olieveira, Lucas Rocha e Tais Rocha
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu 
-> Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
 
 ### Processo
 
@@ -25,7 +21,6 @@ A equipe irá utilizar o Trello para realizar a gestão das tarefas do projeto. 
 
 - Backlog: recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista. 
 - Refined: Contém as tarefas que já foram analisadas e compreendidas pelos integrantes da equipe. Esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando. 
-- Planned: Contém as tarefas que serão realizadas na Sprint.
 - In Progress: Quando uma tarefa tiver sido iniciada, ela é movida para cá. 
 - Homol: Tarefas que, quando finalizadas, estarão sob análise e correção antes de serem incorporadas ao projeto. 
 - Done: Terafas finalizadas e devidamente corrigidas. 
@@ -65,7 +60,7 @@ Os artefatos do projeto são desenvolvidos a partir das plataformas GitHub e Fig
 | Repositório de código fonte         | GitHub                             | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai                            |
 | Documentos do projeto               | GitHub                             | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/tree/b5adae6e8a568a66d801c0170289104679752496/documentos                            |
 | Projeto de Interface                | Figma                              | http://....                            |
-| Gerenciamento do Projeto            | GitHub Projects                    | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/projects                            |
+| Gerenciamento do Projeto            | Trello                    | https://trello.com/b/KMboYUVU/localizaai                           |
 | Hospedagem                          | GitHub Pages                       | http://....                            |
 
 
