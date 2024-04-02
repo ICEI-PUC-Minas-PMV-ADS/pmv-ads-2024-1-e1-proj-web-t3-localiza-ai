@@ -1,12 +1,20 @@
 # Introdução
 
-[Aqui a equipe deve criar um texto descritivo com a visão geral do problema abordado, apresentando o ambiente e as situações envolvidas no problema.]
+Em um mundo cada vez mais dependente de equipamentos de informática, empresas especializadas em manutenção e reparo desses dispositivos se tornam cada vez mais necessárias.  
+A obsolescência programada, ou seja, a estratégia utilizada por fabricantes para projetar produtos com uma vida útil limitada, aumenta ainda mais a necessidade e relevância desse tipo de empreendimento.  
+Nesse sentido, chama atenção o fato de que a relação entre consumidores e empresas especializadas em assistência técnica ainda seja marcada por tantos desafios. De um lado, não é raro que usuários de equipamentos eletrônicos se queixem da dificuldade de encontrar empresas confiáveis que sejam capazes de prestar assistência técnica eficiente, por um preço justo, em seus dispositivos. De outro, empresários do setor se queixam por terem dificuldade de escalar sua prospecção e fidelização de clientes.  
+Pensando nessa dificuldade, esse projeto tem como objetivo criar uma aplicação web que se apresente como uma solução para ambos os lados: consumidores e empresas.  
+A ideia é criar um site dedicado a reunir empresas e profissionais bem avaliados nesse segmento, que possa ser consultado por consumidores que estejam em busca de serviços de qualidade, facilitando assim que encontrem empresas que prestem um bom serviço e, aumentando, também, a visibilidade e alcance de empresas do setor. 
 
 ## Problema
-[Aqui a equipe deve fornecer uma descrição detalhada do problema a ser resolvido. Não é o momento adequado para abordar questões técnicas relacionadas ao desenvolvimento da aplicação. O objetivo é compreender e comunicar de maneira precisa qual é o desafio ou necessidade que motiva a criação da aplicação.]
 
-Este link pode ajudar a equipe a entender mais sobre definição do problema: [Objetivos, Problema de pesquisa e Justificativa.](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-
+Apesar da abundância de empresas especializadas em assistência técnica e da crescente demanda por esse tipo de serviço por parte de muitos consumidores, a relação entre essas duas partes ainda é marcada por desafios significativos. A complexidade reside em: 
+ 
+1. Dificuldade que muitos usuários encontram ao buscar empresas confiáveis que possam oferecer assistência técnica eficaz e acessível para seus dispositivos eletrônicos;  
+2. Dificuldade relacionada aos obstáculos que as empresas do setor enfrentam para expandir sua base de clientes e fidelizar aqueles que buscam seus serviços.  
+ 
+Essa lacuna entre a oferta e a procura evidencia a necessidade de uma solução abrangente que conecte consumidores a empresas confiáveis e, ao mesmo tempo, impulsione o crescimento sustentável das empresas de assistência técnica. 
+ 
 
 ## Objetivos
 
