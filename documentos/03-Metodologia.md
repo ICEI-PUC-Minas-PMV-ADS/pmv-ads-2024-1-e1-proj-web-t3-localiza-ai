@@ -47,18 +47,25 @@ A equipe irá utilizar o Trello para realizar a gestão das tarefas do projeto. 
 
 As ferramentas empregadas no projeto são:
 <ul>
-  <li>Editor de código</li>
-  <li>Ferramenta de desenho de tela (wireframing)</li>
+  <li>Ferramenta para versionamento de código: Git, Github</li>
+  <li>Editor de código: Microsoft Visual Studio Code</li>
+  <li>Ferramenta para criação de fluxo de usuário: Draw.io</li>
+  <li>Ferramenta de desenho de tela (wireframing): Figma</li>
+  <li>Ferramenta para gerenciamento do projeto: Trello</li>
+  <li>Ferramentas para comunicação: Microsoft Teams + WhatsApp</li>
 </ul>
 
-O editor de código foi escolhido porque ele possui uma integração com o sistema de versão. Utilizamos também a ferramenta website wireframing para captar melhor as necessidades do design de interface da solução proposta.
 
-Os artefatos do projeto são desenvolvidos a partir das plataformas GitHub e Figma, apresentadas com seu propósito na tabela que se segue.
+O Microsoft Visual Studio Code foi escolhido devido à sua integração com o sistema de controle de versão. Para a criação de fluxogramas de usuários, utilizamos a ferramenta draw.io por ser acessível e de fácil compreensão. Escolhemos o Figma em conjunto com o Adobe XD para a criação do design de interface e prototipagem. Por fim, o Microsoft Teams e o WhatsApp foram selecionados como ferramentas de comunicação devido à sua acessibilidade e agilidade para todos os membros da equipe.
+
+Os artefatos do projeto são desenvolvidos a partir de diversas plataformas, e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
 
 | AMBIENTE                            | PLATAFORMA                         | LINK DE ACESSO                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
 | Repositório de código fonte         | GitHub                             | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai                            |
 | Documentos do projeto               | GitHub                             | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/tree/b5adae6e8a568a66d801c0170289104679752496/documentos                            |
+| Fluxo de usuário/cliente            | Draw.io                            | https://drive.google.com/file/d/15vVCFx32Qpv7ElvxU_g-oRnxxlR79En0/view?usp=drive_link                            |
+| Fluxo de usuário/empresa            | Draw.io                            | https://drive.google.com/file/d/1UW2MoY-NkeBWspCDaTBdhnKRgXxlRLvF/view?usp=drive_link                            |
 | Projeto de Interface                | Figma                              | http://....                            |
 | Gerenciamento do Projeto            | Trello                    | https://trello.com/b/KMboYUVU/localizaai                           |
 | Hospedagem                          | GitHub Pages                       | http://....                            |
