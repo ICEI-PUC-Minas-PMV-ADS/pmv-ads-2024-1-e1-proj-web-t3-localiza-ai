@@ -56,7 +56,7 @@ As ferramentas empregadas no projeto são:
 </ul>
 
 
-O Microsoft Visual Studio Code foi escolhido devido à sua integração com o sistema de controle de versão. Para a criação de fluxogramas de usuários, utilizamos a ferramenta draw.io por ser acessível e de fácil compreensão. Escolhemos o Figma em conjunto com o Adobe XD para a criação do design de interface e prototipagem. Por fim, o Microsoft Teams e o WhatsApp foram selecionados como ferramentas de comunicação devido à sua acessibilidade e agilidade para todos os membros da equipe.
+O Microsoft Visual Studio Code foi escolhido devido à sua integração com o sistema de controle de versão. Para a criação de fluxogramas de usuários, utilizamos a ferramenta draw.io por ser acessível e de fácil compreensão. Escolhemos o Adobe XD para a criação do design de interface e prototipagem. Por fim, o Microsoft Teams e o WhatsApp foram selecionados como ferramentas de comunicação devido à sua acessibilidade e agilidade para todos os membros da equipe.
 
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas, e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
 
@@ -66,7 +66,7 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas, e a
 | Documentos do projeto               | GitHub                             | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/tree/b5adae6e8a568a66d801c0170289104679752496/documentos                            |
 | Fluxo de usuário/cliente            | Draw.io                            | https://drive.google.com/file/d/15vVCFx32Qpv7ElvxU_g-oRnxxlR79En0/view?usp=drive_link                            |
 | Fluxo de usuário/empresa            | Draw.io                            | https://drive.google.com/file/d/1UW2MoY-NkeBWspCDaTBdhnKRgXxlRLvF/view?usp=drive_link                            |
-| Projeto de Interface                | Figma                              | http://....                            |
+| Projeto de Interface                | Adobe XD                              | http://....                            |
 | Gerenciamento do Projeto            | Trello                    | https://trello.com/b/KMboYUVU/localizaai                           |
 | Hospedagem                          | GitHub Pages                       | http://....                            |
 
