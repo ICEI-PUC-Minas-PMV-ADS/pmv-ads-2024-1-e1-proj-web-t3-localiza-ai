@@ -66,7 +66,7 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas, e a
 | Documentos do projeto               | GitHub                             | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/tree/b5adae6e8a568a66d801c0170289104679752496/documentos                            |
 | Fluxo de usuário/cliente            | Draw.io                            | https://drive.google.com/file/d/15vVCFx32Qpv7ElvxU_g-oRnxxlR79En0/view?usp=drive_link                            |
 | Fluxo de usuário/empresa            | Draw.io                            | https://drive.google.com/file/d/1UW2MoY-NkeBWspCDaTBdhnKRgXxlRLvF/view?usp=drive_link                            |
-| Projeto de Interface                | Adobe XD                              | http://....                            |
+| Projeto de Interface                | Figma                              | http://www.figma.com/file/uCzm0bXN8Z0rKlvteQwcRw/Localiza.Ai---Projeto-Web-T3?type=design&node-id=0%3A1&mode=design&t=r57mzrwfNwWdH9Ht-1                          |
 | Gerenciamento do Projeto            | Trello                    | https://trello.com/b/KMboYUVU/localizaai                           |
 | Hospedagem                          | GitHub Pages                       | http://....                            |
 
