@@ -1,0 +1,235 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --fonte-titulo:'Montserrat', sans-serif;
+    --fonte-padrao: 'Poppins', sans-serif;
+    --azul1: #A0D6FE;
+    --azul2: #0C95FE;
+    --azul3: #2fc5de;
+}
+
+* {
+    font-family: var(--fonte-padrao);
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    padding: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav > a {
+    color: black;
+    padding: 25px;
+    text-decoration: none;
+}
+
+nav > a:hover {
+    color: var(--azul3);
+}
+
+nav > a#PagInicial {
+    color: var(--azul3);
+}
+
+#login > a {
+    background-color: var(--azul3);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--azul2);
+    text-decoration: none;
+    font-weight: normal;
+    transition-duration: .5s;
+}
+
+#login > a:hover {
+    color: var(--azul3);
+    background-color: black;
+    border-color: var(--azul3);
+}
+
+#cabecalho {
+    margin: 50px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#cabecalho > a > img {
+    height: 40px;
+    width: 40px;
+}
+
+div#NomeEmpresa {
+    margin-left: 200px;
+}
+
+h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 1em;
+    font-weight: normal;
+    color: var(--azul3);
+}
+
+h2{
+    font-family: var(--fonte-titulo);
+    font-size: 2em;
+   font-weight: normal; 
+}
+
+h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.5em;
+    font-weight: normal;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    margin-left: 200px;
+}
+
+h3.footer {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: auto; 
+}
+
+h3#main-footer {
+    padding: 10px;
+    margin: auto;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+}
+
+#info {
+    width: 330px;
+    height: 450px;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    margin: 0px 30px;
+}
+
+#info > p {
+    padding: 10px;
+}
+
+#whatsapp {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.linha-horizontal {
+    width: 330px;
+    border: 1px solid lightgrey;
+}
+
+#maps {
+    width: 350px;
+    height: 450px;
+}
+
+#lista {
+    width: 1300px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 50px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.196);
+}
+
+#lista > ul {
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+}
+
+.avaliacoes {
+    display: flex;
+    justify-content: center;
+}
+
+.avaliacao {
+    width: 350px;
+    height: 250px;
+    text-align: justify;
+    padding: 20px;
+    margin: 15px 15px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.196);
+}
+
+.nome {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+footer {
+    font-size: 0.7em;
+    color: white;
+    margin-top: 150px;
+}
+
+#footer1 {
+    height: 200px;
+    background-color: #14395B;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#localizai {
+    text-align: center;
+}
+#localizai > a > img {
+    width: 35px;
+    margin-top: 40px;
+}
+
+#main-footer {
+    font-size: 2.8em;
+}
+
+#menus {
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    width: 280px;
+    line-height: 2.5em;
+}
+
+.menu > a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu > a:hover {
+    text-decoration: underline;
+}
+
+#adress {
+    width: 350px;
+}
+
+#footer2 {
+    height: 50px;
+    background-color: #0B2F50;
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer2 > p {
+    color: white;
+    margin: auto;
+}
