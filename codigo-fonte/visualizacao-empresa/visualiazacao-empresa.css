@@ -59,18 +59,18 @@ nav > a#PagInicial {
     border-color: var(--azul3);
 }
 
-#cabecalho {
+section {
     margin: 50px;
     display: flex;
     justify-content: flex-start;
 }
 
-#cabecalho > a > img {
+section > a > img {
     height: 40px;
     width: 40px;
 }
 
-div#NomeEmpresa {
+div#nome-empresa {
     margin-left: 200px;
 }
 
@@ -96,18 +96,7 @@ h3 {
     margin-left: 200px;
 }
 
-h3.footer {
-    font-size: 1.3em;
-    font-weight: bold;
-    margin: auto; 
-}
-
-h3#main-footer {
-    padding: 10px;
-    margin: auto;
-}
-
-#main {
+#principal {
     display: flex;
     justify-content: center;
 }
@@ -179,6 +168,17 @@ footer {
     margin-top: 150px;
 }
 
+h3.footer {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: auto; 
+}
+
+h3#main-footer {
+    padding: 10px;
+    margin: auto;
+}
+
 #footer1 {
     height: 200px;
     background-color: #14395B;
@@ -199,22 +199,23 @@ footer {
     font-size: 2.8em;
 }
 
-#menus {
+#menu {
     display: flex;
     justify-content: center;
 }
 
-.menu {
+#menu > nav {
     width: 280px;
     line-height: 2.5em;
 }
 
-.menu > a {
+#menu > nav > a {
     text-decoration: none;
     color: white;
+    padding: 0px;
 }
 
-.menu > a:hover {
+#menu > nav > a:hover {
     text-decoration: underline;
 }
 
