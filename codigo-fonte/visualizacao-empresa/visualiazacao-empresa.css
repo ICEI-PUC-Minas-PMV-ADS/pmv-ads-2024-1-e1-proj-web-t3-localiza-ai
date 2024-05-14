@@ -18,6 +18,7 @@
     padding: 0px;
 }
 
+/*CABEÇALHO*/
 header {
     padding: 20px;
     margin-right: 20px;
@@ -59,6 +60,7 @@ nav > a#PagInicial {
     border-color: var(--azul3);
 }
 
+/*PRINCIPAL*/
 section {
     margin: 50px;
     display: flex;
@@ -128,6 +130,7 @@ h3 {
     height: 450px;
 }
 
+/*LISTA*/
 #lista {
     width: 1300px;
     padding: 10px;
@@ -142,6 +145,7 @@ h3 {
     list-style-position: inside;
 }
 
+/*AVALIAÇÕES*/
 .avaliacoes {
     display: flex;
     justify-content: center;
@@ -162,10 +166,17 @@ h3 {
     margin-top: 25px;
 }
 
+/*RODAPÉ*/
 footer {
     font-size: 0.7em;
     color: white;
     margin-top: 150px;
+}
+
+h3#localizai {
+    font-size: 2.8em;
+    padding: 10px;
+    margin: auto;
 }
 
 h3.footer {
@@ -174,12 +185,7 @@ h3.footer {
     margin: auto; 
 }
 
-h3#main-footer {
-    padding: 10px;
-    margin: auto;
-}
-
-#footer1 {
+#main-footer {
     height: 200px;
     background-color: #14395B;
     padding-top: 40px;
@@ -187,16 +193,12 @@ h3#main-footer {
     justify-content: space-around;
 }
 
-#localizai {
+#contatos {
     text-align: center;
 }
-#localizai > a > img {
+#contatos > a > img {
     width: 35px;
     margin-top: 40px;
-}
-
-#main-footer {
-    font-size: 2.8em;
 }
 
 #menu {
@@ -223,14 +225,15 @@ h3#main-footer {
     width: 350px;
 }
 
-#footer2 {
+#copyright {
     height: 50px;
     background-color: #0B2F50;
+    margin: 0px;
     display: flex;
     justify-content: space-around;
 }
 
-#footer2 > p {
+#copyright > p {
     color: white;
     margin: auto;
 }
