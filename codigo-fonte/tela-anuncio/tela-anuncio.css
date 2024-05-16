@@ -138,18 +138,20 @@ ul {
 }
 
 /*AVALIAÇÕES*/
-.comentarios {
+#avaliacoes {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
-.avaliacao {
-    width: 350px;
+#avaliacoes > div {
     height: 250px;
     text-align: justify;
     padding: 20px;
-    margin: 15px 15px;
-    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.196);
+    margin: 15px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.319);
+    flex: 1 1 350px;
 }
 
 .nome {
