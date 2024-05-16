@@ -41,7 +41,7 @@ nav > a#PagInicial {
     color: var(--azul3);
 }
 
-#login > a {
+#login > a  {
     background-color: var(--azul3);
     color: white;
     padding: 10px 30px;
@@ -179,7 +179,7 @@ h3#localizai {
     margin: auto;
 }
 
-h3.footer {
+h3.list-title {
     font-size: 1.3em;
     font-weight: bold;
     margin: auto; 
@@ -201,28 +201,22 @@ h3.footer {
     margin-top: 40px;
 }
 
-#menu {
-    display: flex;
-    justify-content: center;
-}
-
-#menu > nav {
-    width: 280px;
+#main-footer > nav {
     line-height: 2.5em;
 }
 
-#menu > nav > a {
+#main-footer > nav > a {
     text-decoration: none;
     color: white;
     padding: 0px;
 }
 
-#menu > nav > a:hover {
-    text-decoration: underline;
+#main-footer > nav > a:hover {
+    color: var(--azul1);
 }
 
 #adress {
-    width: 350px;
+    width: 25%;
 }
 
 #copyright {
