@@ -21,16 +21,15 @@
 /*CABEÇALHO*/
 header {
     padding: 20px;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin: 0px 20px;
     display: flex;
     justify-content: space-between;
 }
 
 nav > a {
     color: black;
-    padding: 25px;
     text-decoration: none;
+    padding: 25px;
 }
 
 nav > a:hover {
@@ -125,14 +124,11 @@ h3 {
     border: 1px solid lightgrey;
 }
 
-#maps {
-    width: 350px;
-    height: 450px;
-}
-
 /*LISTA*/
-#lista {
-    width: 1300px;
+ul {
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    width: 80%;
     padding: 10px;
     border-radius: 10px;
     margin: auto;
@@ -140,13 +136,8 @@ h3 {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.196);
 }
 
-#lista > ul {
-    list-style-type: '\2714\00A0\00A0';
-    list-style-position: inside;
-}
-
 /*AVALIAÇÕES*/
-.avaliacoes {
+.comentarios {
     display: flex;
     justify-content: center;
 }
@@ -193,14 +184,6 @@ h3.list-title {
     justify-content: space-around;
 }
 
-#contatos {
-    text-align: center;
-}
-#contatos > a > img {
-    width: 35px;
-    margin-top: 40px;
-}
-
 #main-footer > nav {
     line-height: 2.5em;
 }
@@ -213,6 +196,14 @@ h3.list-title {
 
 #main-footer > nav > a:hover {
     color: var(--azul1);
+}
+
+#contatos {
+    text-align: center;
+}
+#contatos > a > img {
+    width: 35px;
+    margin-top: 40px;
 }
 
 #adress {
