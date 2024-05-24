@@ -10,20 +10,20 @@ A metodologia ágil escolhida para o desenvolvimento deste projeto foi o SCRUM, 
 ### Divisão de Papéis
 
 A equipe utiliza o Scrum como base para definição do processo de desenvolvimento, a equipe foi organizada da seguinte maneira: 
-`- Scrum Master:` [Lucas de Araújo](https://github.com/lucas-arl)
-`- Product Owner:` [Tais Rocha](https://github.com/taisrochan)
-`- Equipe de Desenvolvimento:` [Alanis Graciele](https://github.com/alanis-tavares), [Felipe Oliveira](https://github.com/Felipe0liveira14), [Lucas de Araújo](https://github.com/lucas-arl), [Tais Rocha](https://github.com/taisrochan)
-`- Equipe de Design:` [Alanis Graciele](https://github.com/alanis-tavares), [Felipe Oliveira](https://github.com/Felipe0liveira14), [Lucas de Araújo](https://github.com/lucas-arl), [Tais Rocha](https://github.com/taisrochan)
+- Scrum Master: [Lucas de Araújo](https://github.com/lucas-arl)
+- Product Owner: [Tais Rocha](https://github.com/taisrochan)
+- Equipe de Desenvolvimento: [Alanis Graciele](https://github.com/alanis-tavares), [Felipe Oliveira](https://github.com/Felipe0liveira14), [Lucas de Araújo](https://github.com/lucas-arl), [Tais Rocha](https://github.com/taisrochan)
+- Equipe de Design: [Alanis Graciele](https://github.com/alanis-tavares), [Felipe Oliveira](https://github.com/Felipe0liveira14), [Lucas de Araújo](https://github.com/lucas-arl), [Tais Rocha](https://github.com/taisrochan)
 
 ### Processo
 
 A equipe irá utilizar o Trello para realizar a gestão das tarefas do projeto. As listas de tarefas serão organizadas da seguinte forma: 
 
-`- Backlog:` recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista. 
-`- Refined:` Contém as tarefas que já foram analisadas e compreendidas pelos integrantes da equipe. Esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando. 
-`- In Progress:` Quando uma tarefa tiver sido iniciada, ela é movida para cá. 
-`- Homol:` Tarefas que, quando finalizadas, estarão sob análise e correção antes de serem incorporadas ao projeto. 
-`- Done:` Terafas finalizadas e devidamente corrigidas. 
+- Backlog: recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista. 
+- Refined: Contém as tarefas que já foram analisadas e compreendidas pelos integrantes da equipe. Esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando. 
+- In Progress: Quando uma tarefa tiver sido iniciada, ela é movida para cá. 
+- Homol: Tarefas que, quando finalizadas, estarão sob análise e correção antes de serem incorporadas ao projeto. 
+- Done: Terafas finalizadas e devidamente corrigidas. 
 
 
 ### Etiquetas
