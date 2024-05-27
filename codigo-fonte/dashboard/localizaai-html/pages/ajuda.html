@@ -3,86 +3,34 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Informar ao navegador para corresponder a largura da tela -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description"
-        content="Modelo de painel de controle, inspirado no Framework Bootstrap">
+    <meta name="description" content="Modelo de painel de controle, inspirado no Framework Bootstrap">
     <meta name="robots" content="noindex,nofollow">
-    <title>Localiza.Ai - Página Inicial</title>
-    <!-- Ícone do Favicon -->
+    <title>Localiza.Ai - Central de Ajuda</title>
     <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.ico">
-    <!-- Ícones MDI -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/mdi.min.css">
-
-    <!-- CSS Personalizado -->
     <link href="../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
-    <!-- CSS Personalizado -->
     <link href="../../dist/css/style.min.css" rel="stylesheet">
-    <!-- HTML5 Shim e Respond.js IE8 suporte a elementos HTML5 e consultas de mídia -->
-    <!-- AVISO: Respond.js não funciona se você visualizar a página via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
 </head>
 <body>
-    <!-- ============================================================== -->
-    <!-- Preloader - Style em spinners.css -->
-    <!-- ============================================================== -->
-    <div class="preloader">
-        <div class="lds-ripple">
-            <div class="lds-pos"></div>
-            <div class="lds-pos"></div>
-        </div>
-    </div>
-    <!-- ============================================================== -->
-    <!-- Wrapper Principal - Style em pages.scss -->
-    <!-- ============================================================== -->
-    <div id="main-wrapper" data-navbarbg="skin6" data-theme="light" data-layout="vertical" data-sidebartype="full"
-        data-boxed-layout="full">
-        <!-- ============================================================== -->
-        <!-- Topbar header - Style em pages.scss -->
-        <!-- ============================================================== -->
+    <div id="main-wrapper" data-navbarbg="skin6" data-theme="light" data-layout="vertical" data-sidebartype="full" data-boxed-layout="full">
         <header class="topbar" data-navbarbg="skin6">
             <nav class="navbar top-navbar navbar-expand-md navbar-light">
                 <div class="navbar-header" data-logobg="skin5">
-                    <!-- Isto é para a alternância da barra lateral, que é visível apenas no mobile -->
                     <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)">
                         <i class="ti-menu ti-close"></i>
                     </a>
-                    <!-- ============================================================== -->
-                    <!-- Logo -->
-                    <!-- ============================================================== -->
                     <div class="navbar-brand">
                         <a href="index.html" class="logo">
-                            <!-- Logo text -->
                             <span class="logo-text">
-                                <!-- dark Logo text -->
                                 <img src="../../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
-                                <!-- Light Logo text -->
                                 <img src="../../assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
                             </span>
                         </a>
                     </div>
-                    <!-- ============================================================== -->
-                    <!-- Final Logo -->
-                    <!-- ============================================================== -->
-                    <!-- ============================================================== -->
-                    <!-- "Toggle" com visualização apenas em mobile -->
-                    <!-- ============================================================== -->
-                    
                 </div>
-                <!-- ============================================================== -->
-                <!-- End Logo -->
-                <!-- ============================================================== -->
                 <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin6">
-                    <!-- ============================================================== -->
-                    <!-- "Toggle" e itens de navegação -->
-                    <!-- ============================================================== -->
                     <ul class="navbar-nav float-start me-auto">
-                        <!-- ============================================================== -->
-                        <!-- Barra de pesquisa -->
-                        <!-- ============================================================== -->
                         <li class="nav-item search-box">
                             <a class="nav-link waves-effect waves-dark" href="javascript:void(0)">
                                 <div class="d-flex align-items-center">
@@ -94,172 +42,173 @@
                             </a>
                             <form class="app-search position-absolute">
                                 <input type="text" class="form-control" placeholder="Digite serviços, orçamentos e muito mais">
-                                <a class="srh-btn">
-                                    <i class="ti-close"></i>
-                                </a>
+                                <a class="srh-btn"><i class="ti-close"></i></a>
                             </form>
                         </li>
                     </ul>
-                    <!-- ============================================================== -->
-                    <!-- Right side toggle and nav items -->
-                    <!-- ============================================================== -->
                     <ul class="navbar-nav float-end">
-                        <!-- ============================================================== -->
-                        <!-- User profile and search -->
-                        <!-- ============================================================== -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="../../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="40">
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user me-1 ms-1"></i>
-                                    Status: Online</a>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user me-1 ms-1"></i>
-                                    Configurações de conta</a>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user me-1 ms-1"></i>
-                                    Feedback</a>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user me-1 ms-1"></i>
-                                    Logout</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user me-1 ms-1"></i> Status: Online</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user me-1 ms-1"></i> Configurações de conta</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user me-1 ms-1"></i> Feedback</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user me-1 ms-1"></i> Logout</a>
                             </ul>
                         </li>
-                        <!-- ============================================================== -->
-                        <!-- Configurações do Usuário e Barra de Pesquisa -->
-                        <!-- ============================================================== -->
                     </ul>
                 </div>
             </nav>
         </header>
-        <!-- ============================================================== -->
-        <!-- Final do Topbar eH eader -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Sidebar da esquerda - Style em sidebar.scss  -->
-        <!-- ============================================================== -->
         <aside class="left-sidebar" data-sidebarbg="skin5">
             <div class="scroll-sidebar">
-              <nav class="sidebar-nav">
-                <ul id="sidebarnav">
-                  <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.html">
-                      <i class="mdi mdi-home"></i> <span class="hide-menu">Página Inicial</span>
-                    </a>
-                  </li>
-                  <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link active" href="inbox.html"> <i class="mdi mdi-android-messages"></i>
-                      <span class="hide-menu">Inbox</span>
-                    </a>
-                  </li>
-                  <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="servicos.html"> <i class="mdi mdi:window-shutter-settings"></i>
-                      <span class="hide-menu">Serviços</span>
-                    </a>
-                  </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="invoices.html"> <i class="mdi mdi:currency-usd"></i>
-                        <span class="hide-menu">Orçamentos</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="clientes.html"> <i class="mdi mdi:account-group-outline"></i>
-                        <span class="hide-menu">Clientes</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="central de ajuda.html"> <i class="mdi mdi:account-question"></i>
-                        <span class="hide-menu">Central de Ajuda</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="historico.html"> <i class="mdi mdi:account-cog"></i>
-                        <span class="hide-menu">Configurações</span>
-                        </a>
-                  </ul>
-              </nav>
-              </div>
-            </aside>
-                <!-- Final da navegação "Sidebar" -->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.html" aria-expanded="false">
+                                <i class="mdi mdi-home"></i>
+                                <span class="hide-menu">Página Inicial</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="inbox.html" aria-expanded="false">
+                                <i class="mdi mdi-android-messages"></i>
+                                <span class="hide-menu">Inbox</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="servicos.html" aria-expanded="false">
+                                <i class="mdi mdi-window-shutter-settings"></i>
+                                <span class="hide-menu">Serviços</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="orcamentos.html" aria-expanded="false">
+                                <i class="mdi mdi-invoice-edit"></i>
+                                <span class="hide-menu">Orçamentos</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="clientes.html" aria-expanded="false">
+                                <i class="mdi mdi-contacts"></i>
+                                <span class="hide-menu">Clientes</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="ajuda.html" aria-expanded="false">
+                                <i class="mdi mdi-frequently-asked-questions"></i>
+                                <span class="hide-menu">Central de Ajuda</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="configuracoes.html" aria-expanded="false">
+                                <i class="mdi mdi-cog-outline"></i>
+                                <span class="hide-menu">Configurações</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <!-- Final do scroll "Sidebar"-->
         </aside>
-        <!-- ============================================================== -->
-        <!-- Fim da "Sidebar" - Estilos em sidebar.scss  -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- "Wrapper" de página  -->
-        <!-- ============================================================== -->
         <div class="page-wrapper">
-            <!-- ============================================================== -->
-            <!-- "Bread Crumb" e Sidebar direito "toggle"  -->
-            <!-- ============================================================== -->
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-5 align-self-center">
-                        <h4 class="page-title">Caixa de entrada</h4>
+                        <h4 class="page-title">Central de Ajuda</h4>
                     </div>
                     <div class="col-7 align-self-center">
                         <div class="d-flex align-items-center justify-content-end">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item">
-                                        <a href="index.html">Página Inicial</a>
-                                    </li>
-                                    <li class="breadcrumb-item active" aria-current="page">Inbox</li>
+                                    <li class="breadcrumb-item"><a href="#">Página Inicial</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Central de Ajuda</li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- ============================================================== -->
-            <!-- Fim da "Bread crumb" e Sidebar direito "toggle"  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- Container -->
-            <!-- ============================================================== -->
             <div class="container-fluid">
-                <!-- ============================================================== -->
-                <!-- Caixa de Entrada 1 -->
-                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Bem-vindo à Central de Ajuda</h4>
+                                <p class="card-subtitle mb-4">Aqui você encontrará respostas para as perguntas mais frequentes e guias para ajudá-lo a utilizar o nosso serviço.</p>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card border">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Introdução</h5>
+                                                <p class="card-text">Saiba mais sobre nosso serviço e como começar.</p>
+                                                <a href="#" class="btn btn-primary">Saiba Mais</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card border">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Configurações da Conta</h5>
+                                                <p class="card-text">Aprenda a configurar e gerenciar sua conta.</p>
+                                                <a href="#" class="btn btn-primary">Saiba Mais</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card border">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Faturamento</h5>
+                                                <p class="card-text">Informações sobre planos, preços e faturas.</p>
+                                                <a href="#" class="btn btn-primary">Saiba Mais</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card border">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Suporte Técnico</h5>
+                                                <p class="card-text">Encontre soluções para problemas técnicos.</p>
+                                                <a href="#" class="btn btn-primary">Saiba Mais</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card border">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Segurança</h5>
+                                                <p class="card-text">Mantenha sua conta segura e protegida.</p>
+                                                <a href="#" class="btn btn-primary">Saiba Mais</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card border">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Outros</h5>
+                                                <p class="card-text">Diversos tópicos e artigos úteis.</p>
+                                                <a href="#" class="btn btn-primary">Saiba Mais</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- ============================================================== -->
-            <!-- Container Final -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- Rodapé -->
-            <!-- ============================================================== -->
             <footer class="footer text-center">
                 Todos os direitos reservados a Equipe 2 (Alanis, Felipe, Lucas e Tais). Projetado e desenvolvido por
                 <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai">Localiza.Ai (Github)</a>.
             </footer>
-            <!-- ============================================================== -->
-            <!-- Rodapé final -->
-            <!-- ============================================================== -->
         </div>
-        <!-- ============================================================== -->
-        <!-- Wrapper da página final  -->
-        <!-- ============================================================== -->
     </div>
-    <!-- ============================================================== -->
-    <!-- Wrapped Final -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Todos os Jquery -->
-    <!-- ============================================================== -->
     <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
     <script src="../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- slimscrollbar scrollbar JavaScript -->
     <script src="../../assets/extra-libs/sparkline/sparkline.js"></script>
-    <!--Wave Effects -->
     <script src="../../dist/js/waves.js"></script>
-    <!--Menu sidebar -->
     <script src="../../dist/js/sidebarmenu.js"></script>
-    <!--Custom JavaScript -->
     <script src="../../dist/js/custom.min.js"></script>
-    <!--This page JavaScript -->
-    <!--chartis chart-->
-    <script src="../../assets/libs/chartist/dist/chartist.min.js"></script>
-    <script src="../../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-    <script src="../../dist/js/pages/dashboards/dashboard1.js"></script>
 </body>
 </html>
