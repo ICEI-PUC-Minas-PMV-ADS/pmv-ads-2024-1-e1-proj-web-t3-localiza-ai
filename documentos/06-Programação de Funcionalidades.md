@@ -7,7 +7,7 @@ Nesta seção são apresentadas as telas desenvolvidas para cada uma das funcion
 A 1° parte da tela principal até o momento tem a como 'funcionalidade' o campo de busca de serviços, estados e endereço,
 também é apresentado ao navegar por 'Pagina inicial, Sobre, Entre contato e Minhas Empresas a mudança de cor além também da mudança de cor de letra e backround do button 'LOGIN e PESQUISAR'.
 
-http://127.0.0.1:5500/index.html#
+
 
 
 #### Requisito atendido
