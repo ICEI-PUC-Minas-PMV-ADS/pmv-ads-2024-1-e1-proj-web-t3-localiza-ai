@@ -1,6 +1,6 @@
-# LOCALIZA.AI
+# Localiza.AI
 
-![alt text](docs/img/sus_online.jpg)
+![alt text](codigo-fonte/css/Frame.png)
 
 `Análise e Desenvolvimento de Sistemas - PUC Minas`
 
