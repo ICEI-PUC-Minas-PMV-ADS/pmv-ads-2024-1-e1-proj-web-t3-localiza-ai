@@ -1,12 +1,8 @@
 # Programação de Funcionalidades
 
-Implementação da aplicação descritas por meio dos requisitos codificados. 
+### Campo de busca de estados e serviços automátizado 
 
-[Utilize a estrutura abaixo para cada funcionalidade entregue na etapa]
 
-### Título da funcionalidade
-
-[Adicione imagem da funcionalidade/tela]
 
 
 #### Requisito atendido
