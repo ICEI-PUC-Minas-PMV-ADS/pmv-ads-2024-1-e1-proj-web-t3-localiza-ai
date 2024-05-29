@@ -5,7 +5,7 @@ Nesta seção são apresentadas as telas desenvolvidas para cada uma das funcion
 ### 1° Parte da Landing page
 
 A 1° parte da tela principal até o momento tem a como 'funcionalidade' o campo de busca de serviços, estados e endereço,
-também é apresentado ao navegar por 'Pagina inicial, Sobre, Entre contato e Minhas Empresas a mudança de cor além também da mudança de cor de letra e backround do button 'LOGIN E PESQUISAR'.
+também é apresentado ao navegar por 'Pagina inicial, Sobre, Entre contato e Minhas Empresas a mudança de cor além também da mudança de cor de letra e backround do button 'LOGIN e PESQUISAR'.
 
 
 #### Requisito atendido
