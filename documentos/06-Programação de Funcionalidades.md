@@ -7,7 +7,7 @@ Nesta seção são apresentadas as telas desenvolvidas para cada uma das funcion
 A 1° parte da tela principal até o momento tem a como 'funcionalidade' o campo de busca de serviços, estados e endereço,
 também é apresentado ao navegar por 'Pagina inicial, Sobre, Entre contato e Minhas Empresas a mudança de cor além também da mudança de cor de letra e backround do button 'LOGIN e PESQUISAR'.
 
-![Landing page]https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/blob/main/documentos/img/Captura%20de%20Tela%20(72).png
+![Landing page](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/blob/main/documentos/img/Captura%20de%20Tela%20(72).png)
 
 
 
