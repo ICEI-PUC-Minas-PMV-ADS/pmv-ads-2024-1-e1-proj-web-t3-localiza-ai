@@ -18,13 +18,15 @@ RF-06	O sistema deve pedir para o cliente mencionar sua localidade, o problema e
 
 #### Artefatos da funcionalidade
 
-index.html
-style.css
-api.js
+- index.html
+- style.css
+- code.jquery
 
 #### Instruções de acesso
 
-[Adicione as orientações de acesso à funcionalidade]
+Abrir a pagína e ir em selecionar tipo do equipamento, selecione seu estado e seu endereço pode testar isso de funcionalidade por enquanto, também pode testar a mudança de cores ao passar e clicar com pointer nas opções de Login, Pesquisar, Pagina inicial, Sobre, Entre em contato, Minhas empresas.
+
+
 
 
 #### Responsável
