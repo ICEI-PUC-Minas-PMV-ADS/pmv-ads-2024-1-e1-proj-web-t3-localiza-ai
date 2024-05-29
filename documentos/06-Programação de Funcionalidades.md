@@ -26,7 +26,7 @@ RF-06	O sistema deve pedir para o cliente mencionar sua localidade, o problema e
 
 Abrir a pagína , ir em 'Selecionar tipo do equipamento', 'Selecione seu estado' e 'Seu endereço' pode testar isso de funcionalidade por enquanto, também pode testar a mudança de cores ao passar e clicar com pointer nas opções de Login, Pesquisar, Pagina inicial, Sobre, Entre em contato, Minhas empresas.
 
-![Landing page](http://127.0.0.1:5500/index.html#)
+![Landing page](http%3A%2F%2F127.0.0.1%3A5500%2Findex.html%23)
 
 
 #### Responsável
