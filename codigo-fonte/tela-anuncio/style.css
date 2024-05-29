@@ -22,42 +22,6 @@
 header {
     padding: 20px;
     margin: 0px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-nav > a {
-    color: black;
-    text-decoration: none;
-    padding: 25px;
-}
-
-nav > a:hover {
-    color: var(--azul3);
-}
-
-nav > a#PagInicial {
-    color: var(--azul3);
-}
-
-#login > a  {
-    text-decoration: none;
-    font-weight: normal;
-    background-color: var(--azul3);
-    color: white;
-    padding: 10px 30px;
-    border-radius: 10px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: var(--azul2);
-    transition-duration: .5s;
-}
-
-#login > a:hover {
-    color: var(--azul3);
-    background-color: black;
-    border-color: var(--azul3);
 }
 
 /*PRINCIPAL*/
@@ -70,10 +34,6 @@ section {
 section > a > img {
     height: 40px;
     width: 40px;
-}
-
-div#nome-empresa {
-    margin-left: 200px;
 }
 
 h1 {
@@ -95,38 +55,27 @@ h3 {
     font-weight: normal;
     margin-top: 25px;
     margin-bottom: 50px;
-    margin-left: 200px;
-}
-
-#principal {
-    display: flex;
-    justify-content: center;
 }
 
 #info {
-    width: 330px;
-    height: 450px;
     border: 2px solid lightgrey;
     border-radius: 5px;
-    margin: 0px 30px;
 }
 
 #info > p {
     padding: 10px;
 }
 
-#whatsapp {
-    text-align: center;
-    margin: 40px auto;
-}
-
 .linha-horizontal {
-    width: 330px;
+    width: 100%;
     border: 1px solid lightgrey;
 }
 
 /*LISTA*/
-ul {
+.titulo {
+    text-align: center;
+}
+main > ul {
     list-style-type: '\2714\00A0\00A0';
     list-style-position: inside;
     width: 80%;

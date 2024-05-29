@@ -1,0 +1,75 @@
+/*CABEÇALHO*/
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.material-symbols-outlined {
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+header > nav {
+    display: none;
+}
+
+header > nav ul {
+    list-style-type: none;
+
+}
+
+header > nav a {
+    background-color: #2fc4de38;
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    border-top: 2px solid white;
+    display: block;
+}
+
+header > nav a:hover {
+    background-color: white;
+    color: var(--azul3);
+}
+
+#inicio {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+#login {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+/*PRINCIPAL*/
+div#nome-empresa {
+    margin-left: 100px;
+}
+
+#principal {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#anuncio {
+    margin: auto;
+    width: 90%;
+    max-width: 650px;
+}
+
+#info {
+    width: 90%;
+    height: 400px;
+    margin: 20px auto;
+}
+
+#maps {
+    margin: auto;
+}
+
+/*RODAPÉ*/
+#github {
+    display: none;
+}

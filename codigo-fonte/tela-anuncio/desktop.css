@@ -1,0 +1,77 @@
+/*CABEÇALHO*/
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.material-symbols-outlined {
+    display: none;
+}
+
+header > nav ul {
+    list-style-type: none;
+}
+
+header > nav ul li {
+    display: inline;
+}
+
+header > nav a {
+    color: black;
+    text-decoration: none;
+    padding: 25px;
+    display: inline-block;
+}
+
+header > nav a:hover {
+    color: var(--azul3);
+}
+
+#login {
+    text-decoration: none;
+    font-weight: normal;
+    background-color: var(--azul3);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--azul2);
+    transition-duration: .5s;
+}
+
+#login:hover {
+    color: var(--azul3);
+    background-color: black;
+    border-color: var(--azul3);
+}
+
+/*PRINCIPAL*/
+#nome-empresa {
+    margin-left: 200px;
+}
+
+#principal {
+    display: flex;
+    justify-content: center;
+}
+
+#anuncio {
+    width: 600px;
+}
+
+#info {
+    width: 330px;
+    height: 450px;
+    margin: 0px 30px;
+}
+
+#whatsapp {
+    text-align: center;
+    margin: 40px auto;
+}
+
+#maps {
+    width: 25%;
+}

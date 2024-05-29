@@ -4,23 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Localiza.Ai</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="shortcut icon" href="imagens/icon-localizai.png" type="image/x-png">
-    <link rel="stylesheet" href="tela-anuncio.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 1055px)">
+    <link rel="stylesheet" href="tablet.css" media="screen and (min-width: 1055px) and (max-width: 1350px)">
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 1350px)">
 </head>
 <body>
     
     <!--CABEÇALHO-->
     <header>
-        <img src="imagens/logo-localizai-semfundo.png" alt="Logo Localiza.Ai" width="200px" id="logo">
-        <nav>
-            <a href="#" id="PagInicial">Página Inicial</a>
-            <a href="#">Sobre</a>
-            <a href="#">Entre em contato</a>
-            <a href="#">Minhas Empresas</a>
+        <img id="logo" src="imagens/logo-localizai-semfundo.png" alt="Logo Localiza.Ai" width="200px" height="80px">
+        <nav id="itens">
+            <ul>
+                <li><a id="inicio" href="#">Página Inicial</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Entre em contato</a></li>
+                <li><a href="#">Minhas Empresas</a></li>
+                <li><a id="login" href="#">LOGIN</a></li>
+            </ul>
         </nav>
-        <div id="login">
-            <a href="#">LOGIN</a>
-        </div>
+        <span class="material-symbols-outlined" onclick="clickMenu()">menu</span>
     </header>
 
     <!--PRINCIPAL-->
@@ -33,7 +38,7 @@
             </div>
         </section>
         <section id="principal">
-            <img src="imagens/anuncio-alanistech.png" alt="Anúncio" width="620px" id="anuncio">
+            <img id="anuncio" src="imagens/anuncio-alanistech.png" alt="Anúncio">
             <div id="info">
                 <p>Endereço: R. Dom José Gaspar, 500 - Coração Eucarístico, Belo Horizonte - MG, 30535-901</p>
                 <div class="linha-horizontal"></div>
@@ -48,11 +53,11 @@
                 <p>Contato: (012) 91000-1000</p><div class="linha-horizontal"></div>
                 <div id="whatsapp"><a href="#"><img src="imagens/whatsapp.png" alt="" width="200px"></a></div>
             </div>
-            <img src="imagens/maps.png" alt="Google Maps" width="350px" id="maps">
+            <img id="maps" src="imagens/maps.png" alt="Google Maps" width="350px">
         </section>
 
         <!--LISTA-->
-        <h3>Especialidades em:</h3>
+        <h3 class="titulo">Especialidades em:</h3>
             <ul>
                 <li>Reparo eletrônico em placa mãe</li>
                 <li>Manutenção preventiva de computadores/notebooks</li>
@@ -64,7 +69,7 @@
             </ul>
 
         <!--AVALIAÇÕES-->
-        <h3>Avaliações dos clientes:</h3>
+        <h3 class="titulo">Avaliações dos clientes:</h3>
         <section id="avaliacoes">
             <div>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt, reprehenderit est debitis, nemo optio ut quaerat, ullam reiciendis dolor esse dolore necessitatibus itaque voluptatum cumque. Illo nam alias veritatis.</p>
@@ -127,7 +132,7 @@
             <div id="adress">
                 <h3 class="list-title">Endereço</h3><br>
                 <p>R. Dom José Gaspar, 500 - Coração Eucarístico, Belo Horizonte - MG, 30535-901</p><br>
-                <p>website: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai</p>
+                <p id="github">website: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai</p>
             </div>
         </div>
         <section id="copyright">
@@ -135,5 +140,14 @@
             <p>Termos & Condições | Política de Dados e Privacidade</p>
         </section>
     </footer>
+    <script>
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+    </script>
 </body>
 </html>
