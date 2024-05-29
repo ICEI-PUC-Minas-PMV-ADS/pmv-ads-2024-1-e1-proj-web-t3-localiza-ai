@@ -1,6 +1,4 @@
-
-
-![alt text](codigo-fonte/css/Frame.png)
+# Localiza.AI
 
 `Análise e Desenvolvimento de Sistemas - PUC Minas`
 
@@ -9,6 +7,8 @@
 `2024.1 - Turma 3`
 
 O projeto visa desenvolver uma aplicação web que funcione como uma plataforma de intermediação entre consumidores e empresas de assistência técnica. O site terá como propósito principal reunir empresas e profissionais reconhecidos no segmento, permitindo que consumidores encontrem facilmente serviços de qualidade. Além disso, busca-se aumentar a visibilidade e alcance das empresas participantes, proporcionando benefícios para ambos os lados do mercado.
+
+![alt text](codigo-fonte/css/Frame.png)
 
 ## Integrantes
 
