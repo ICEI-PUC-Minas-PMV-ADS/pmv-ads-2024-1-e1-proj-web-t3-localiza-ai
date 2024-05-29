@@ -18,13 +18,9 @@ RF-06	O sistema deve pedir para o cliente mencionar sua localidade, o problema e
 
 #### Artefatos da funcionalidade
 
-[Adicione os nomes dos arquivos relacionados ao desenvolvimento da funcionalidade]
-
-
-#### Estrutura de Dados
-
-[Caso exista estrutura de dados, adicione aqui]
-
+index.html
+style.css
+api.js
 
 #### Instruções de acesso
 
