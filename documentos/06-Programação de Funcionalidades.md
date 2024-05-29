@@ -9,7 +9,7 @@ também é apresentado ao navegar por 'Pagina inicial, Sobre, Entre contato e Mi
 
 ![Landing page](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/blob/main/documentos/img/Captura%20de%20Tela%20(72).png)
 
-
+![Landing page]
 
 #### Requisito atendido
 
