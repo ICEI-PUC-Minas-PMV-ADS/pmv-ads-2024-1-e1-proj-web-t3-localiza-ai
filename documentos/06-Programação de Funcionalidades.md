@@ -13,7 +13,7 @@ também é apresentado ao navegar por 'Pagina inicial, Sobre, Entre contato e Mi
 
 #### Requisito atendido
 
-[RF-X: adicione a descrição do requisito atendido]
+RF-06	O sistema deve pedir para o cliente mencionar sua localidade, o problema e qual tipo de aparelho e sistema para ser resolvido.
 
 
 #### Artefatos da funcionalidade
