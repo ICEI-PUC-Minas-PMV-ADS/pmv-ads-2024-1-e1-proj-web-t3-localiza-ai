@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Modelo de painel de controle, inspirado no Framework Bootstrap">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Localiza.Ai - Editar Serviços</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/mdi.min.css">
+    <link href="../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link href="../../dist/css/style.min.css" rel="stylesheet">
+    <style>
+        .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+            color: #495057;
+            background-color: #fff;
+            border-color: #dee2e6 #dee2e6 #fff;
+        }
+        label {
+            margin-left: 10px; /* Ajuste a margem conforme necessário */
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .checkbox-container input {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-wrapper" data-navbarbg="skin6" data-theme="light" data-layout="vertical" data-sidebartype="full" data-boxed-layout="full">
+        <header class="topbar" data-navbarbg="skin6">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <div class="navbar-header" data-logobg="skin5">
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)">
+                        <i class="ti-menu ti-close"></i>
+                    </a>
+                    <div class="navbar-brand">
+                        <a href="index.html" class="logo">
+                            <span class="logo-text">
+                                <img src="../../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                                <img src="../../assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin6">
+                    <ul class="navbar-nav float-start me-auto">
+                        <li class="nav-item search-box">
+                            <a class="nav-link waves-effect waves-dark" href="javascript:void(0)">
+                                <div class="d-flex align-items-center">
+                                    <i class="mdi mdi-magnify font-20 me-1"></i>
+                                    <div class="ms-1 d-none d-sm-block">
+                                        <span>Pesquise aqui</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <form class="app-search position-absolute">
+                                <input type="text" class="form-control" placeholder="Digite serviços, orçamentos e muito mais">
+                                <a class="srh-btn"><i class="ti-close"></i></a>
+                            </form>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav float-end">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="40">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user me-1 ms-1"></i> Status: Online</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user me-1 ms-1"></i> Configurações de conta</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user me-1 ms-1"></i> Feedback</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user me-1 ms-1"></i> Logout</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="left-sidebar" data-sidebarbg="skin5">
+            <div class="scroll-sidebar">
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.html">
+                                <i class="mdi mdi-home"></i>
+                                <span class="hide-menu">Página Inicial</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="inbox.html">
+                                <i class="mdi mdi-android-messages"></i>
+                                <span class="hide-menu">Inbox</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link active" href="servicos.html">
+                                <i class="mdi mdi-window-shutter-settings"></i>
+                                <span class="hide-menu">Serviços</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="orcamentos.html">
+                                <i class="mdi mdi-currency-usd"></i>
+                                <span class="hide-menu">Orçamentos</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="clientes.html">
+                                <i class="mdi mdi-account-group-outline"></i>
+                                <span class="hide-menu">Clientes</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="ajuda.html">
+                                <i class="mdi mdi-account-question"></i>
+                                <span class="hide-menu">Central de Ajuda</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="configuracoes.html">
+                                <i class="mdi mdi-cog-outline"></i>
+                                <span class="hide-menu">Configurações</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <div class="page-wrapper">
+            <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-5 align-self-center">
+                        <h4 class="page-title">Editar Serviços</h4>
+                    </div>
+                    <div class="col-7 align-self-center">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Página Inicial</a></li>
+                                    <li class="breadcrumb-item"><a href="servicos.html">Serviços</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Editar Serviços</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Editar serviços</h4>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="celulares-tab" data-bs-toggle="tab" href="#celulares" role="tab" aria-controls="celulares" aria-selected="true">Celulares e Smartphones</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="iphone-tab" data-bs-toggle="tab" href="#iphone" role="tab" aria-controls="iphone" aria-selected="false">iPhone</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="smartwatch-tab" data-bs-toggle="tab" href="#smartwatch" role="tab" aria-controls="smartwatch" aria-selected="false">Smartwatch</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="tablet-tab" data-bs-toggle="tab" href="#tablet" role="tab" aria-controls="tablet" aria-selected="false">Tablet & iPad</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="computadores-tab" data-bs-toggle="tab" href="#computadores" role="tab" aria-controls="computadores" aria-selected="false">Computadores e Notebooks</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="perifericos-tab" data-bs-toggle="tab" href="#perifericos" role="tab" aria-controls="perifericos" aria-selected="false">Periféricos</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="celulares" role="tabpanel" aria-labelledby="celulares-tab">
+                                <div class="p-4">
+                                    <!-- Conteúdo da aba Celulares e Smartphones -->
+                                    <div class="checkbox-container"><input type="checkbox" id="service1"><label for="service1">Conserto de celular que não liga</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service2"><label for="service2">Reparo de smartphone travando</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service3"><label for="service3">Conserto de celular aquecendo</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service4"><label for="service4">Conserto de celular que não carrega</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service5"><label for="service5">Reparo de celular com problemas no áudio/microfone</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service6"><label for="service6">Conserto de celular com problemas no Wi-Fi/Bluetooth/GPS</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service7"><label for="service7">Conserto de celular com vírus</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service8"><label for="service8">Conserto de celular que não reconhece o chip SIM</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service9"><label for="service9">Conserto de celular com problemas na placa mãe</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service10"><label for="service10">Conserto de celular com problemas nos sensores (proximidade/luz/impressão digital)</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service11"><label for="service11">Conserto de celular com problemas na vibração</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service12"><label for="service12">Conserto de celular com problemas no botão de ligar/desligar</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service13"><label for="service13">Conserto de celular com problemas na tela (piscando/preta/branca/azul)</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service14"><label for="service14">Conserto de celular com problemas de drenagem de bateria/lentidão</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service15"><label for="service15">Conserto de celular com problemas na memória (interna/RAM)</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service16"><label for="service16">Conserto de celular com problemas no sistema operacional</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service17"><label for="service17">Assistência técnica para celular</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service18"><label for="service18">Troca de tela/bateria de celular</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service19"><label for="service19">Reparo de touch screen/tela quebrada de celular</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service20"><label for="service20">Conserto de câmera de smartphone</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service21"><label for="service21">Conserto de botão de volume/home de celular</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service22"><label for="service22">Atualização de software para celular</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service23"><label for="service23">Configuração de celular após o conserto</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service24"><label for="service24">Desbloqueio de celular</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service25"><label for="service25">Troca de carcaça de celular</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service26"><label for="service26">Conserto de celular com problemas na antena</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service27"><label for="service27">Conserto de celular com problemas na entrada de fone de ouvido/USB</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service28"><label for="service28">Troca de bateria inchada de celular</label></div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="iphone" role="tabpanel" aria-labelledby="iphone-tab">
+                                <div class="p-4">
+                                    <!-- Conteúdo da aba iPhone -->
+                                    <div class="checkbox-container"><input type="checkbox" id="service29"><label for="service29">Conserto de iPhone que não liga</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service30"><label for="service30">Reparo de iPhone travando</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service31"><label for="service31">Conserto de iPhone aquecendo</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service32"><label for="service32">Conserto de iPhone que não carrega</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service33"><label for="service33">Reparo de iPhone com problemas no áudio/microfone</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service34"><label for="service34">Troca de conector de carga de iPhone</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service35"><label for="service35">Reparo de iPhone com problemas no alto-falante</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service36"><label for="service36">Conserto de iPhone com problemas no Wi-Fi/Bluetooth/GPS</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service37"><label for="service37">Conserto de iPhone com vírus</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service38"><label for="service38">Atualização de software para iPhone</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service39"><label for="service39">Configuração de iPhone após o conserto</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service40"><label for="service40">Desbloqueio de iPhone</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service41"><label for="service41">Troca de carcaça de iPhone</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service42"><label for="service42">Conserto de iPhone que não reconhece o chip SIM</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service43"><label for="service43">Reparo de iPhone com problemas na antena</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service44"><label for="service44">Conserto de iPhone com problemas na placa mãe</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service45"><label for="service45">Reparo de iPhone com problemas na entrada de fone de ouvido/USB</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service46"><label for="service46">Conserto de iPhone com problemas nos sensores (proximidade/luz/impressão digital)</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service47"><label for="service47">Troca de bateria inchada de iPhone</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service48"><label for="service48">Conserto de iPhone com problemas no botão de ligar/desligar/volume/home</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service49"><label for="service49">Reparo de iPhone com problemas na tela (piscando/preta/branca/azul)</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service50"><label for="service50">Conserto de iPhone com problemas de drenagem de bateria/lentidão</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service51"><label for="service51">Reparo de iPhone com problemas na atualização de aplicativos</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service52"><label for="service52">Conserto de iPhone com problemas na memória (interna/RAM)</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service53"><label for="service53">Conserto de iPhone com problemas no sistema operacional</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service54"><label for="service54">Troca de placa de circuito de iPhone</label></div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="smartwatch" role="tabpanel" aria-labelledby="smartwatch-tab">
+                                <div class="p-4">
+                                    <!-- Conteúdo da aba Smartwatch -->
+                                    <div class="checkbox-container"><input type="checkbox" id="service55"><label for="service55">Conserto de smartwatch que não liga</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service56"><label for="service56">Reparo de smartwatch com problemas no Bluetooth/carregamento</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service57"><label for="service57">Conserto de smartwatch com problemas no GPS/sensor de luz ambiente</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service58"><label for="service58">Conserto de smartwatch com problemas na resistência à água/monitor de sono</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service59"><label for="service59">Conserto de smartwatch com problemas na sincronização de notificações</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service60"><label for="service60">Reparo de smartwatch com problemas no sistema operacional/memória interna</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service61"><label for="service61">Assistência técnica para smartwatch</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service62"><label for="service62">Troca de tela/bateria/pulseira de smartwatch</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service63"><label for="service63">Reparo de tela quebrada de smartwatch</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service64"><label for="service64">Conserto de botões de smartwatch</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service65"><label for="service65">Reparo de pulseira de smartwatch</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service66"><label for="service66">Conserto de sensor de frequência cardíaca de smartwatch</label></div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tablet" role="tabpanel" aria-labelledby="tablet-tab">
+                                <div class="p-4">
+                                    <!-- Conteúdo da aba Tablet & iPad -->
+                                    <div class="checkbox-container"><input type="checkbox" id="service67"><label for="service67">Conserto de tablet/iPad que não liga</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service68"><label for="service68">Reparo de tablet/iPad travando/aquecendo</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service69"><label for="service69">Conserto de tablet/iPad que não carrega</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service70"><label for="service70">Reparo de tablet/iPad com problemas no touch screen/áudio/microfone/alto-falante</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service71"><label for="service71">Conserto de tablet/iPad com problemas no Wi-Fi/Bluetooth/GPS/câmera</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service72"><label for="service72">Conserto de tablet/iPad com vírus</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service73"><label for="service73">Atualização de software para tablet/iPad</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service74"><label for="service74">Configuração de tablet/iPad após o conserto</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service75"><label for="service75">Desbloqueio de tablet/iPad</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service76"><label for="service76">Troca de carcaça de tablet/iPad</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service77"><label for="service77">Reparo de tablet/iPad que não reconhece o chip SIM</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service78"><label for="service78">Conserto de tablet/iPad com problemas na antena/placa mãe</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service79"><label for="service79">Reparo de tablet/iPad com problemas na entrada de fone de ouvido/USB</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service80"><label for="service80">Assistência técnica para tablet/iPad</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service81"><label for="service81">Troca de tela/bateria de tablet/iPad</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service82"><label for="service82">Reparo de tela quebrada de tablet/iPad</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service83"><label for="service83">Conserto de tablet/iPad com tela rachada</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service84"><label for="service84">Reparo de tablet molhado</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service85"><label for="service85">Conserto de iPad com problemas no botão de início</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service86"><label for="service86">Troca de placa lógica de iPad</label></div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="computadores" role="tabpanel" aria-labelledby="computadores-tab">
+                                <div class="p-4">
+                                    <!-- Conteúdo da aba Computadores e Notebooks -->
+                                    <div class="checkbox-container"><input type="checkbox" id="service102"><label for="service102">Conserto de computador/notebook</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service103"><label for="service103">Reparo de computador/notebook molhado/travando</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service104"><label for="service104">Reparo de computador/notebook que não liga</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service105"><label for="service105">Reparo de computador/notebook com problemas no áudio/Wi-Fi/placa-mãe</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service106"><label for="service106">Reparo de computador/notebook com vírus ou ransomware</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service107"><label for="service107">Atualização de software para computador/notebook</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service108"><label for="service108">Montagem de computadores/notebooks</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service109"><label for="service109">Troca de fonte de alimentação de computador/notebook</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service110"><label for="service110">Reparo de computador/notebook com problemas de superaquecimento/lentidão</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service111"><label for="service111">Reparo de computador/notebook com problemas no sistema operacional</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service112"><label for="service112">Troca de memória RAM em computador/notebook</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service113"><label for="service113">Instalação de sistema operacional (Linux/Windows)</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service114"><label for="service114">Montagem de Hackintosh</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service115"><label for="service115">Manutenção de servidor (rack/torre/rugged/modular/especializado)</label></div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="perifericos" role="tabpanel" aria-labelledby="perifericos-tab">
+                                <div class="p-4">
+                                    <!-- Conteúdo da aba Periféricos -->
+                                    <div class="checkbox-container"><input type="checkbox" id="service87"><label for="service87">Substituição de cabos danificados (fone de ouvido)</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service88"><label for="service88">Reparo ou substituição de alto-falantes ou microfone (fone de ouvido)</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service89"><label for="service89">Fixação de problemas de conexão, como conectores soltos (fone de ouvido)</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service90"><label for="service90">Reparo de problemas de áudio, como ruídos ou falta de som (fone de ouvido)</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service91"><label for="service91">Substituição de almofadas de ouvido desgastadas (fone de ouvido)</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service92"><label for="service92">Limpeza interna para remover poeira e sujeira que possam afetar o desempenho (mouse)</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service93"><label for="service93">Substituição ou reparo de botões quebrados ou com falhas (mouse)</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service94"><label for="service94">Reparo ou substituição de roda de rolagem danificada (mouse)</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service95"><label for="service95">Fixação de problemas de conexão, como conexões USB soltas (mouse)</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service96"><label for="service96">Resolução de problemas de rastreamento ou sensibilidade inadequada (mouse)</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service97"><label for="service97">Correção de pixels mortos ou presos (monitor, se possível)</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service98"><label for="service98">Reparo de problemas de retroiluminação, como luzes LED queimadas (monitor)</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service99"><label for="service99">Solução de problemas de exibição, como linhas verticais ou horizontais (monitor)</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service100"><label for="service100">Substituição de conectores danificados, como HDMI ou DisplayPort (monitor)</label></div>
+                                    <div class="checkbox-container"><input type="checkbox" id="service101"><label for="service101">Calibração de cores e ajuste de configurações para melhorar a qualidade da imagem (monitor)</label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end mt-3">
+                            <button onclick="location.href='servicos.html'" class="btn btn-primary">Concluído</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer text-center">
+                Todos os direitos reservados a Equipe 2 (Alanis, Felipe, Lucas e Tais). Projetado e desenvolvido por
+                <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai">Localiza.Ai (Github)</a>.
+            </footer>
+        </div>
+    </div>
+    <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/extra-libs/sparkline/sparkline.js"></script>
+    <script src="../../dist/js/waves.js"></script>
+    <script src="../../dist/js/sidebarmenu.js"></script>
+    <script src="../../dist/js/custom.min.js"></script>
+</body>
+</html>

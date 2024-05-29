@@ -10,10 +10,10 @@ A metodologia ágil escolhida para o desenvolvimento deste projeto foi o SCRUM, 
 ### Divisão de Papéis
 
 A equipe utiliza o Scrum como base para definição do processo de desenvolvimento, a equipe foi organizada da seguinte maneira: 
-- Scrum Master: Lucas Rocha
-- Product Owner: Tais Rocha
-- Equipe de Desenvolvimento: Alanis Tavares, Felipe Oliveira, Lucas Rocha e Tais Rocha
-- Equipe de Design: Alanis Tavares, Felipe Olieveira, Lucas Rocha e Tais Rocha
+- Scrum Master: [Lucas de Araújo](https://github.com/lucas-arl)
+- Product Owner: [Tais Rocha](https://github.com/taisrochan)
+- Equipe de Desenvolvimento: [Alanis Graciele](https://github.com/alanis-tavares), [Felipe Oliveira](https://github.com/Felipe0liveira14), [Lucas de Araújo](https://github.com/lucas-arl), [Tais Rocha](https://github.com/taisrochan)
+- Equipe de Design: [Alanis Graciele](https://github.com/alanis-tavares), [Felipe Oliveira](https://github.com/Felipe0liveira14), [Lucas de Araújo](https://github.com/lucas-arl), [Tais Rocha](https://github.com/taisrochan)
 
 ### Processo
 
