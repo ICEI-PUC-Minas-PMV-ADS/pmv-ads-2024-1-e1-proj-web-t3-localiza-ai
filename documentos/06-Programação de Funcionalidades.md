@@ -24,13 +24,12 @@ RF-06	O sistema deve pedir para o cliente mencionar sua localidade, o problema e
 
 #### Instruções de acesso
 
-1. Abra um navegador de Internet e informe a seguinte URL: https://%3A%2F%2F127.0.0.1%3A5500%2Findex.html%23
-2. A landig page é a unica exibida na tela pode testar as devidas funcionalidades citadas acima liberadas.
+[vai ser feito]
 
 
 #### Responsável
 
-[Adicione nome do responsável pelo desenvolvimento da funcionalidade]
+[Felipe F. Oliveira]
 
 
 
