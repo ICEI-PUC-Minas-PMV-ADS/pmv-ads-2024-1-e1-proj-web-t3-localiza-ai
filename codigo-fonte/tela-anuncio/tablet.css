@@ -9,22 +9,22 @@ header {
     display: none;
 }
 
-header > nav ul {
+header > menu > nav ul {
     list-style-type: none;
 }
 
-header > nav ul li {
+header > menu > nav ul li {
     display: inline;
 }
 
-header > nav a {
+header > menu > nav a {
     color: black;
     text-decoration: none;
     padding: 25px;
     display: inline-block;
 }
 
-header > nav a:hover {
+header > menu > nav a:hover {
     color: var(--azul3);
 }
 
@@ -49,14 +49,14 @@ header > nav a:hover {
 
 
 /*PRINCIPAL*/
-div#nome-empresa {
-    margin-left: 100px;
+#nome-empresa {
+    margin: auto;
 }
 
 #principal {
     display: flex;
     flex-direction: column;
-    
+     
 }
 
 #anuncio {
