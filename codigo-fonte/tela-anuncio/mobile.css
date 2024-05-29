@@ -20,8 +20,8 @@ header {
 header > menu {
     display: flex;
     justify-content: flex-end;
-    width: 100%
-
+    width: 100%;
+    max-width: 300px;
 }
 
 header nav {
@@ -37,6 +37,7 @@ header > menu > nav a {
     background-color: #2fc4de38;
     color: black;
     text-decoration: none;
+    text-align: center;
     padding: 5px;
     border-top: 2px solid white;
     display: block;
