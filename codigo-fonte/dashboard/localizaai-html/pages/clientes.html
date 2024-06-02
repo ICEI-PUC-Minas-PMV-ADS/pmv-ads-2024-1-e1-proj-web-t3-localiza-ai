@@ -42,9 +42,7 @@
                             </a>
                             <form class="app-search position-absolute">
                                 <input type="text" class="form-control" placeholder="Digite serviços, orçamentos e muito mais">
-                                <a class="srh-btn">
-                                    <i class="ti-close"></i>
-                                </a>
+                                <a class="srh-btn"><i class="ti-close"></i></a>
                             </form>
                         </li>
                     </ul>
@@ -93,7 +91,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="clientes.html" aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link active" href="clientes.html" aria-expanded="false">
                                 <i class="mdi mdi-contacts"></i>
                                 <span class="hide-menu">Clientes</span>
                             </a>
@@ -139,160 +137,10 @@
                             <div class="card-body">
                                 <h4 class="card-title">Lista de Clientes</h4>
                                 <div class="d-flex justify-content-end mb-3">
-                                    <button class="btn btn-primary me-0">Filtros</button>
+                                    <button class="btn btn-primary" onclick="showCreateForm()">Criar Contato</button>
                                 </div>
-                                <div class="row">
-                                    <!-- Cliente 1 -->
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="card border">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <img src="../../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="50">
-                                                    <div class="ms-3">
-                                                        <h5 class="mb-0">Alanis Graciele</h5>
-                                                        <p class="text-muted mb-0">Belo Horizonte, Minas Gerais</p>
-                                                        <p class="text-muted mb-0">Telefone : (085) 91234-5678</p>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex justify-content-between">
-                                                    <button class="btn btn-sm btn-outline-primary">Pós-venda</button>
-                                                    <button class="btn btn-sm btn-outline-secondary">Ordens de Serviços</button>
-                                                    <button class="btn btn-sm btn-outline-danger">Excluir</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Cliente 2 -->
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="card border">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <img src="../../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="50">
-                                                    <div class="ms-3">
-                                                        <h5 class="mb-0">Felipe Oliveira</h5>
-                                                        <p class="text-muted mb-0">São Paulo, São Paulo</p>
-                                                        <p class="text-muted mb-0">Telefone : (085) 91234-5678</p>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex justify-content-between">
-                                                    <button class="btn btn-sm btn-outline-primary">Pós-venda</button>
-                                                    <button class="btn btn-sm btn-outline-secondary">Ordens de Serviços</button>
-                                                    <button class="btn btn-sm btn-outline-danger">Excluir</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Cliente 3 -->
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="card border">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <img src="../../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="50">
-                                                    <div class="ms-3">
-                                                        <h5 class="mb-0">Lucas Rocha</h5>
-                                                        <p class="text-muted mb-0">Fortaleza, Ceará</p>
-                                                        <p class="text-muted mb-0">Telefone : (085) 91234-5678</p>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex justify-content-between">
-                                                    <button class="btn btn-sm btn-outline-primary">Pós-venda</button>
-                                                    <button class="btn btn-sm btn-outline-secondary">Ordens de Serviços</button>
-                                                    <button class="btn btn-sm btn-outline-danger">Excluir</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Cliente 4 -->
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="card border">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <img src="../../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="50">
-                                                    <div class="ms-3">
-                                                        <h5 class="mb-0">Sarah Yasmim</h5>
-                                                        <p class="text-muted mb-0">Fortaleza, Ceará</p>
-                                                        <p class="text-muted mb-0">Telefone : (085) 91234-5678</p>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex justify-content-between">
-                                                    <button class="btn btn-sm btn-outline-primary">Pós-venda</button>
-                                                    <button class="btn btn-sm btn-outline-secondary">Ordens de Serviços</button>
-                                                    <button class="btn btn-sm btn-outline-danger">Excluir</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Cliente 5 -->
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="card border">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <img src="../../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="50">
-                                                    <div class="ms-3">
-                                                        <h5 class="mb-0">Simone Alves</h5>
-                                                        <p class="text-muted mb-0">Belo Horizonte, Minas Gerais</p>
-                                                        <p class="text-muted mb-0">Telefone : (085) 91234-5678</p>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex justify-content-between">
-                                                    <button class="btn btn-sm btn-outline-primary">Pós-venda</button>
-                                                    <button class="btn btn-sm btn-outline-secondary">Ordens de Serviços</button>
-                                                    <button class="btn btn-sm btn-outline-danger">Excluir</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Cliente 6 -->
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="card border">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <img src="../../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="50">
-                                                    <div class="ms-3">
-                                                        <h5 class="mb-0">Beatriz Magalhães</h5>
-                                                        <p class="text-muted mb-0">Fortaleza, Ceará</p>
-                                                        <p class="text-muted mb-0">Telefone : (085) 91234-5678</p>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex justify-content-between">
-                                                    <button class="btn btn-sm btn-outline-primary">Pós-venda</button>
-                                                    <button class="btn btn-sm btn-outline-secondary">Ordens de Serviços</button>
-                                                    <button class="btn btn-sm btn-outline-danger">Excluir</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Cliente 7 -->
-                                    <div class="col-md-6 col-lg-4">
-                                        <div class="card border">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <img src="../../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="50">
-                                                    <div class="ms-3">
-                                                        <h5 class="mb-0">Tais Rocha</h5>
-                                                        <p class="text-muted mb-0">Belo Horizonte, Minas Gerais</p>
-                                                        <p class="text-muted mb-0">Telefone : (085) 91234-5678</p>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex justify-content-between">
-                                                    <button class="btn btn-sm btn-outline-primary">Pós-venda</button>
-                                                    <button class="btn btn-sm btn-outline-secondary">Ordens de Serviços</button>
-                                                    <button class="btn btn-sm btn-outline-danger">Excluir</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-center mt-3">
-                                    <nav aria-label="Page navigation example">
-                                        <ul class="pagination">
-                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                        </ul>
-                                    </nav>
+                                <div class="row" id="clientsList">
+                                    <!-- Lista de clientes será preenchida aqui -->
                                 </div>
                             </div>
                         </div>
@@ -305,11 +153,153 @@
             </footer>
         </div>
     </div>
-    <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
-    <script src="../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../assets/extra-libs/sparkline/sparkline.js"></script>
-    <script src="../../dist/js/waves.js"></script>
-    <script src="../../dist/js/sidebarmenu.js"></script>
-    <script src="../../dist/js/custom.min.js"></script>
+    <div id="createClientModal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeCreateForm()">&times;</span>
+            <h2>Criar Novo Contato</h2>
+            <form id="clientForm">
+                <div class="form-group">
+                    <label for="fullName">Nome Completo</label>
+                    <input type="text" class="form-control" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Endereço</label>
+                    <input type="text" class="form-control" id="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone</label>
+                    <input type="text" class="form-control" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderNumber">Número de O.S</label>
+                    <input type="text" class="form-control" id="orderNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="otherInfo">Outras Informações</label>
+                    <textarea class="form-control" id="otherInfo" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
+        </div>
+    </div>
+    <style>
+        #createClientModal {
+            position: fixed;
+            z-index: 1;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            loadClients();
+            document.getElementById("clientForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                saveClient();
+            });
+        });
+
+        function showCreateForm() {
+            document.getElementById("createClientModal").style.display = "block";
+        }
+
+        function closeCreateForm() {
+            document.getElementById("createClientModal").style.display = "none";
+        }
+
+        function saveClient() {
+            const fullName = document.getElementById("fullName").value;
+            const address = document.getElementById("address").value;
+            const phone = document.getElementById("phone").value;
+            const orderNumber = document.getElementById("orderNumber").value;
+            const otherInfo = document.getElementById("otherInfo").value;
+
+            const client = {
+                fullName,
+                address,
+                phone,
+                orderNumber,
+                otherInfo
+            };
+
+            let clients = localStorage.getItem("clients");
+            if (clients) {
+                clients = JSON.parse(clients);
+            } else {
+                clients = [];
+            }
+            clients.push(client);
+            localStorage.setItem("clients", JSON.stringify(clients));
+            closeCreateForm();
+            loadClients();
+        }
+
+        function loadClients() {
+            const clientsList = document.getElementById("clientsList");
+            clientsList.innerHTML = "";
+            let clients = localStorage.getItem("clients");
+            if (clients) {
+                clients = JSON.parse(clients);
+                clients.forEach((client, index) => {
+                    const clientCard = document.createElement("div");
+                    clientCard.className = "col-md-6 col-lg-4";
+                    clientCard.innerHTML = `
+                        <div class="card border">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="ms-3">
+                                        <h5 class="mb-0">${client.fullName}</h5>
+                                        <p class="text-muted mb-0">${client.address}</p>
+                                        <p class="text-muted mb-0">Telefone : ${client.phone}</p>
+                                        <p class="text-muted mb-0">Número de O.S : ${client.orderNumber}</p>
+                                        <p class="text-muted mb-0">${client.otherInfo}</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-sm btn-outline-danger" onclick="deleteClient(${index})">Excluir</button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    clientsList.appendChild(clientCard);
+                });
+            }
+        }
+
+        function deleteClient(index) {
+            let clients = localStorage.getItem("clients");
+            if (clients) {
+                clients = JSON.parse(clients);
+                clients.splice(index, 1);
+                localStorage.setItem("clients", JSON.stringify(clients));
+                loadClients();
+            }
+        }
+    </script>
 </body>
 </html>
