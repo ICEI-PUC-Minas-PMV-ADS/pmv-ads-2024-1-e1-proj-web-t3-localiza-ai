@@ -200,7 +200,6 @@
                                         </tr>
                                     </thead>
                                     <tbody id="referencias">
-                                        <!-- Linhas serão preenchidas dinamicamente -->
                                     </tbody>
                                 </table>
                             </div>
@@ -267,110 +266,12 @@
                             <div class="card-body">
                                 <h4 class="card-title">Central de Mensagens</h4>
                             </div>
-                            <div class="comment-widgets" style="height:430px;">
-                                <!-- Linha de comentários -->
-                                <div class="d-flex flex-row comment-row mt-0">
-                                    <div class="p-2">
-                                        <img src="../../assets/images/users/1.jpg" alt="user" width="50" class="rounded-circle">
-                                    </div>
-                                    <div class="comment-text w-100">
-                                        <h6 class="font-medium">Alanis Graciele</h6>
-                                        <span class="mb-3 d-block">Lorem Ipsum is simply dummy text of the printing and type setting industry.</span>
-                                        <div class="comment-footer">
-                                            <span class="text-muted float-end">07 de Abril de 2024</span>
-                                            <span class="label label-rounded label-primary">Pendente</span>
-                                            <span class="action-icons">
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-pencil-alt"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-check"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-heart"></i>
-                                                </a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Linha de comentários -->
-                                <div class="d-flex flex-row comment-row">
-                                    <div class="p-2">
-                                        <img src="../../assets/images/users/1.jpg" alt="user" width="50" class="rounded-circle">
-                                    </div>
-                                    <div class="comment-text active w-100">
-                                        <h6 class="font-medium">Felipe Oliveira</h6>
-                                        <span class="mb-3 d-block">Lorem Ipsum is simply dummy text of the printing and type setting industry.</span>
-                                        <div class="comment-footer">
-                                            <span class="text-muted float-end">07 de Abril de 2024</span>
-                                            <span class="label label-success label-rounded">Aprovado</span>
-                                            <span class="action-icons active">
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-pencil-alt"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="icon-close"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-heart text-danger"></i>
-                                                </a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Linha de comentários -->
-                                <div class="d-flex flex-row comment-row">
-                                    <div class="p-2">
-                                        <img src="../../assets/images/users/1.jpg" alt="user" width="50" class="rounded-circle">
-                                    </div>
-                                    <div class="comment-text w-100">
-                                        <h6 class="font-medium">Lucas de Araújo</h6>
-                                        <span class="mb-3 d-block">Lorem Ipsum is simply dummy text of the printing and type setting industry.</span>
-                                        <div class="comment-footer">
-                                            <span class="text-muted float-end">07 de Abril de 2024</span>
-                                            <span class="label label-rounded label-danger">Urgente</span>
-                                            <span class="action-icons">
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-pencil-alt"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-check"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-heart"></i>
-                                                </a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Linha de comentários -->
-                                <div class="d-flex flex-row comment-row mt-0">
-                                    <div class="p-2">
-                                        <img src="../../assets/images/users/1.jpg" alt="user" width="50" class="rounded-circle">
-                                    </div>
-                                    <div class="comment-text w-100">
-                                        <h6 class="font-medium">Tais Rocha</h6>
-                                        <span class="mb-3 d-block">Lorem Ipsum is simply dummy text of the printing and type setting industry.</span>
-                                        <div class="comment-footer">
-                                            <span class="text-muted float-end">07 de Abril de 2024</span>
-                                            <span class="label label-rounded label-primary">Pendente</span>
-                                            <span class="action-icons">
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-pencil-alt"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-check"></i>
-                                                </a>
-                                                <a href="javascript:void(0)">
-                                                    <i class="ti-heart"></i>
-                                                </a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="comment-widgets" style="height:430px;" id="central-mensagens">
+                                <!-- Conteúdo será preenchido dinamicamente -->
                             </div>
                         </div>
                     </div>
+                    <!-- column -->
                     <div class="col-lg-6">
                         <div class="card">
                             <div class="card-body">
@@ -458,6 +359,27 @@
                         referenciasHtml += '</tr>';
                     });
                     $('#referencias').html(referenciasHtml);
+
+                    // Atualizar central de mensagens
+                    var mensagens = data.mensagens;
+                    var mensagensHtml = '';
+                    mensagens.forEach(function(mensagem) {
+                        mensagensHtml += '<div class="d-flex flex-row comment-row mt-0">';
+                        mensagensHtml += '<div class="p-2"><img src="../../assets/images/users/1.jpg" alt="user" width="50" class="rounded-circle"></div>';
+                        mensagensHtml += '<div class="comment-text w-100">';
+                        mensagensHtml += '<h6 class="font-medium">' + mensagem.usuario + '</h6>';
+                        mensagensHtml += '<span class="mb-3 d-block">' + mensagem.texto + '</span>';
+                        mensagensHtml += '<div class="comment-footer">';
+                        mensagensHtml += '<span class="text-muted float-end">' + mensagem.data + '</span>';
+                        mensagensHtml += '<span class="label label-rounded label-primary">' + mensagem.status + '</span>';
+                        mensagensHtml += '<span class="action-icons">';
+                        mensagensHtml += '<a href="javascript:void(0)"><i class="ti-pencil-alt"></i></a>';
+                        mensagensHtml += '<a href="javascript:void(0)"><i class="ti-check"></i></a>';
+                        mensagensHtml += '<a href="javascript:void(0)"><i class="ti-heart"></i></a>';
+                        mensagensHtml += '</span>';
+                        mensagensHtml += '</div></div></div>';
+                    });
+                    $('#central-mensagens').html(mensagensHtml);
                 }
             });
         }

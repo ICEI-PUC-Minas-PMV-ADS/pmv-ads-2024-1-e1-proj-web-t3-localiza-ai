@@ -6,37 +6,27 @@ $response = array();
 
 // Consultas para buscar os dados do banco de dados
 
-// Exemplo de consulta para visualizações da empresa
-$sql = "SELECT COUNT(*) as visualizacoes FROM visualizacoes_empresa";
+// Consulta para visualizações, cliques e taxas de conversão
+$sql = "SELECT local, 
+               SUM(visualizacoes) AS total_visualizacoes, 
+               SUM(clicks) AS total_clicks, 
+               (SUM(clicks) / SUM(visualizacoes)) * 100 AS taxa_conversao 
+        FROM visualizacoes 
+        GROUP BY local";
 $result = $conn->query($sql);
-$row = $result->fetch_assoc();
-$response['visualizacoes_empresa'] = $row['visualizacoes'];
 
-// Exemplo de consulta para novos clientes
-$sql = "SELECT COUNT(*) as novos_clientes FROM clientes WHERE created_at > NOW() - INTERVAL 1 DAY";
-$result = $conn->query($sql);
-$row = $result->fetch_assoc();
-$response['novos_clientes'] = $row['novos_clientes'];
+$referencias = array();
 
-// Exemplo de consulta para orçamentos aprovados
-$sql = "SELECT COUNT(*) as orcamentos_aprovados FROM orcamentos WHERE status = 'aprovado'";
-$result = $conn->query($sql);
-$row = $result->fetch_assoc();
-$response['orcamentos_aprovados'] = $row['orcamentos_aprovados];
+while ($row = $result->fetch_assoc()) {
+    $referencias[] = array(
+        'local' => $row['local'],
+        'total_visualizacoes' => $row['total_visualizacoes'],
+        'total_clicks' => $row['total_clicks'],
+        'taxa_conversao' => $row['taxa_conversao']
+    );
+}
 
-// Exemplo de consulta para equipamentos em reparo
-$sql = "SELECT COUNT(*) as equipamentos_reparo FROM equipamentos WHERE status = 'em reparo'";
-$result = $conn->query($sql);
-$row = $result->fetch_assoc();
-$response['equipamentos_reparo'] = $row['equipamentos_reparo'];
-
-// Dados do gráfico de estatísticas
-$response['estatisticas'] = array(
-    'labels' => ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
-    'series' => [
-        [5, 10, 15, 20, 25, 30] // Substitua por dados reais
-    ]
-);
+$response['referencias'] = $referencias;
 
 // Enviar a resposta como JSON
 echo json_encode($response);

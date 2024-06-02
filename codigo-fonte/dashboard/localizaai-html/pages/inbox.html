@@ -179,16 +179,6 @@
                                         </div>
                                     </div>
                                     <div id="userList">
-                                        <a href="#" class="list-group-item list-group-item-action border-0">
-                                            <div class="badge bg-success float-right">5</div>
-                                            <div class="d-flex align-items-start">
-                                                <img src="../../assets/images/users/1.jpg" class="rounded-circle mr-1" alt="Lucas Rocha" width="40" height="40">
-                                                <div class="flex-grow-1 ml-3">
-                                                    Lucas Rocha
-                                                    <div class="small"><span class="fas fa-circle chat-online"></span> Online</div>
-                                                </div>
-                                            </div>
-                                        </a>
                                     </div>
                                     <hr class="d-block d-lg-none mt-1 mb-0">
                                 </div>
@@ -196,11 +186,11 @@
                                     <div class="py-2 px-4 border-bottom d-none d-lg-block">
                                         <div class="d-flex align-items-center py-1">
                                             <div class="position-relative">
-                                                <img src="../../assets/images/users/1.jpg" class="rounded-circle mr-1" alt="Lucas Rocha" width="40" height="40">
+                                                <img src="../../assets/images/users/1.jpg" class="rounded-circle mr-1" alt="User" width="40" height="40">
                                             </div>
                                             <div class="flex-grow-1 pl-3">
-                                                <strong>Lucas Rocha</strong>
-                                                <div class="text-muted small"><em>Digitando...</em></div>
+                                                <strong id="chatUser">Usuário</strong>
+                                                <div class="text-muted small"><em id="chatStatus">Status</em></div>
                                             </div>
                                             <div>
                                                 <button class="btn btn-light border btn-lg px-3">
@@ -215,16 +205,6 @@
                                     </div>
                                     <div class="position-relative">
                                         <div class="chat-messages p-4" id="chatMessages">
-                                            <div class="chat-message-right pb-4">
-                                                <div>
-                                                    <img src="../../assets/images/users/1.jpg" class="rounded-circle mr-1" alt="Chris Wood" width="40" height="40">
-                                                    <div class="text-muted small text-nowrap mt-2">12:30</div>
-                                                </div>
-                                                <div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
-                                                    <div class="font-weight-bold mb-1">Lucas Rocha</div>
-                                                    Lorem ipsum dolor sit amet, vis erat denique in, dicunt prodesset te vix.
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="flex-grow-0 py-3 px-4 border-top">
@@ -255,47 +235,79 @@
     <script src="../../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
     <script src="../../dist/js/pages/dashboards/dashboard1.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("sendButton").addEventListener("click", function() {
+        $(document).ready(function() {
+            function fetchMessages() {
+                $.ajax({
+                    url: 'Banco de Dados/messages.php',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+                        var userList = data.users;
+                        var userListHtml = '';
+                        userList.forEach(function(user) {
+                            userListHtml += '<a href="#" class="list-group-item list-group-item-action border-0">';
+                            userListHtml += '<div class="badge bg-success float-right">' + user.unread + '</div>';
+                            userListHtml += '<div class="d-flex align-items-start">';
+                            userListHtml += '<img src="../../assets/images/users/1.jpg" class="rounded-circle mr-1" alt="' + user.name + '" width="40" height="40">';
+                            userListHtml += '<div class="flex-grow-1 ml-3">' + user.name;
+                            userListHtml += '<div class="small"><span class="fas fa-circle chat-online"></span> Online</div>';
+                            userListHtml += '</div></div></a>';
+                        });
+                        $('#userList').html(userListHtml);
+
+                        var chatMessages = data.messages;
+                        var chatMessagesHtml = '';
+                        chatMessages.forEach(function(message) {
+                            chatMessagesHtml += '<div class="chat-message-' + (message.sender === 'Você' ? 'right' : 'left') + ' pb-4">';
+                            chatMessagesHtml += '<div>';
+                            chatMessagesHtml += '<img src="../../assets/images/users/1.jpg" class="rounded-circle mr-1" alt="User" width="40" height="40">';
+                            chatMessagesHtml += '<div class="text-muted small text-nowrap mt-2">' + message.time + '</div>';
+                            chatMessagesHtml += '</div>';
+                            chatMessagesHtml += '<div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">';
+                            chatMessagesHtml += '<div class="font-weight-bold mb-1">' + message.sender + '</div>';
+                            chatMessagesHtml += message.text;
+                            chatMessagesHtml += '</div></div>';
+                        });
+                        $('#chatMessages').html(chatMessagesHtml);
+                    }
+                });
+            }
+
+            $('#sendButton').on('click', function() {
                 sendMessage();
             });
 
-            document.getElementById("messageInput").addEventListener("keydown", function(event) {
-                if (event.key === "Enter") {
+            $('#messageInput').on('keydown', function(event) {
+                if (event.key === 'Enter') {
                     sendMessage();
                 }
             });
 
             function sendMessage() {
-                const messageInput = document.getElementById("messageInput");
-                const message = messageInput.value.trim();
+                const messageInput = $('#messageInput');
+                const message = messageInput.val().trim();
 
-                if (message !== "") {
-                    const messageContainer = document.createElement("div");
-                    messageContainer.classList.add("chat-message-right", "pb-4");
+                if (message !== '') {
+                    const messageData = {
+                        sender: 'Você',
+                        text: message,
+                        time: new Date().toLocaleTimeString()
+                    };
 
-                    const messageContent = `
-                        <div>
-                            <img src="../../assets/images/users/1.jpg" class="rounded-circle mr-1" alt="Chris Wood" width="40" height="40">
-                            <div class="text-muted small text-nowrap mt-2">${new Date().toLocaleTimeString()}</div>
-                        </div>
-                        <div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
-                            <div class="font-weight-bold mb-1">Você</div>
-                            ${message}
-                        </div>
-                    `;
-
-                    messageContainer.innerHTML = messageContent;
-                    document.getElementById("chatMessages").appendChild(messageContainer);
-                    messageInput.value = "";
-                    scrollToBottom();
+                    $.ajax({
+                        url: 'Banco de Dados/sendMessage.php',
+                        type: 'POST',
+                        data: messageData,
+                        success: function(response) {
+                            messageInput.val('');
+                            fetchMessages();
+                        }
+                    });
                 }
             }
 
-            function scrollToBottom() {
-                const chatMessages = document.getElementById("chatMessages");
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            }
+            fetchMessages();
+            setInterval(fetchMessages, 10000);
         });
     </script>
 </body>
