@@ -177,7 +177,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Estatísticas</h4>
-                                <div class="sales ct-charts mt-3"></div>
+                                <div class="sales ct-charts mt-3" id="estatisticas"></div>
                             </div>
                         </div>
                     </div>
@@ -503,5 +503,41 @@
     <script src="../../assets/libs/chartist/dist/chartist.min.js"></script>
     <script src="../../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
     <script src="../../dist/js/pages/dashboards/dashboard1.js"></script>
+    <script>
+    $(document).ready(function() {
+        // Função para buscar dados do servidor
+        function fetchData() {
+            $.ajax({
+                url: 'data.php',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    // Atualizar dados do painel
+                    $('#visualizacoes-empresa').text(data.visualizacoes_empresa);
+                    $('#novos-clientes').text(data.novos_clientes);
+                    $('#orcamentos-aprovados').text(data.orcamentos_aprovados);
+                    $('#equipamentos-reparo').text(data.equipamentos_reparo);
+
+                    // Atualizar gráfico de estatísticas
+                    new Chartist.Line('#estatisticas', {
+                        labels: data.estatisticas.labels,
+                        series: [data.estatisticas.series]
+                    }, {
+                        fullWidth: true,
+                        chartPadding: {
+                            right: 40
+                        }
+                    });
+                }
+            });
+        }
+
+        // Atualiza a cada 10 segundos
+        setInterval(fetchData, 10000);
+
+        // Chamada inicial para buscar os dados
+        fetchData();
+    });
+    </script>
 </body>
 </html>
