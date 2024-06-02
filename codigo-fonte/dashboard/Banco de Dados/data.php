@@ -22,7 +22,7 @@ $response['novos_clientes'] = $row['novos_clientes'];
 $sql = "SELECT COUNT(*) as orcamentos_aprovados FROM orcamentos WHERE status = 'aprovado'";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
-$response['orcamentos_aprovados'] = $row['orcamentos_aprovados'];
+$response['orcamentos_aprovados'] = $row['orcamentos_aprovados];
 
 // Exemplo de consulta para equipamentos em reparo
 $sql = "SELECT COUNT(*) as equipamentos_reparo FROM equipamentos WHERE status = 'em reparo'";
@@ -31,8 +31,6 @@ $row = $result->fetch_assoc();
 $response['equipamentos_reparo'] = $row['equipamentos_reparo'];
 
 // Dados do gráfico de estatísticas
-// Você precisa ajustar essa consulta para pegar os dados de estatísticas reais do seu banco de dados
-// Aqui é um exemplo estático
 $response['estatisticas'] = array(
     'labels' => ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
     'series' => [
