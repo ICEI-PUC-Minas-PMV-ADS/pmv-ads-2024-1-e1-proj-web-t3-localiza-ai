@@ -13,15 +13,14 @@
     <link href="../../dist/css/style.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Preloader - Style em spinners.css -->
+    <!-- Preloader -->
     <div class="preloader">
         <div class="lds-ripple">
             <div class="lds-pos"></div>
             <div class="lds-pos"></div>
         </div>
     </div>
-    <div id="main-wrapper" data-navbarbg="skin6" data-theme="light" data-layout="vertical" data-sidebartype="full"
-        data-boxed-layout="full">
+    <div id="main-wrapper" data-navbarbg="skin6" data-theme="light" data-layout="vertical" data-sidebartype="full" data-boxed-layout="full">
         <header class="topbar" data-navbarbg="skin6">
             <nav class="navbar top-navbar navbar-expand-md navbar-light">
                 <div class="navbar-header" data-logobg="skin5">
@@ -81,7 +80,7 @@
                                 <i class="mdi mdi-home"></i>
                                 <span class="hide-menu">Página Inicial</span>
                             </a>
-                        </li>                        
+                        </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="inbox.html" aria-expanded="false">
                                 <i class="mdi mdi-android-messages"></i>
@@ -196,7 +195,7 @@
                                             <th class="border-top-0">LOCAL</th>
                                             <th class="border-top-0">VISUALIZAÇÕES</th>
                                             <th class="border-top-0">CLICKS NA EMPRESA</th>
-                                            <th class="border-top-0">TAXA DE CONVERSÃO</th>                                            
+                                            <th class="border-top-0">TAXA DE CONVERSÃO</th>
                                         </tr>
                                     </thead>
                                     <tbody id="referencias">
@@ -219,7 +218,7 @@
                                         <tr>
                                             <th class="border-top-0">SERVIÇO</th>
                                             <th class="border-top-0">DEMANDA</th>
-                                            <th class="border-top-0">TOTAL DE BUSCAS</th>                                        
+                                            <th class="border-top-0">TOTAL DE BUSCAS</th>
                                         </tr>
                                     </thead>
                                     <tbody id="servicos-procurados">
@@ -271,7 +270,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- column -->
                     <div class="col-lg-6">
                         <div class="card">
                             <div class="card-body">
@@ -322,71 +320,79 @@
     <script src="../../dist/js/custom.min.js"></script>
     <script src="../../assets/libs/chartist/dist/chartist.min.js"></script>
     <script src="../../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-    <script src="../../dist/js/pages/dashboards/dashboard1.js"></script>
     <script>
-    $(document).ready(function() {
-        function fetchData() {
-            $.ajax({
-                url: 'Banco de Dados/data.php',
-                type: 'GET',
-                dataType: 'json',
-                success: function(data) {
-                    $('#visualizacoes-empresa').text(data.visualizacoes_empresa);
-                    $('#novos-clientes').text(data.novos_clientes);
-                    $('#orcamentos-aprovados').text(data.orcamentos_aprovados);
-                    $('#equipamentos-reparo').text(data.equipamentos_reparo);
-
-                    // Atualizar gráfico de estatísticas
-                    new Chartist.Line('#estatisticas', {
-                        labels: data.estatisticas.labels,
-                        series: [data.estatisticas.series]
-                    }, {
-                        fullWidth: true,
-                        chartPadding: {
-                            right: 40
-                        }
-                    });
-
-                    // Atualizar tabela de referências
-                    var referencias = data.referencias;
-                    var referenciasHtml = '';
-                    referencias.forEach(function(referencia) {
-                        referenciasHtml += '<tr>';
-                        referenciasHtml += '<td class="txt-oflo">' + referencia.local + '</td>';
-                        referenciasHtml += '<td class="txt-oflo">' + referencia.total_visualizacoes + '</td>';
-                        referenciasHtml += '<td class="txt-oflo">' + referencia.total_clicks + '</td>';
-                        referenciasHtml += '<td class="txt-oflo">' + referencia.taxa_conversao.toFixed(2) + '%</td>';
-                        referenciasHtml += '</tr>';
-                    });
-                    $('#referencias').html(referenciasHtml);
-
-                    // Atualizar central de mensagens
-                    var mensagens = data.mensagens;
-                    var mensagensHtml = '';
-                    mensagens.forEach(function(mensagem) {
-                        mensagensHtml += '<div class="d-flex flex-row comment-row mt-0">';
-                        mensagensHtml += '<div class="p-2"><img src="../../assets/images/users/1.jpg" alt="user" width="50" class="rounded-circle"></div>';
-                        mensagensHtml += '<div class="comment-text w-100">';
-                        mensagensHtml += '<h6 class="font-medium">' + mensagem.usuario + '</h6>';
-                        mensagensHtml += '<span class="mb-3 d-block">' + mensagem.texto + '</span>';
-                        mensagensHtml += '<div class="comment-footer">';
-                        mensagensHtml += '<span class="text-muted float-end">' + mensagem.data + '</span>';
-                        mensagensHtml += '<span class="label label-rounded label-primary">' + mensagem.status + '</span>';
-                        mensagensHtml += '<span class="action-icons">';
-                        mensagensHtml += '<a href="javascript:void(0)"><i class="ti-pencil-alt"></i></a>';
-                        mensagensHtml += '<a href="javascript:void(0)"><i class="ti-check"></i></a>';
-                        mensagensHtml += '<a href="javascript:void(0)"><i class="ti-heart"></i></a>';
-                        mensagensHtml += '</span>';
-                        mensagensHtml += '</div></div></div>';
-                    });
-                    $('#central-mensagens').html(mensagensHtml);
-                }
-            });
-        }
-
-        setInterval(fetchData, 10000);
-        fetchData();
-    });
+        $(document).ready(function() {
+            function fetchData() {
+                $.ajax({
+                    url: 'Banco de Dados/data.php',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+                        $('#visualizacoes-empresa').text(data.visualizacoes_empresa);
+                        $('#novos-clientes').text(data.novos_clientes);
+                        $('#orcamentos-aprovados').text(data.orcamentos_aprovados);
+                        $('#equipamentos-reparo').text(data.equipamentos_reparo);
+    
+                        // Atualizar gráfico de estatísticas
+                        new Chartist.Line('#estatisticas', {
+                            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                            series: [
+                                data.visualizacoes_mensais,
+                                data.clicks_mensais
+                            ]
+                        }, {
+                            fullWidth: true,
+                            chartPadding: {
+                                right: 40
+                            },
+                            axisY: {
+                                onlyInteger: true,
+                                offset: 20,
+                                labelInterpolationFnc: function(value) {
+                                    return value / 1000 + 'k';
+                                }
+                            }
+                        });
+    
+                        // Atualizar tabela de referências
+                        var referencias = data.referencias;
+                        var referenciasHtml = '';
+                        referencias.forEach(function(referencia) {
+                            referenciasHtml += '<tr>';
+                            referenciasHtml += '<td class="txt-oflo">' + referencia.local + '</td>';
+                            referenciasHtml += '<td class="txt-oflo">' + referencia.total_visualizacoes + '</td>';
+                            referenciasHtml += '<td class="txt-oflo">' + referencia.total_clicks + '</td>';
+                            referenciasHtml += '<td class="txt-oflo">' + referencia.taxa_conversao.toFixed(2) + '%</td>';
+                            referenciasHtml += '</tr>';
+                        });
+                        $('#referencias').html(referenciasHtml);
+    
+                        // Atualizar central de mensagens
+                        var mensagens = data.mensagens;
+                        var mensagensHtml = '';
+                        mensagens.forEach(function(mensagem) {
+                            mensagensHtml += '<div class="d-flex flex-row comment-row mt-0">';
+                            mensagensHtml += '<div class="p-2"><img src="../../assets/images/users/1.jpg" alt="user" width="50" class="rounded-circle"></div>';
+                            mensagensHtml += '<div class="comment-text w-100">';
+                            mensagensHtml += '<h6 class="font-medium">' + mensagem.usuario + '</h6>';
+                            mensagensHtml += '<span class="mb-3 d-block">' + mensagem.texto + '</span>';
+                            mensagensHtml += '<div class="comment-footer">';
+                            mensagensHtml += '<span class="text-muted float-end">' + mensagem.data + '</span>';
+                            mensagensHtml += '<span class="label label-rounded label-primary">' + mensagem.status + '</span>';
+                            mensagensHtml += '<span class="action-icons">';
+                            mensagensHtml += '<a href="javascript:void(0)"><i class="ti-pencil-alt"></i></a>';
+                            mensagensHtml += '<a href="javascript:void(0)"><i class="ti-check"></i></a>';
+                            mensagensHtml += '<a href="javascript:void(0)"><i class="ti-heart"></i></a>';
+                            mensagensHtml += '</span>';
+                            mensagensHtml += '</div></div></div>';
+                        });
+                        $('#central-mensagens').html(mensagensHtml);
+                    }
+                });
+            }
+    
+            setInterval(fetchData, 10000);
+            fetchData();
+        });
     </script>
-</body>
-</html>
+    
