@@ -137,7 +137,8 @@
                             <div class="card-body">
                                 <h4 class="card-title">Lista de Clientes</h4>
                                 <div class="d-flex justify-content-end mb-3">
-                                    <button class="btn btn-primary" onclick="showCreateForm()">Criar Contato</button>
+                                    <button class="btn btn-primary" onclick="showCreateForm()">Novo Cliente</button>
+                                    <button class="btn btn-secondary" onclick="importClients()">Importar Clientes</button>
                                 </div>
                                 <div class="row" id="clientsList">
                                     <!-- Lista de clientes será preenchida aqui -->
@@ -156,29 +157,80 @@
     <div id="createClientModal" style="display:none;">
         <div class="modal-content">
             <span class="close" onclick="closeCreateForm()">&times;</span>
-            <h2>Criar Novo Contato</h2>
+            <h2>Novo Cliente - Dados Principais</h2>
             <form id="clientForm">
                 <div class="form-group">
-                    <label for="fullName">Nome Completo</label>
-                    <input type="text" class="form-control" id="fullName" required>
+                    <label for="clientName">Nome</label>
+                    <input type="text" class="form-control" id="clientName" required>
                 </div>
                 <div class="form-group">
-                    <label for="address">Endereço</label>
-                    <input type="text" class="form-control" id="address" required>
+                    <label for="clientLastName">Sobrenome</label>
+                    <input type="text" class="form-control" id="clientLastName" required>
                 </div>
                 <div class="form-group">
-                    <label for="phone">Telefone</label>
-                    <input type="text" class="form-control" id="phone" required>
+                    <label for="clientCPF">CPF</label>
+                    <input type="text" class="form-control" id="clientCPF" required>
                 </div>
                 <div class="form-group">
-                    <label for="orderNumber">Número de O.S</label>
-                    <input type="text" class="form-control" id="orderNumber" required>
+                    <label for="clientRG">RG</label>
+                    <input type="text" class="form-control" id="clientRG" required>
                 </div>
                 <div class="form-group">
-                    <label for="otherInfo">Outras Informações</label>
-                    <textarea class="form-control" id="otherInfo" rows="3"></textarea>
+                    <label for="clientBirthDate">Data de Nascimento</label>
+                    <input type="date" class="form-control" id="clientBirthDate" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Salvar</button>
+                <div class="form-group">
+                    <label for="clientActive">Ativo</label>
+                    <input type="checkbox" id="clientActive">
+                </div>
+                <div class="form-group">
+                    <label for="clientType">Tipo de Cliente</label>
+                    <select class="form-control" id="clientType">
+                        <option value="Pessoa Física">Pessoa Física</option>
+                        <option value="Pessoa Jurídica">Pessoa Jurídica</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="clientStore">Cadastrado Em</label>
+                    <select class="form-control" id="clientStore">
+                        <option value="Loja 01">Loja 01</option>
+                        <!-- Adicione mais opções de loja conforme necessário -->
+                    </select>
+                </div>
+                <h2>Endereço</h2>
+                <div class="form-group">
+                    <label for="clientCEP">CEP</label>
+                    <input type="text" class="form-control" id="clientCEP" required>
+                </div>
+                <div class="form-group">
+                    <label for="clientCity">Cidade</label>
+                    <input type="text" class="form-control" id="clientCity" value="Fortaleza-CE" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="clientNeighborhood">Bairro</label>
+                    <input type="text" class="form-control" id="clientNeighborhood" required>
+                </div>
+                <div class="form-group">
+                    <label for="clientAddress">Endereço</label>
+                    <input type="text" class="form-control" id="clientAddress" required>
+                </div>
+                <div class="form-group">
+                    <label for="clientNumber">Número</label>
+                    <input type="text" class="form-control" id="clientNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="clientComplement">Complemento</label>
+                    <input type="text" class="form-control" id="clientComplement">
+                </div>
+                <h2>Informações de Contato</h2>
+                <div id="contactInfo">
+                    <!-- Campos de contato serão adicionados aqui -->
+                </div>
+                <button type="button" class="btn btn-secondary" onclick="addContactField()">Novo Telefone</button>
+                <div class="d-flex justify-content-end mt-3">
+                    <button type="button" class="btn btn-secondary" onclick="closeCreateForm()">Voltar</button>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
             </form>
         </div>
     </div>
@@ -232,19 +284,36 @@
             document.getElementById("createClientModal").style.display = "none";
         }
 
-        function saveClient() {
-            const fullName = document.getElementById("fullName").value;
-            const address = document.getElementById("address").value;
-            const phone = document.getElementById("phone").value;
-            const orderNumber = document.getElementById("orderNumber").value;
-            const otherInfo = document.getElementById("otherInfo").value;
+        function addContactField() {
+            const contactInfo = document.getElementById("contactInfo");
+            const contactField = document.createElement("div");
+            contactField.className = "form-group";
+            contactField.innerHTML = `
+                <label for="clientPhone">Telefone</label>
+                <input type="text" class="form-control" name="clientPhone" required>
+            `;
+            contactInfo.appendChild(contactField);
+        }
 
+        function saveClient() {
             const client = {
-                fullName,
-                address,
-                phone,
-                orderNumber,
-                otherInfo
+                name: document.getElementById("clientName").value,
+                lastName: document.getElementById("clientLastName").value,
+                cpf: document.getElementById("clientCPF").value,
+                rg: document.getElementById("clientRG").value,
+                birthDate: document.getElementById("clientBirthDate").value,
+                active: document.getElementById("clientActive").checked,
+                type: document.getElementById("clientType").value,
+                store: document.getElementById("clientStore").value,
+                address: {
+                    cep: document.getElementById("clientCEP").value,
+                    city: document.getElementById("clientCity").value,
+                    neighborhood: document.getElementById("clientNeighborhood").value,
+                    address: document.getElementById("clientAddress").value,
+                    number: document.getElementById("clientNumber").value,
+                    complement: document.getElementById("clientComplement").value
+                },
+                contacts: Array.from(document.getElementsByName("clientPhone")).map(input => input.value)
             };
 
             let clients = localStorage.getItem("clients");
@@ -273,11 +342,12 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="ms-3">
-                                        <h5 class="mb-0">${client.fullName}</h5>
-                                        <p class="text-muted mb-0">${client.address}</p>
-                                        <p class="text-muted mb-0">Telefone : ${client.phone}</p>
-                                        <p class="text-muted mb-0">Número de O.S : ${client.orderNumber}</p>
-                                        <p class="text-muted mb-0">${client.otherInfo}</p>
+                                        <h5 class="mb-0">${client.name} ${client.lastName}</h5>
+                                        <p class="text-muted mb-0">CPF: ${client.cpf}</p>
+                                        <p class="text-muted mb-0">RG: ${client.rg}</p>
+                                        <p class="text-muted mb-0">Data de Nascimento: ${client.birthDate}</p>
+                                        <p class="text-muted mb-0">Endereço: ${client.address.address}, ${client.address.number} - ${client.address.neighborhood}, ${client.address.city}</p>
+                                        <p class="text-muted mb-0">Telefones: ${client.contacts.join(", ")}</p>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between">
@@ -299,6 +369,10 @@
                 localStorage.setItem("clients", JSON.stringify(clients));
                 loadClients();
             }
+        }
+
+        function importClients() {
+            alert("Função de importação de clientes ainda não implementada.");
         }
     </script>
 </body>
