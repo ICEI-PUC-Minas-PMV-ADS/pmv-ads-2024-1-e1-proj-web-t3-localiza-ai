@@ -13,7 +13,7 @@
 </head>
 <body>
     
-    <!--CABEÇALHO-->
+    <!--Cabeçalho-->
     <header>
         <img id="logo" src="imagens/logo-localizai-semfundo.png" alt="Logo Localiza.Ai" width="200px" height="80px">
         <menu>
@@ -30,7 +30,7 @@
         </menu>
     </header>
 
-    <!--PRINCIPAL-->
+    <!--Principal-->
     <main>
         <section>
             <a href="#"><img src="imagens/voltar.png" alt=""></a>
@@ -58,7 +58,7 @@
             <img id="maps" src="imagens/maps.png" alt="Google Maps" width="350px">
         </section>
 
-        <!--LISTA-->
+        <!--Lista-->
         <h3 class="titulo">Especialidades em:</h3>
             <ul>
                 <li>Reparo eletrônico em placa mãe</li>
@@ -70,43 +70,26 @@
                 <p>Entre em contato para saber mais sobre nossos serviços e como podemos ajudar a resolver seus problemas de tecnologia.</p>
             </ul>
 
-        <!--AVALIAÇÕES-->
+        <!--Avaliações-->
         <h3 class="titulo">Avaliações dos clientes:</h3>
         <section id="avaliacoes">
-            <div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt, reprehenderit est debitis, nemo optio ut quaerat, ullam reiciendis dolor esse dolore necessitatibus itaque voluptatum cumque. Illo nam alias veritatis.</p>
-                <p class="nome">Alanis</p>
-                <p>Precisou de reparo em Macbook 3 semanas atrás</p>
-            </div>
-            <div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt, reprehenderit est debitis, nemo optio ut quaerat, ullam reiciendis dolor esse dolore necessitatibus itaque voluptatum cumque. Illo nam alias veritatis.</p>
-                <p class="nome">Felipe</p>
-                <p>Precisou de reparo em Macbook 3 semanas atrás</p>
-            </div>
-            <div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt, reprehenderit est debitis, nemo optio ut quaerat, ullam reiciendis dolor esse dolore necessitatibus itaque voluptatum cumque. Illo nam alias veritatis.</p>
-                <p class="nome">Lucas</p>
-                <p>Precisou de reparo em Macbook 3 semanas atrás</p>
-            </div>
-            <div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt, reprehenderit est debitis, nemo optio ut quaerat, ullam reiciendis dolor esse dolore necessitatibus itaque voluptatum cumque. Illo nam alias veritatis.</p>
-                <p class="nome">Tais</p>
-                <p>Precisou de reparo em Macbook 3 semanas atrás</p>
-            </div>
-            <div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt, reprehenderit est debitis, nemo optio ut quaerat, ullam reiciendis dolor esse dolore necessitatibus itaque voluptatum cumque. Illo nam alias veritatis.</p>
-                <p class="nome">Simone</p>
-                <p>Precisou de reparo em Macbook 3 semanas atrás</p>
-            </div>
-            <div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt, reprehenderit est debitis, nemo optio ut quaerat, ullam reiciendis dolor esse dolore necessitatibus itaque voluptatum cumque. Illo nam alias veritatis.</p>
-                <p class="nome">Pedro</p>
-                <p>Precisou de reparo em Macbook 3 semanas atrás</p>
-            </div>
+            <!-- Os comentários serão exibidos aqui -->
         </section>
+
+        <!-- Formulário de Avaliação -->
+        <form id="form-avaliacao">
+            <h3>Deixe sua avaliação:</h3>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="avaliacao">Avaliação:</label>
+            <textarea id="avaliacao" name="avaliacao" required></textarea>
+            <label for="servico">Serviço realizado:</label>
+            <input type="text" id="servico" name="servico" required>
+            <button type="submit">Enviar</button>
+        </form>
     </main>
     
-    <!--RODAPÉ-->
+    <!--Rodapé-->
     <footer>
         <div id="main-footer">
             <div id="contatos">
@@ -150,6 +133,52 @@
                 itens.style.display = 'block'
             }
         }
+
+        // Função para carregar avaliações do localStorage
+        function loadAvaliacoes() {
+            const avaliacoes = JSON.parse(localStorage.getItem('avaliacoes')) || [];
+            const avaliacoesSection = document.getElementById('avaliacoes');
+            avaliacoesSection.innerHTML = '';
+
+            avaliacoes.forEach(avaliacao => {
+                const avaliacaoDiv = document.createElement('div');
+                avaliacaoDiv.classList.add('avaliacao');
+                avaliacaoDiv.innerHTML = `
+                    <p>${avaliacao.texto}</p>
+                    <p class="nome">${avaliacao.nome}</p>
+                    <p class="servico">Precisou de ${avaliacao.servico}</p>
+                `;
+                avaliacoesSection.appendChild(avaliacaoDiv);
+            });
+        }
+
+        // Carregar avaliações ao carregar a página
+        document.addEventListener('DOMContentLoaded', loadAvaliacoes);
+
+        // Função para salvar nova avaliação
+        document.getElementById('form-avaliacao').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            // Obter valores do formulário
+            const nome = document.getElementById('nome').value;
+            const avaliacao = document.getElementById('avaliacao').value;
+            const servico = document.getElementById('servico').value;
+
+            // Obter avaliações existentes do localStorage
+            const avaliacoes = JSON.parse(localStorage.getItem('avaliacoes')) || [];
+
+            // Adicionar nova avaliação
+            avaliacoes.push({ nome, texto: avaliacao, servico });
+
+            // Salvar avaliações atualizadas no localStorage
+            localStorage.setItem('avaliacoes', JSON.stringify(avaliacoes));
+
+            // Recarregar as avaliações
+            loadAvaliacoes();
+
+            // Limpar formulário
+            document.getElementById('form-avaliacao').reset();
+        });
     </script>
 </body>
 </html>
