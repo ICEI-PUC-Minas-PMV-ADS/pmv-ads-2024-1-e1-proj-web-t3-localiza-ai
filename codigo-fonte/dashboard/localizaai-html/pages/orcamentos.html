@@ -1,4 +1,3 @@
-<!-- ALTERAÇÃO DA COR DOS BOTÕES - PENDENTE -->
 <!DOCTYPE html>
 <html dir="ltr" lang="pt-br">
 <head>
@@ -9,6 +8,7 @@
     <meta name="robots" content="noindex,nofollow">
     <title>Localiza.Ai - Orçamentos</title>
     <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/mdi.min.css">
     <link href="../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
     <link href="../../dist/css/style.min.css" rel="stylesheet">
@@ -184,7 +184,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="orcamentos.html" aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link active" href="orcamentos.html" aria-expanded="false">
                                 <i class="mdi mdi-invoice-edit"></i><span class="hide-menu">Orçamentos</span>
                             </a>
                         </li>
@@ -240,7 +240,7 @@
                                                 <td>
                                                     Orçamento: 123<br />
                                                     Criado: 10 de Abril, 2024<br />
-                                                    Vencimento: 25 de Abril, 2023
+                                                    Vencimento: 25 de Abril, 2024
                                                 </td>
                                             </tr>
                                         </table>
@@ -299,7 +299,7 @@
                         </div>
                         <div class="d-flex justify-content-center mb-3 mt-3">
                             <button onclick="window.print()" class="btn btn-primary me-2"><i class="mdi mdi-printer" style="font-style: normal;"></i> Imprimir</button>
-                            <button class="btn btn-primary me-2">Enviar</button>
+                            <button class="btn btn-primary me-2" onclick="sendWhatsapp()">Enviar</button>
                             <button class="btn btn-primary">Novo</button>
                         </div>
                     </div>
@@ -317,5 +317,18 @@
     <script src="../../dist/js/waves.js"></script>
     <script src="../../dist/js/sidebarmenu.js"></script>
     <script src="../../dist/js/custom.min.js"></script>
+    <script>
+        function sendWhatsapp() {
+            const phoneNumber = prompt("Digite o número de telefone para enviar o orçamento via WhatsApp (formato: +5511999999999):");
+            if (phoneNumber) {
+                const url = `https://wa.me/${phoneNumber}?text=Olá,%20segue%20o%20seu%20orçamento:%20\n\n` +
+                    `Orçamento: 123\nCriado: 10 de Abril, 2024\nVencimento: 25 de Abril, 2024\n\n` +
+                    `Método de Pagamento: Cartão de Crédito\nValor Final: R$ 1.000,00\nQuantidade de parcelas: 5x sem juros\n\n` +
+                    `Item: Substituição de HD para SSD - R$ 300,00\nItem: WD_BLACK SN750 NVMe™ SSD - R$ 500,00\nItem: Reinstalação de sistema e backup de arquivos - R$ 200,00\n\n` +
+                    `Total: R$ 1.000,00`;
+                window.open(url, '_blank');
+            }
+        }
+    </script>
 </body>
 </html>

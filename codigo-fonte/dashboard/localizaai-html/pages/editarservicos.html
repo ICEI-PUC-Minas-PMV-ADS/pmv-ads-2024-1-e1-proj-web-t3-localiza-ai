@@ -28,6 +28,69 @@
         .checkbox-container input {
             margin-right: 10px;
         }
+        .service-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .service-container label {
+            flex-grow: 1;
+        }
+        .btn {
+            margin-left: 10px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 40%;
+            max-width: 500px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border-top: 1px solid #dee2e6;
+            padding-top: 10px;
+            margin-top: 20px;
+        }
+        .modal-footer button {
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
@@ -175,51 +238,40 @@
                         </ul>
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="celulares" role="tabpanel" aria-labelledby="celulares-tab">
-                                <div class="p-4">
+                                <div class="p-4" id="services">
                                     <!-- Conteúdo da aba Celulares e Smartphones -->
-                                    <div class="checkbox-container"><input type="checkbox" id="service1"><label for="service1">Conserto de celular que não liga</label></div>
-                                    <div id="celulares-content"></div>
+                                    <!-- Serviços serão carregados aqui via JavaScript -->
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="iphone" role="tabpanel" aria-labelledby="iphone-tab">
-                                <div class="p-4">
+                                <div class="p-4" id="services-iphone">
                                     <!-- Conteúdo da aba iPhone -->
-                                    <div class="checkbox-container"><input type="checkbox" id="service29"><label for="service29">Conserto de iPhone que não liga</label></div>
-                                    <div id="iphone-content"></div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="smartwatch" role="tabpanel" aria-labelledby="smartwatch-tab">
-                                <div class="p-4">
+                                <div class="p-4" id="services-smartwatch">
                                     <!-- Conteúdo da aba Smartwatch -->
-                                    <div class="checkbox-container"><input type="checkbox" id="service55"><label for="service55">Conserto de smartwatch que não liga</label></div>
-                                    <div id="smartwatch-content"></div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="tablet" role="tabpanel" aria-labelledby="tablet-tab">
-                                <div class="p-4">
+                                <div class="p-4" id="services-tablet">
                                     <!-- Conteúdo da aba Tablet & iPad -->
-                                    <div class="checkbox-container"><input type="checkbox" id="service67"><label for="service67">Conserto de tablet/iPad que não liga</label></div>
-                                    <div id="tablet-content"></div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="computadores" role="tabpanel" aria-labelledby="computadores-tab">
-                                <div class="p-4">
+                                <div class="p-4" id="services-computadores">
                                     <!-- Conteúdo da aba Computadores e Notebooks -->
-                                    <div class="checkbox-container"><input type="checkbox" id="service102"><label for="service102">Conserto de computador/notebook</label></div>
-                                    <div id="computadores-content"></div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="perifericos" role="tabpanel" aria-labelledby="perifericos-tab">
-                                <div class="p-4">
+                                <div class="p-4" id="services-perifericos">
                                     <!-- Conteúdo da aba Periféricos -->
-                                    <div class="checkbox-container"><input type="checkbox" id="service87"><label for="service87">Substituição de cabos danificados (fone de ouvido)</label></div>
-                                    <div id="perifericos-content"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="d-flex justify-content-end mt-3">
-                            <button id="createServiceBtn" class="btn btn-primary">Criar Novo Serviço</button>
-                            <button id="editServiceBtn" class="btn btn-secondary ms-2">Editar Serviço</button>
+                            <button class="btn btn-primary" onclick="showAddServiceModal()">Novo Serviço</button>
+                            <button onclick="location.href='servicos.html'" class="btn btn-primary">Concluído</button>
                         </div>
                     </div>
                 </div>
@@ -230,6 +282,33 @@
             </footer>
         </div>
     </div>
+    <!-- Modal de Adicionar Serviço -->
+    <div id="addServiceModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddServiceModal()">&times;</span>
+            <h2>Adicionar Novo Serviço</h2>
+            <input type="text" id="newServiceName" placeholder="Nome do Serviço">
+            <button class="btn btn-primary" onclick="addService()">Adicionar</button>
+        </div>
+    </div>
+    <!-- Modal de Editar Serviço -->
+    <div id="editServiceModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Editar Serviço</h2>
+                <span class="close" onclick="closeEditServiceModal()">&times;</span>
+            </div>
+            <div>
+                <label for="editServiceName">Novo Nome do Serviço</label>
+                <input type="text" id="editServiceName" placeholder="Nome do Serviço">
+                <button class="btn btn-danger" onclick="deleteServiceConfirmed()">Apagar Serviço</button>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeEditServiceModal()">Voltar</button>
+                <button class="btn btn-primary" onclick="saveServiceChanges()">Salvar Alterações</button>
+            </div>
+        </div>
+    </div>
     <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../assets/extra-libs/sparkline/sparkline.js"></script>
@@ -237,170 +316,104 @@
     <script src="../../dist/js/sidebarmenu.js"></script>
     <script src="../../dist/js/custom.min.js"></script>
     <script>
-        // Inicializar serviços padrão
-        const defaultServices = {
-            celulares: ["Conserto de celular que não liga"],
-            iphone: ["Conserto de iPhone que não liga"],
-            smartwatch: ["Conserto de smartwatch que não liga"],
-            tablet: ["Conserto de tablet/iPad que não liga"],
-            computadores: ["Conserto de computador/notebook"],
-            perifericos: ["Substituição de cabos danificados (fone de ouvido)"]
-        };
+        let currentEditId = null;
 
-        function initializeServices() {
-            Object.keys(defaultServices).forEach(tab => {
-                const services = JSON.parse(localStorage.getItem(tab) || '[]');
-                const updatedServices = [...new Set([...services, ...defaultServices[tab]])];
-                localStorage.setItem(tab, JSON.stringify(updatedServices));
-            });
-        }
-
-        // Carregar serviços do localStorage
-        function loadServices() {
-            const tabs = ['celulares', 'iphone', 'smartwatch', 'tablet', 'computadores', 'perifericos'];
-            tabs.forEach(tab => {
-                const services = JSON.parse(localStorage.getItem(tab) || '[]');
-                const contentDiv = document.getElementById(`${tab}-content`);
-                contentDiv.innerHTML = ''; // Limpar conteúdo existente
-                services.forEach(service => {
-                    const newServiceHtml = `<div class="checkbox-container"><input type="checkbox" id="${service.replace(/\s+/g, '-').toLowerCase()}"><label for="${service.replace(/\s+/g, '-').toLowerCase()}">${service}</label></div>`;
-                    contentDiv.insertAdjacentHTML('beforeend', newServiceHtml);
-                });
-            });
-        }
-
-        // Salvar serviço no localStorage
-        function saveService() {
-            const serviceName = document.getElementById('serviceName').value.trim();
-            if (serviceName) {
-                const activeTab = document.querySelector('.tab-pane.active');
-                const tabId = activeTab.id.split('-')[0];
-                const services = JSON.parse(localStorage.getItem(tabId) || '[]');
-                if (services.includes(serviceName)) {
-                    alert('O serviço já existe.');
-                    return;
-                }
-                services.push(serviceName);
-                localStorage.setItem(tabId, JSON.stringify(services));
-                const contentDiv = activeTab.querySelector('div[id$="-content"]');
-                const newServiceHtml = `<div class="checkbox-container"><input type="checkbox" id="${serviceName.replace(/\s+/g, '-').toLowerCase()}"><label for="${serviceName.replace(/\s+/g, '-').toLowerCase()}">${serviceName}</label></div>`;
-                contentDiv.insertAdjacentHTML('beforeend', newServiceHtml);
-                console.log('Serviço salvo:', serviceName);
-                alert('Serviço salvo com sucesso!');
-                const createServiceModal = bootstrap.Modal.getInstance(document.getElementById('createServiceModal'));
-                createServiceModal.hide();
-            } else {
-                alert('Por favor, insira um nome para o serviço.');
-            }
-        }
-
-        // Apagar serviço do localStorage
-        function deleteService() {
-            const serviceNameToDelete = document.getElementById('editServiceName').value.trim().toLowerCase();
-            if (serviceNameToDelete) {
-                const activeTab = document.querySelector('.tab-pane.active');
-                const tabId = activeTab.id.split('-')[0];
-                const services = JSON.parse(localStorage.getItem(tabId) || '[]');
-                const serviceIndex = services.findIndex(service => service.toLowerCase() === serviceNameToDelete);
-                if (serviceIndex !== -1) {
-                    services.splice(serviceIndex, 1);
-                    localStorage.setItem(tabId, JSON.stringify(services));
-                    const contentDiv = activeTab.querySelector('div[id$="-content"]');
-                    const serviceElement = contentDiv.querySelector(`label[for="${serviceNameToDelete.replace(/\s+/g, '-')}"]`).parentElement;
-                    contentDiv.removeChild(serviceElement);
-                    console.log('Serviço apagado:', serviceNameToDelete);
-                    alert('Serviço apagado com sucesso!');
-                } else {
-                    alert('Serviço não encontrado.');
-                }
-                const editServiceModal = bootstrap.Modal.getInstance(document.getElementById('editServiceModal'));
-                editServiceModal.hide();
-            } else {
-                alert('Por favor, insira o nome do serviço para apagar.');
-            }
-        }
-
-        // Função para abrir o modal de criação de novo serviço
-        function openCreateServiceModal() {
-            const modalHtml = `
-                <div class="modal fade" id="createServiceModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Nova Grife</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="mb-3">
-                                    <label for="serviceName" class="form-label">Nome da Grife</label>
-                                    <input type="text" class="form-control" id="serviceName">
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
-                                <button type="button" class="btn btn-primary" onclick="saveService()">Salvar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
-            document.body.insertAdjacentHTML('beforeend', modalHtml);
-            const createServiceModal = new bootstrap.Modal(document.getElementById('createServiceModal'));
-            createServiceModal.show();
-        }
-
-        // Função para abrir o modal de edição de serviço
-        function openEditServiceModal() {
-            const modalHtml = `
-                <div class="modal fade" id="editServiceModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Editar Serviço</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="mb-3">
-                                    <label for="editServiceName" class="form-label">Nome do Serviço a Apagar</label>
-                                    <input type="text" class="form-control" id="editServiceName">
-                                </div>
-                                <button type="button" class="btn btn-danger" onclick="deleteService()">Apagar Serviço</button>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
-                                <button type="button" class="btn btn-primary" onclick="updateService()">Salvar Alterações</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
-            document.body.insertAdjacentHTML('beforeend', modalHtml);
-            const editServiceModal = new bootstrap.Modal(document.getElementById('editServiceModal'));
-            editServiceModal.show();
-        }
-
-        // Função para atualizar o serviço (aqui você pode adicionar a lógica para atualizar o serviço)
-        function updateService() {
-            const newServiceName = document.getElementById('editServiceName').value.trim();
-            if (newServiceName) {
-                console.log('Serviço atualizado para:', newServiceName); // Substitua isso pela lógica real de atualização
-                alert('Serviço atualizado com sucesso!');
-                const editServiceModal = bootstrap.Modal.getInstance(document.getElementById('editServiceModal'));
-                editServiceModal.hide();
-            } else {
-                alert('Por favor, insira um novo nome para o serviço.');
-            }
-        }
-
-        // Inicializar e carregar os serviços ao carregar a página
-        document.addEventListener('DOMContentLoaded', () => {
-            initializeServices();
+        document.addEventListener("DOMContentLoaded", function() {
             loadServices();
         });
 
-        // Event listeners para os botões
-        document.getElementById('createServiceBtn').addEventListener('click', openCreateServiceModal);
-        document.getElementById('editServiceBtn').addEventListener('click', openEditServiceModal);
+        function loadServices() {
+            const services = JSON.parse(localStorage.getItem('services')) || [];
+            services.forEach(service => {
+                displayService(service.id, service.name);
+            });
+        }
+
+        function saveServices(services) {
+            localStorage.setItem('services', JSON.stringify(services));
+        }
+
+        function displayService(id, name) {
+            const container = document.createElement('div');
+            container.classList.add('service-container');
+            container.id = id;
+
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.classList.add('service-checkbox');
+            checkbox.id = `${id}-checkbox`;
+
+            const label = document.createElement('label');
+            label.setAttribute('for', `${id}-checkbox`);
+            label.innerText = name;
+
+            const editButton = document.createElement('button');
+            editButton.classList.add('edit-service', 'btn', 'btn-primary');
+            editButton.innerText = 'Editar';
+            editButton.onclick = () => showEditServiceModal(id, name);
+
+            const deleteButton = document.createElement('button');
+            deleteButton.classList.add('delete-service', 'btn', 'btn-danger');
+            deleteButton.innerText = 'Apagar';
+            deleteButton.onclick = () => deleteService(id);
+
+            container.append(checkbox, label, editButton, deleteButton);
+            document.getElementById('services').appendChild(container);
+        }
+
+        function showAddServiceModal() {
+            document.getElementById('addServiceModal').style.display = 'block';
+        }
+
+        function closeAddServiceModal() {
+            document.getElementById('addServiceModal').style.display = 'none';
+        }
+
+        function addService() {
+            const name = document.getElementById('newServiceName').value;
+            const id = `service${Date.now()}`;
+            const services = JSON.parse(localStorage.getItem('services')) || [];
+            services.push({ id, name });
+            saveServices(services);
+            displayService(id, name);
+            closeAddServiceModal();
+        }
+
+        function showEditServiceModal(id, name) {
+            currentEditId = id;
+            document.getElementById('editServiceName').value = name;
+            document.getElementById('editServiceModal').style.display = 'block';
+        }
+
+        function closeEditServiceModal() {
+            document.getElementById('editServiceModal').style.display = 'none';
+        }
+
+        function saveServiceChanges() {
+            const name = document.getElementById('editServiceName').value;
+            const services = JSON.parse(localStorage.getItem('services')) || [];
+            const service = services.find(service => service.id === currentEditId);
+            if (service) {
+                service.name = name;
+                saveServices(services);
+                document.querySelector(`#${currentEditId} label`).innerText = name;
+                closeEditServiceModal();
+            }
+        }
+
+        function deleteService(id) {
+            if (confirm("Tem certeza que deseja apagar este serviço?")) {
+                const services = JSON.parse(localStorage.getItem('services')) || [];
+                const updatedServices = services.filter(service => service.id !== id);
+                saveServices(updatedServices);
+                document.getElementById(id).remove();
+            }
+        }
+
+        function deleteServiceConfirmed() {
+            deleteService(currentEditId);
+            closeEditServiceModal();
+        }
     </script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="pt-br">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,8 +13,10 @@
     <link href="../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
     <link href="../../dist/css/style.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <div id="main-wrapper" data-navbarbg="skin6" data-theme="light" data-layout="vertical" data-sidebartype="full" data-boxed-layout="full">
+    <div id="main-wrapper" data-navbarbg="skin6" data-theme="light" data-layout="vertical" data-sidebartype="full"
+        data-boxed-layout="full">
         <header class="topbar" data-navbarbg="skin6">
             <nav class="navbar top-navbar navbar-expand-md navbar-light">
                 <div class="navbar-header" data-logobg="skin5">
@@ -48,7 +51,8 @@
                     </ul>
                     <ul class="navbar-nav float-end">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="../../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="40">
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
@@ -137,8 +141,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Lista de Clientes</h4>
                                 <div class="d-flex justify-content-end mb-3">
-                                    <button class="btn btn-primary" onclick="showCreateForm()">Novo Cliente</button>
-                                    <button class="btn btn-secondary" onclick="importClients()">Importar Clientes</button>
+                                    <button class="btn btn-primary" onclick="showCreateForm()">Criar Contato</button>
                                 </div>
                                 <div class="row" id="clientsList">
                                     <!-- Lista de clientes será preenchida aqui -->
@@ -157,80 +160,68 @@
     <div id="createClientModal" style="display:none;">
         <div class="modal-content">
             <span class="close" onclick="closeCreateForm()">&times;</span>
-            <h2>Novo Cliente - Dados Principais</h2>
+            <h2>Criar Novo Contato</h2>
             <form id="clientForm">
                 <div class="form-group">
-                    <label for="clientName">Nome</label>
-                    <input type="text" class="form-control" id="clientName" required>
-                </div>
-                <div class="form-group">
-                    <label for="clientLastName">Sobrenome</label>
-                    <input type="text" class="form-control" id="clientLastName" required>
-                </div>
-                <div class="form-group">
-                    <label for="clientCPF">CPF</label>
-                    <input type="text" class="form-control" id="clientCPF" required>
-                </div>
-                <div class="form-group">
-                    <label for="clientRG">RG</label>
-                    <input type="text" class="form-control" id="clientRG" required>
-                </div>
-                <div class="form-group">
-                    <label for="clientBirthDate">Data de Nascimento</label>
-                    <input type="date" class="form-control" id="clientBirthDate" required>
-                </div>
-                <div class="form-group">
-                    <label for="clientActive">Ativo</label>
-                    <input type="checkbox" id="clientActive">
+                    <label for="isActive">Ativo</label>
+                    <input type="checkbox" id="isActive">
                 </div>
                 <div class="form-group">
                     <label for="clientType">Tipo de Cliente</label>
-                    <select class="form-control" id="clientType">
-                        <option value="Pessoa Física">Pessoa Física</option>
-                        <option value="Pessoa Jurídica">Pessoa Jurídica</option>
-                    </select>
+                    <div>
+                        <input type="radio" id="pf" name="clientType" value="Pessoa Física" checked>
+                        <label for="pf">Pessoa Física</label>
+                        <input type="radio" id="pj" name="clientType" value="Pessoa Jurídica">
+                        <label for="pj">Pessoa Jurídica</label>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="clientStore">Cadastrado Em</label>
-                    <select class="form-control" id="clientStore">
-                        <option value="Loja 01">Loja 01</option>
-                        <!-- Adicione mais opções de loja conforme necessário -->
-                    </select>
-                </div>
-                <h2>Endereço</h2>
-                <div class="form-group">
-                    <label for="clientCEP">CEP</label>
-                    <input type="text" class="form-control" id="clientCEP" required>
+                    <label for="fullName">Nome</label>
+                    <input type="text" class="form-control" id="fullName" required>
                 </div>
                 <div class="form-group">
-                    <label for="clientCity">Cidade</label>
-                    <input type="text" class="form-control" id="clientCity" value="Fortaleza-CE" readonly>
+                    <label for="cpf">CPF</label>
+                    <input type="text" class="form-control" id="cpf" required>
                 </div>
                 <div class="form-group">
-                    <label for="clientNeighborhood">Bairro</label>
-                    <input type="text" class="form-control" id="clientNeighborhood" required>
+                    <label for="dob">Data de Nascimento</label>
+                    <input type="date" class="form-control" id="dob" required>
                 </div>
                 <div class="form-group">
-                    <label for="clientAddress">Endereço</label>
-                    <input type="text" class="form-control" id="clientAddress" required>
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control" id="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="clientNumber">Número</label>
-                    <input type="text" class="form-control" id="clientNumber" required>
+                    <label for="phone">Telefone</label>
+                    <input type="text" class="form-control" id="phone" required>
                 </div>
                 <div class="form-group">
-                    <label for="clientComplement">Complemento</label>
-                    <input type="text" class="form-control" id="clientComplement">
+                    <label for="cep">CEP</label>
+                    <input type="text" class="form-control" id="cep" required>
+                    <button type="button" onclick="fetchAddress()">Buscar</button>
                 </div>
-                <h2>Informações de Contato</h2>
-                <div id="contactInfo">
-                    <!-- Campos de contato serão adicionados aqui -->
+                <div class="form-group">
+                    <label for="city">Cidade</label>
+                    <input type="text" class="form-control" id="city" readonly>
                 </div>
-                <button type="button" class="btn btn-secondary" onclick="addContactField()">Novo Telefone</button>
-                <div class="d-flex justify-content-end mt-3">
-                    <button type="button" class="btn btn-secondary" onclick="closeCreateForm()">Voltar</button>
-                    <button type="submit" class="btn btn-primary">Salvar</button>
+                <div class="form-group">
+                    <label for="address">Endereço</label>
+                    <input type="text" class="form-control" id="address" readonly>
                 </div>
+                <div class="form-group">
+                    <label for="neighborhood">Bairro</label>
+                    <input type="text" class="form-control" id="neighborhood" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="number">Número</label>
+                    <input type="text" class="form-control" id="number" required>
+                </div>
+                <div class="form-group">
+                    <label for="complement">Complemento</label>
+                    <input type="text" class="form-control" id="complement">
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <button type="button" class="btn btn-secondary" onclick="closeCreateForm()">Cancelar</button>
             </form>
         </div>
     </div>
@@ -247,6 +238,7 @@
             background-color: rgb(0,0,0);
             background-color: rgba(0,0,0,0.4);
         }
+
         .modal-content {
             background-color: #fefefe;
             margin: auto;
@@ -254,12 +246,14 @@
             border: 1px solid #888;
             width: 80%;
         }
+
         .close {
             color: #aaa;
             float: right;
             font-size: 28px;
             font-weight: bold;
         }
+
         .close:hover,
         .close:focus {
             color: black;
@@ -268,9 +262,9 @@
         }
     </style>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             loadClients();
-            document.getElementById("clientForm").addEventListener("submit", function(event) {
+            document.getElementById("clientForm").addEventListener("submit", function (event) {
                 event.preventDefault();
                 saveClient();
             });
@@ -284,36 +278,57 @@
             document.getElementById("createClientModal").style.display = "none";
         }
 
-        function addContactField() {
-            const contactInfo = document.getElementById("contactInfo");
-            const contactField = document.createElement("div");
-            contactField.className = "form-group";
-            contactField.innerHTML = `
-                <label for="clientPhone">Telefone</label>
-                <input type="text" class="form-control" name="clientPhone" required>
-            `;
-            contactInfo.appendChild(contactField);
+        function fetchAddress() {
+            const cep = document.getElementById("cep").value.replace("-", "").replace(".", "");
+            if (cep.length !== 8) {
+                alert("CEP inválido!");
+                return;
+            }
+            fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.erro) {
+                        alert("CEP não encontrado!");
+                    } else {
+                        document.getElementById("city").value = data.localidade;
+                        document.getElementById("address").value = data.logradouro;
+                        document.getElementById("neighborhood").value = data.bairro;
+                    }
+                })
+                .catch(() => {
+                    alert("Erro ao buscar o CEP!");
+                });
         }
 
         function saveClient() {
+            const isActive = document.getElementById("isActive").checked;
+            const clientType = document.querySelector('input[name="clientType"]:checked').value;
+            const fullName = document.getElementById("fullName").value;
+            const cpf = document.getElementById("cpf").value;
+            const dob = document.getElementById("dob").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const cep = document.getElementById("cep").value;
+            const city = document.getElementById("city").value;
+            const address = document.getElementById("address").value;
+            const neighborhood = document.getElementById("neighborhood").value;
+            const number = document.getElementById("number").value;
+            const complement = document.getElementById("complement").value;
+
             const client = {
-                name: document.getElementById("clientName").value,
-                lastName: document.getElementById("clientLastName").value,
-                cpf: document.getElementById("clientCPF").value,
-                rg: document.getElementById("clientRG").value,
-                birthDate: document.getElementById("clientBirthDate").value,
-                active: document.getElementById("clientActive").checked,
-                type: document.getElementById("clientType").value,
-                store: document.getElementById("clientStore").value,
-                address: {
-                    cep: document.getElementById("clientCEP").value,
-                    city: document.getElementById("clientCity").value,
-                    neighborhood: document.getElementById("clientNeighborhood").value,
-                    address: document.getElementById("clientAddress").value,
-                    number: document.getElementById("clientNumber").value,
-                    complement: document.getElementById("clientComplement").value
-                },
-                contacts: Array.from(document.getElementsByName("clientPhone")).map(input => input.value)
+                isActive,
+                clientType,
+                fullName,
+                cpf,
+                dob,
+                email,
+                phone,
+                cep,
+                city,
+                address,
+                neighborhood,
+                number,
+                complement
             };
 
             let clients = localStorage.getItem("clients");
@@ -342,15 +357,15 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="ms-3">
-                                        <h5 class="mb-0">${client.name} ${client.lastName}</h5>
-                                        <p class="text-muted mb-0">CPF: ${client.cpf}</p>
-                                        <p class="text-muted mb-0">RG: ${client.rg}</p>
-                                        <p class="text-muted mb-0">Data de Nascimento: ${client.birthDate}</p>
-                                        <p class="text-muted mb-0">Endereço: ${client.address.address}, ${client.address.number} - ${client.address.neighborhood}, ${client.address.city}</p>
-                                        <p class="text-muted mb-0">Telefones: ${client.contacts.join(", ")}</p>
+                                        <h5 class="mb-0">${client.fullName}</h5>
+                                        <p class="text-muted mb-0">${client.address}</p>
+                                        <p class="text-muted mb-0">Telefone : ${client.phone}</p>
+                                        <p class="text-muted mb-0">Número : ${client.number}</p>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between">
+                                    <button class="btn btn-sm btn-outline-primary" onclick="editClient(${index})">Editar</button>
+                                    <button class="btn btn-sm btn-outline-success" onclick="sendMessage(${index})">Enviar Mensagem</button>
                                     <button class="btn btn-sm btn-outline-danger" onclick="deleteClient(${index})">Excluir</button>
                                 </div>
                             </div>
@@ -359,6 +374,14 @@
                     clientsList.appendChild(clientCard);
                 });
             }
+        }
+
+        function editClient(index) {
+            // Função para editar cliente (a ser implementada)
+        }
+
+        function sendMessage(index) {
+            window.location.href = `inbox.html?client=${index}`;
         }
 
         function deleteClient(index) {
@@ -370,10 +393,7 @@
                 loadClients();
             }
         }
-
-        function importClients() {
-            alert("Função de importação de clientes ainda não implementada.");
-        }
     </script>
 </body>
+
 </html>

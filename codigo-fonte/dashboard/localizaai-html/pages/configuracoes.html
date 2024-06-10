@@ -56,7 +56,7 @@
                     <ul class="navbar-nav float-end">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="../../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="40">
+                                <img src="../../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="40" id="navbarProfilePic">
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user me-1 ms-1"></i> Status: Online</a>
@@ -110,7 +110,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="configuracoes.html" aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link active" href="configuracoes.html" aria-expanded="false">
                                 <i class="mdi mdi-cog-outline"></i>
                                 <span class="hide-menu">Configurações</span>
                             </a>
@@ -160,7 +160,7 @@
                                     <div class="tab-pane fade show active" id="perfil" role="tabpanel" aria-labelledby="perfil-tab">
                                         <div class="p-4">
                                             <!-- Conteúdo da aba Configuração do Perfil -->
-                                            <form>
+                                            <form id="profileForm">
                                                 <div class="form-group">
                                                     <label for="username">Nome de Usuário</label>
                                                     <input type="text" class="form-control" id="username" placeholder="Nome de Usuário">
@@ -176,6 +176,10 @@
                                                 <div class="form-group">
                                                     <label for="bio">Biografia</label>
                                                     <textarea class="form-control" id="bio" rows="3" placeholder="Sobre você"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="profilePicInput">Foto do Perfil</label>
+                                                    <input type="file" class="form-control" id="profilePicInput" accept="image/*" onchange="loadProfilePicture(event)">
                                                 </div>
                                                 <button type="submit" class="btn btn-primary">Salvar Mudanças</button>
                                             </form>
@@ -266,5 +270,66 @@
     <script src="../../dist/js/waves.js"></script>
     <script src="../../dist/js/sidebarmenu.js"></script>
     <script src="../../dist/js/custom.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            loadProfile();
+            document.getElementById("profileForm").addEventListener("submit", function (event) {
+                event.preventDefault();
+                saveProfile();
+            });
+        });
+
+        function loadProfile() {
+            const profile = JSON.parse(localStorage.getItem("profile")) || {};
+            if (profile.username) document.getElementById("username").value = profile.username;
+            if (profile.email) document.getElementById("email").value = profile.email;
+            if (profile.phone) document.getElementById("phone").value = profile.phone;
+            if (profile.bio) document.getElementById("bio").value = profile.bio;
+            if (profile.profilePic) {
+                const profilePicElement = document.getElementById("profilePic");
+                const navbarProfilePicElement = document.getElementById("navbarProfilePic");
+                if (profilePicElement) {
+                    profilePicElement.src = profile.profilePic;
+                }
+                if (navbarProfilePicElement) {
+                    navbarProfilePicElement.src = profile.profilePic;
+                }
+            }
+        }
+
+        function saveProfile() {
+            const profile = {
+                username: document.getElementById("username").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value,
+                bio: document.getElementById("bio").value,
+                profilePic: document.getElementById("profilePic").src
+            };
+            localStorage.setItem("profile", JSON.stringify(profile));
+            alert("Perfil salvo com sucesso!");
+        }
+
+        function loadProfilePicture(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function () {
+                const profilePic = reader.result;
+                const profilePicElement = document.getElementById("profilePic");
+                const navbarProfilePicElement = document.getElementById("navbarProfilePic");
+                if (profilePicElement) {
+                    profilePicElement.src = profilePic;
+                }
+                if (navbarProfilePicElement) {
+                    navbarProfilePicElement.src = profilePic;
+                }
+
+                // Update profile picture in localStorage immediately
+                const profile = JSON.parse(localStorage.getItem("profile")) || {};
+                profile.profilePic = profilePic;
+                localStorage.setItem("profile", JSON.stringify(profile));
+            };
+            reader.readAsDataURL(file);
+        }
+    </script>
 </body>
 </html>

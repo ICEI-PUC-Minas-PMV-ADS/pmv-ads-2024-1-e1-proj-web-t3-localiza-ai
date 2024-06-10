@@ -323,66 +323,76 @@
     <script>
         $(document).ready(function() {
             function fetchData() {
-                // Aqui você pode adicionar uma lógica para buscar dados de outra fonte, se necessário
-                $('#visualizacoes-empresa').text('1000');
-                $('#novos-clientes').text('150');
-                $('#orcamentos-aprovados').text('120');
-                $('#equipamentos-reparo').text('80');
+                $.ajax({
+                    url: 'Banco de Dados/data.php',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+                        $('#visualizacoes-empresa').text(data.visualizacoes_empresa);
+                        $('#novos-clientes').text(data.novos_clientes);
+                        $('#orcamentos-aprovados').text(data.orcamentos_aprovados);
+                        $('#equipamentos-reparo').text(data.equipamentos_reparo);
     
-                new Chartist.Line('#estatisticas', {
-                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-                    series: [
-                        [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120],
-                        [5, 15, 25, 35, 45, 55, 65, 75, 85, 95, 105, 115]
-                    ]
-                }, {
-                    fullWidth: true,
-                    chartPadding: {
-                        right: 40
-                    },
-                    axisY: {
-                        onlyInteger: true,
-                        offset: 20,
-                        labelInterpolationFnc: function(value) {
-                            return value / 1000 + 'k';
-                        }
+                        // Atualizar gráfico de estatísticas
+                        new Chartist.Line('#estatisticas', {
+                            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                            series: [
+                                data.visualizacoes_mensais,
+                                data.clicks_mensais
+                            ]
+                        }, {
+                            fullWidth: true,
+                            chartPadding: {
+                                right: 40
+                            },
+                            axisY: {
+                                onlyInteger: true,
+                                offset: 20,
+                                labelInterpolationFnc: function(value) {
+                                    return value / 1000 + 'k';
+                                }
+                            }
+                        });
+    
+                        // Atualizar tabela de referências
+                        var referencias = data.referencias;
+                        var referenciasHtml = '';
+                        referencias.forEach(function(referencia) {
+                            referenciasHtml += '<tr>';
+                            referenciasHtml += '<td class="txt-oflo">' + referencia.local + '</td>';
+                            referenciasHtml += '<td class="txt-oflo">' + referencia.total_visualizacoes + '</td>';
+                            referenciasHtml += '<td class="txt-oflo">' + referencia.total_clicks + '</td>';
+                            referenciasHtml += '<td class="txt-oflo">' + referencia.taxa_conversao.toFixed(2) + '%</td>';
+                            referenciasHtml += '</tr>';
+                        });
+                        $('#referencias').html(referenciasHtml);
+    
+                        // Atualizar central de mensagens
+                        var mensagens = data.mensagens;
+                        var mensagensHtml = '';
+                        mensagens.forEach(function(mensagem) {
+                            mensagensHtml += '<div class="d-flex flex-row comment-row mt-0">';
+                            mensagensHtml += '<div class="p-2"><img src="../../assets/images/users/1.jpg" alt="user" width="50" class="rounded-circle"></div>';
+                            mensagensHtml += '<div class="comment-text w-100">';
+                            mensagensHtml += '<h6 class="font-medium">' + mensagem.usuario + '</h6>';
+                            mensagensHtml += '<span class="mb-3 d-block">' + mensagem.texto + '</span>';
+                            mensagensHtml += '<div class="comment-footer">';
+                            mensagensHtml += '<span class="text-muted float-end">' + mensagem.data + '</span>';
+                            mensagensHtml += '<span class="label label-rounded label-primary">' + mensagem.status + '</span>';
+                            mensagensHtml += '<span class="action-icons">';
+                            mensagensHtml += '<a href="javascript:void(0)"><i class="ti-pencil-alt"></i></a>';
+                            mensagensHtml += '<a href="javascript:void(0)"><i class="ti-check"></i></a>';
+                            mensagensHtml += '<a href="javascript:void(0)"><i class="ti-heart"></i></a>';
+                            mensagensHtml += '</span>';
+                            mensagensHtml += '</div></div></div>';
+                        });
+                        $('#central-mensagens').html(mensagensHtml);
                     }
                 });
-    
-                var referenciasHtml = `
-                    <tr>
-                        <td class="txt-oflo">Exemplo Local</td>
-                        <td class="txt-oflo">1000</td>
-                        <td class="txt-oflo">150</td>
-                        <td class="txt-oflo">15%</td>
-                    </tr>
-                `;
-                $('#referencias').html(referenciasHtml);
-    
-                var mensagensHtml = `
-                    <div class="d-flex flex-row comment-row mt-0">
-                        <div class="p-2"><img src="../../assets/images/users/1.jpg" alt="user" width="50" class="rounded-circle"></div>
-                        <div class="comment-text w-100">
-                            <h6 class="font-medium">Usuário Exemplo</h6>
-                            <span class="mb-3 d-block">Esta é uma mensagem de exemplo.</span>
-                            <div class="comment-footer">
-                                <span class="text-muted float-end">Agora</span>
-                                <span class="label label-rounded label-primary">Novo</span>
-                                <span class="action-icons">
-                                    <a href="javascript:void(0)"><i class="ti-pencil-alt"></i></a>
-                                    <a href="javascript:void(0)"><i class="ti-check"></i></a>
-                                    <a href="javascript:void(0)"><i class="ti-heart"></i></a>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                $('#central-mensagens').html(mensagensHtml);
             }
     
             setInterval(fetchData, 10000);
             fetchData();
         });
     </script>
-</body>
-</html>
+    
