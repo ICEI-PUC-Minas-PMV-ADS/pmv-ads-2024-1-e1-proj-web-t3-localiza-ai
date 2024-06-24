@@ -5,6 +5,7 @@
   <title>Nova Mensagem | Localiza Ai</title>
   <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="icon" href="images/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -21,7 +22,7 @@
         </a>
       </li>
       <li>
-        <a href="servicos.html">
+        <a href="#">
           <i class='bx bx-box'></i>
           <span class="links_name">Serviços</span>
         </a>
@@ -33,7 +34,7 @@
         </a>
       </li>
       <li>
-        <a href="orcamentos.html">
+        <a href="#">
           <i class='bx bx-file'></i>
           <span class="links_name">Orçamentos</span>
         </a>
@@ -45,25 +46,25 @@
         </a>
       </li>
       <li>
-        <a href="central-de-ajuda.html">
+        <a href="#">
           <i class='bx bx-book-alt'></i>
           <span class="links_name">Central de Ajuda</span>
         </a>
       </li>
       <li>
-        <a href="favoritos.html">
+        <a href="#">
           <i class='bx bx-heart'></i>
           <span class="links_name">Favoritos</span>
         </a>
       </li>
       <li>
-        <a href="configuracoes.html">
+        <a href="#">
           <i class='bx bx-cog'></i>
           <span class="links_name">Configurações</span>
         </a>
       </li>
       <li class="log_out">
-        <a href="sair.html">
+        <a href="#">
           <i class='bx bx-log-out'></i>
           <span class="links_name">Sair</span>
         </a>
@@ -83,7 +84,15 @@
       <div class="profile-details">
         <img src="images/user.jpg" alt="">
         <span class="admin_name">Nome da Empresa</span>
-        <i class='bx bx-chevron-down'></i>
+        <i class='bx bx-chevron-down' id="profile-icon"></i>
+        <ul class="dropdown-menu">
+          <li><a href="#" onclick="setStatus('online')"><i class='bx bx-circle' style="color: green;"></i> Online</a></li>
+          <li><a href="#" onclick="setStatus('busy')"><i class='bx bx-circle' style="color: red;"></i> Ocupado</a></li>
+          <li><a href="#" onclick="setStatus('away')"><i class='bx bx-circle' style="color: orange;"></i> Ausente</a></li>
+          <li><a href="#" onclick="setStatus('offline')"><i class='bx bx-circle' style="color: gray;"></i> Aparecer Offline</a></li>
+          <li><a href="configuracoes.html"><i class='bx bx-cog'></i> Configurações da conta</a></li>
+          <li><a href="sair.html"><i class='bx bx-log-out'></i> Logout</a></li>
+        </ul>
       </div>
     </nav>
 

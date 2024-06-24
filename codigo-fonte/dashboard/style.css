@@ -765,3 +765,137 @@ nav .profile-details i {
 .sales-boxes .messages-details .message-content {
   color: #555;
 }
+.profile-details {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #F5F6FA;
+  border: 2px solid #EFEEF1;
+  border-radius: 6px;
+  height: 50px;
+  min-width: 190px;
+  padding: 0 15px 0 2px;
+  cursor: pointer;
+}
+
+.profile-details .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  list-style: none;
+  padding: 10px 0;
+}
+
+.profile-details .dropdown-menu.show {
+  display: block;
+}
+
+.profile-details .dropdown-menu li {
+  padding: 10px 20px;
+}
+
+.profile-details .dropdown-menu li a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.profile-details .dropdown-menu li a i {
+  margin-right: 10px;
+}
+
+.footer {
+  background: #0A2558;
+  color: #fff;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 240px);
+  left: 240px;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.sidebar.active ~ .home-section .footer {
+  width: calc(100% - 60px);
+  left: 60px;
+}
+.footer {
+  background: #0A2558;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 12px; /* Fonte menor para o rodapé */
+  border-top: 1px solid #ccc; /* Linha de separação superior */
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  color: #ddd; /* Alteração de cor no hover para mais contraste */
+}
+
+.sidebar.active ~ .home-section .footer {
+  width: calc(100% - 60px);
+  left: 60px;
+}
+.profile-details {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #F5F6FA;
+  border: 2px solid #EFEEF1;
+  border-radius: 6px;
+  height: 50px;
+  min-width: 190px;
+  padding: 0 15px 0 2px;
+  cursor: pointer;
+}
+
+.profile-details .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  list-style: none;
+  padding: 10px 0;
+}
+
+.profile-details .dropdown-menu.show {
+  display: block;
+}
+
+.profile-details .dropdown-menu li {
+  padding: 10px 20px;
+}
+
+.profile-details .dropdown-menu li a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.profile-details .dropdown-menu li a i {
+  margin-right: 10px;
+}

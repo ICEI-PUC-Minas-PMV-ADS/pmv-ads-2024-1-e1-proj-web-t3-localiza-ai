@@ -5,6 +5,7 @@
   <title>Clientes | Localiza Ai</title>
   <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="icon" href="images/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -34,7 +35,7 @@
       </li>
       <li>
         <a href="#">
-          <i class='bx bx bx-file'></i>
+          <i class='bx bx-file'></i>
           <span class="links_name">Orçamentos</span>
         </a>
       </li>
@@ -75,6 +76,19 @@
       <div class="sidebar-button">
         <i class='bx bx-menu sidebarBtn'></i>
         <span class="dashboard">Clientes</span>
+      </div>
+      <div class="profile-details">
+        <img src="images/user.jpg" alt="">
+        <span class="admin_name">Nome da Empresa</span>
+        <i class='bx bx-chevron-down' id="profile-icon"></i>
+        <ul class="dropdown-menu">
+          <li><a href="#" onclick="setStatus('online')"><i class='bx bx-circle' style="color: green;"></i> Online</a></li>
+          <li><a href="#" onclick="setStatus('busy')"><i class='bx bx-circle' style="color: red;"></i> Ocupado</a></li>
+          <li><a href="#" onclick="setStatus('away')"><i class='bx bx-circle' style="color: orange;"></i> Ausente</a></li>
+          <li><a href="#" onclick="setStatus('offline')"><i class='bx bx-circle' style="color: gray;"></i> Aparecer Offline</a></li>
+          <li><a href="configuracoes.html"><i class='bx bx-cog'></i> Configurações da conta</a></li>
+          <li><a href="sair.html"><i class='bx bx-log-out'></i> Logout</a></li>
+        </ul>
       </div>
     </nav>
 

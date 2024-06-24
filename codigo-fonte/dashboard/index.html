@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <title> Dashboard Admin Responsivo | Localiza Ai </title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | Localiza Ai</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="icon" href="images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 <body>
   <div class="sidebar">
     <div class="logo-details">
@@ -83,7 +84,15 @@
       <div class="profile-details">
         <img src="images/user.jpg" alt="">
         <span class="admin_name">Nome da Empresa</span>
-        <i class='bx bx-chevron-down'></i>
+        <i class='bx bx-chevron-down' id="profile-icon"></i>
+        <ul class="dropdown-menu">
+          <li><a href="#" onclick="setStatus('online')"><i class='bx bx-circle' style="color: green;"></i> Online</a></li>
+          <li><a href="#" onclick="setStatus('busy')"><i class='bx bx-circle' style="color: red;"></i> Ocupado</a></li>
+          <li><a href="#" onclick="setStatus('away')"><i class='bx bx-circle' style="color: orange;"></i> Ausente</a></li>
+          <li><a href="#" onclick="setStatus('offline')"><i class='bx bx-circle' style="color: gray;"></i> Aparecer Offline</a></li>
+          <li><a href="configuracoes.html"><i class='bx bx-cog'></i> Configurações da conta</a></li>
+          <li><a href="sair.html"><i class='bx bx-log-out'></i> Logout</a></li>
+        </ul>
       </div>
     </nav>
 
@@ -98,7 +107,7 @@
               <span class="text">Subiu desde ontem</span>
             </div>
           </div>
-          <i class='bx bx bx-wrench cart'></i>
+          <i class='bx bx-wrench cart'></i>
         </div>
         <div class="box">
           <div class="right-side">
@@ -197,11 +206,12 @@
           <ul class="top-sales-details">
             <li>
               <a href="#">
-                <img src="images/computador.jpg" alt="">
+                <img src="images/lianli.jpg" alt="">
                 <span class="product">Montagem de Computador Gamer</span>
               </a>
               <span class="price">R$ 450.00</span>
             </li>
+            <!-- Adicione mais itens aqui, se necessário -->
           </ul>
         </div>
       </div>
@@ -217,6 +227,15 @@
         sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
       }else
         sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+    }
+
+    document.getElementById("profile-icon").addEventListener("click", function() {
+      document.querySelector(".dropdown-menu").classList.toggle("show");
+    });
+
+    function setStatus(status) {
+      console.log("Status alterado para:", status);
+      document.querySelector(".dropdown-menu").classList.remove("show");
     }
   </script>
 </body>
