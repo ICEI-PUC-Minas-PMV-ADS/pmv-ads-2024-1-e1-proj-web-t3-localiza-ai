@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Caixa de Entrada | Localiza Ai</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-html5'></i>
+      <span class="logo_name">Localiza Ai</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="index.html">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-box'></i>
+          <span class="links_name">Serviços</span>
+        </a>
+      </li>
+      <li>
+        <a href="caixa-de-entrada.html" class="active">
+          <i class='bx bx-envelope'></i>
+          <span class="links_name">Caixa de Entrada</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-file'></i>
+          <span class="links_name">Orçamentos</span>
+        </a>
+      </li>
+      <li>
+        <a href="clientes.html">
+          <i class='bx bx-user'></i>
+          <span class="links_name">Clientes</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-book-alt'></i>
+          <span class="links_name">Central de Ajuda</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-heart'></i>
+          <span class="links_name">Favoritos</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog'></i>
+          <span class="links_name">Configurações</span>
+        </a>
+      </li>
+      <li class="log_out">
+        <a href="sair.html">
+          <i class='bx bx-log-out'></i>
+          <span class="links_name">Sair</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Caixa de Entrada</span>
+      </div>
+    </nav>
+
+    <div class="home-content">
+      <div class="email-container">
+        <h2>Enviar mensagem para Cliente</h2>
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Buscar por Nome, CPF ou ID">
+          <button id="search-button">Buscar</button>
+        </div>
+        <div class="client-details" id="client-details">
+          <!-- Client details will be displayed here -->
+        </div>
+        <form id="email-form">
+          <div class="input-group">
+            <label for="email-to">Para:</label>
+            <input type="email" id="email-to" placeholder="E-mail do Cliente" required>
+          </div>
+          <div class="input-group">
+            <label for="email-subject">Assunto:</label>
+            <input type="text" id="email-subject" placeholder="Assunto da mensagem" required>
+          </div>
+          <div class="input-group">
+            <label for="email-body">Mensagem:</label>
+            <textarea id="email-body" placeholder="Escreva sua mensagem aqui..." required></textarea>
+          </div>
+          <div class="input-group">
+            <label for="email-attachments">Anexos:</label>
+            <input type="file" id="email-attachments" multiple>
+          </div>
+          <div class="input-group">
+            <button type="button" id="send-email"><i class='bx bx-envelope'></i> Enviar E-mail</button>
+            <button type="button" id="send-whatsapp"><i class='bx bxl-whatsapp'></i> Enviar WhatsApp</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

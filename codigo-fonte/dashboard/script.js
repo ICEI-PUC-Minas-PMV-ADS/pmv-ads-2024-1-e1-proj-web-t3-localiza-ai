@@ -20,6 +20,13 @@ document.addEventListener('DOMContentLoaded', function () {
   const nomeFantasia = document.getElementById('nome-fantasia');
   const cnpj = document.getElementById('cnpj');
   const inscricaoEstadual = document.getElementById('inscricao-estadual');
+  const cep = document.getElementById('cep');
+  const logradouro = document.getElementById('logradouro');
+  const numero = document.getElementById('numero');
+  const complemento = document.getElementById('complemento');
+  const bairro = document.getElementById('bairro');
+  const cidade = document.getElementById('cidade');
+  const estado = document.getElementById('estado');
   const endereco = document.getElementById('endereco');
   const email = document.getElementById('email');
   const telefone = document.getElementById('telefone');
@@ -32,6 +39,28 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       fisicaFields.style.display = 'none';
       juridicaFields.style.display = 'block';
+    }
+  });
+
+  cep.addEventListener('blur', function () {
+    const cepValue = cep.value.replace(/\D/g, '');
+    if (cepValue.length === 8) {
+      fetch(`https://viacep.com.br/ws/${cepValue}/json/`)
+        .then(response => response.json())
+        .then(data => {
+          if (!data.erro) {
+            logradouro.value = data.logradouro;
+            bairro.value = data.bairro;
+            cidade.value = data.localidade;
+            estado.value = data.uf;
+          } else {
+            alert('CEP não encontrado!');
+          }
+        })
+        .catch(error => {
+          alert('Erro ao buscar CEP!');
+          console.error(error);
+        });
     }
   });
 
@@ -53,7 +82,13 @@ document.addEventListener('DOMContentLoaded', function () {
       client.inscricaoEstadual = inscricaoEstadual.value;
     }
 
-    client.endereco = endereco.value;
+    client.cep = cep.value;
+    client.logradouro = logradouro.value;
+    client.numero = numero.value;
+    client.complemento = complemento.value;
+    client.bairro = bairro.value;
+    client.cidade = cidade.value;
+    client.estado = estado.value;
     client.email = email.value;
     client.telefone = telefone.value;
 
@@ -124,7 +159,13 @@ document.addEventListener('DOMContentLoaded', function () {
       cnpj.value = client.cnpj;
       inscricaoEstadual.value = client.inscricaoEstadual;
     }
-    endereco.value = client.endereco;
+    cep.value = client.cep;
+    logradouro.value = client.logradouro;
+    numero.value = client.numero;
+    complemento.value = client.complemento;
+    bairro.value = client.bairro;
+    cidade.value = client.cidade;
+    estado.value = client.estado;
     email.value = client.email;
     telefone.value = client.telefone;
   }
@@ -146,7 +187,13 @@ document.addEventListener('DOMContentLoaded', function () {
     nomeFantasia.value = '';
     cnpj.value = '';
     inscricaoEstadual.value = '';
-    endereco.value = '';
+    cep.value = '';
+    logradouro.value = '';
+    numero.value = '';
+    complemento.value = '';
+    bairro.value = '';
+    cidade.value = '';
+    estado.value = '';
     email.value = '';
     telefone.value = '';
     fisicaFields.style.display = 'block';
@@ -154,4 +201,90 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   loadClients();
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const searchInput = document.getElementById('search-input');
+  const searchButton = document.getElementById('search-button');
+  const clientDetails = document.getElementById('client-details');
+  const emailForm = document.getElementById('email-form');
+  const emailTo = document.getElementById('email-to');
+  const emailSubject = document.getElementById('email-subject');
+  const emailBody = document.getElementById('email-body');
+  const emailAttachments = document.getElementById('email-attachments');
+  const sendEmailButton = document.getElementById('send-email');
+  const sendWhatsAppButton = document.getElementById('send-whatsapp');
+
+  function getClients() {
+    const clients = localStorage.getItem('clients');
+    return clients ? JSON.parse(clients) : [];
+  }
+
+  function searchClient() {
+    const query = searchInput.value.toLowerCase();
+    const clients = getClients();
+    const client = clients.find(client =>
+      client.nomeCompleto?.toLowerCase().includes(query) ||
+      client.cpf?.toLowerCase().includes(query) ||
+      client.id?.toLowerCase().includes(query)
+    );
+
+    if (client) {
+      displayClientDetails(client);
+    } else {
+      clientDetails.innerHTML = '<p>Cliente não encontrado.</p>';
+    }
+  }
+
+  function displayClientDetails(client) {
+    clientDetails.innerHTML = `
+      <p><strong>ID:</strong> ${client.id}</p>
+      <p><strong>Nome:</strong> ${client.nomeCompleto || client.razaoSocial}</p>
+      <p><strong>E-mail:</strong> ${client.email}</p>
+      <p><strong>Telefone:</strong> ${client.telefone}</p>
+    `;
+    emailTo.value = client.email;
+  }
+
+  function sendEmail() {
+    const to = emailTo.value;
+    const subject = emailSubject.value;
+    const body = emailBody.value;
+    const attachments = emailAttachments.files;
+
+    if (!to || !subject || !body) {
+      alert('Por favor, preencha todos os campos obrigatórios.');
+      return;
+    }
+
+    // Aqui você pode usar uma API de envio de e-mails, como SendGrid, Mailgun, etc.
+    // Exemplo de chamada de API (substitua pelos detalhes da sua API):
+    /*
+    fetch('https://api.seu-servico-email.com/send', {
+      method: 'POST',
+      body: JSON.stringify({ to, subject, body, attachments }),
+      headers: { 'Content-Type': 'application/json' }
+    })
+    .then(response => response.json())
+    .then(data => alert('E-mail enviado com sucesso!'))
+    .catch(error => console.error('Erro ao enviar e-mail:', error));
+    */
+    alert('Funcionalidade de envio de e-mail não implementada nesta demo.');
+  }
+
+  function sendWhatsApp() {
+    const to = emailTo.value;
+    const body = emailBody.value;
+
+    if (!to || !body) {
+      alert('Por favor, preencha todos os campos obrigatórios.');
+      return;
+    }
+
+    const whatsappUrl = `https://wa.me/${to.replace(/\D/g, '')}?text=${encodeURIComponent(body)}`;
+    window.open(whatsappUrl, '_blank');
+  }
+
+  searchButton.addEventListener('click', searchClient);
+  sendEmailButton.addEventListener('click', sendEmail);
+  sendWhatsAppButton.addEventListener('click', sendWhatsApp);
 });

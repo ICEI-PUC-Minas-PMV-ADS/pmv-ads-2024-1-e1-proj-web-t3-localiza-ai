@@ -572,3 +572,282 @@ nav .profile-details i{
   background-color: #dc3545;
   color: #fff;
 }
+.form-container {
+  margin: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.input-group input, 
+.input-group select, 
+.form-container form button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-container form button {
+  background-color: #0A2558;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.form-container form button:hover {
+  background-color: #0d3073;
+}
+
+.table-container {
+  margin: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container th, 
+.table-container td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table-container th {
+  background-color: #f2f2f2;
+}
+
+.table-container button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.table-container button:hover {
+  opacity: 0.8;
+}
+
+.table-container button.edit {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.table-container button.delete {
+  background-color: #dc3545;
+  color: #fff;
+}
+.email-container {
+  margin: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.email-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.search-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-container button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  background-color: #0A2558;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+
+.client-details {
+  margin-bottom: 20px;
+}
+
+.client-details p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.input-group input, 
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.input-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.input-group button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#send-email {
+  background-color: #28a745;
+  color: #fff;
+}
+
+#send-whatsapp {
+  background-color: #25d366;
+  color: #fff;
+}
+.email-container {
+  margin: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.email-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.search-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-container button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  background-color: #0A2558;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+
+.client-details {
+  margin-bottom: 20px;
+}
+
+.client-details p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.input-group input, 
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.input-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.input-group button {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.input-group button i {
+  margin-right: 8px;
+}
+
+#send-email {
+  background-color: #0A2558;
+  color: #fff;
+}
+
+#send-whatsapp {
+  background-color: #25d366;
+  color: #fff;
+}
