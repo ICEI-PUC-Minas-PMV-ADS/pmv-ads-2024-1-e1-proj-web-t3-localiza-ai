@@ -33,7 +33,9 @@
     <!--Principal-->
     <main>
         <section>
-            <a href="#"><img src="imagens/voltar.png" alt=""></a>
+            <button class="back-button" onclick="goBack()">
+                <img id="voltar" src="imagens/voltar.png" alt="">
+            </button>
             <div id="nome-empresa">
                 <h1>Assistência Técnica</h1>
                 <h2>Alanis Tech</h2>
@@ -41,21 +43,29 @@
         </section>
         <section id="principal">
             <img id="anuncio" src="imagens/anuncio-alanistech.png" alt="Anúncio">
-            <div id="info">
-                <p>Endereço: R. Dom José Gaspar, 500 - Coração Eucarístico, Belo Horizonte - MG, 30535-901</p>
-                <div class="linha-horizontal"></div>
-                <p>Tipo de empresa: Assistência Técnica</p>
-                <div class="linha-horizontal"></div>
-                <p>Serviço de Entrega/Coleta: Sim</p>
-                <div class="linha-horizontal"></div>
-                <p>Horário de Funcionamento:<br>
-                Seg-Sex: 08h00 às 17h00<br>
-                Sáb: 08h00 às 12h00</p>
-                <div class="linha-horizontal"></div>
-                <p>Contato: (012) 91000-1000</p><div class="linha-horizontal"></div>
-                <div id="whatsapp"><a href="#"><img src="imagens/whatsapp.png" alt="" width="200px"></a></div>
+            <div class="contact-info">
+                <div class="info-item">
+                    <strong>Endereço:</strong> R. Dom José Gaspar, 500 - Coração Eucarístico, Belo Horizonte - MG, 30535-901
+                </div>
+                <div class="info-item">
+                    <strong>Tipo de empresa:</strong> Assistência Técnica
+                </div>
+                <div class="info-item">
+                    <strong>Serviço de Entrega/Coleta:</strong> Sim
+                </div>
+                <div class="info-item">
+                    <strong>Horário de Funcionamento:</strong><br>
+                    Seg-Sex: 08h00 às 17h00<br>
+                    Sáb: 08h00 às 12h00
+                </div>
+                <div class="info-item">
+                    <strong>Contato:</strong> (012) 91000-1000
+                </div>
+                <a href="#" class="whatsapp-link" target="_blank">
+                    <img src="imagens/whatsapp.png" alt="WhatsApp">
+                </a>
             </div>
-            <img id="maps" src="imagens/maps.png" alt="Google Maps" width="350px">
+            <a id="link-maps" href="https://maps.app.goo.gl/RNJY1BsunsLXpq5y7" target="_blank"><img id="maps" src="imagens/maps.png" alt="Google Maps" width="350px"></a>
         </section>
 
         <!--Lista-->
@@ -179,6 +189,10 @@
             // Limpar formulário
             document.getElementById('form-avaliacao').reset();
         });
+
+        function goBack() {
+            window.history.back();
+        }
     </script>
 </body>
 </html>

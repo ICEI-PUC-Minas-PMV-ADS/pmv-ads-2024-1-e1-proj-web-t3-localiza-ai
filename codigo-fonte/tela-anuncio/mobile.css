@@ -75,14 +75,11 @@ div#nome-empresa {
     max-width: 650px;
 }
 
-#info {
-    width: 90%;
-    max-width: 650px;
-    height: 400px;
-    margin: 20px auto;
+.contact-info {
+    margin: 30px auto;
 }
 
-#maps {
+#link-maps {
     margin: auto;
 }
 

@@ -56,7 +56,6 @@ header > menu > nav a:hover {
 #principal {
     display: flex;
     flex-direction: column;
-     
 }
 
 #anuncio {
@@ -64,11 +63,10 @@ header > menu > nav a:hover {
     margin: auto;
 }
 
-#info {
-    width: 70%;
+.contact-info {
     margin: 30px auto;
 }
 
-#maps {
+#link-maps {
     margin: auto;
 }

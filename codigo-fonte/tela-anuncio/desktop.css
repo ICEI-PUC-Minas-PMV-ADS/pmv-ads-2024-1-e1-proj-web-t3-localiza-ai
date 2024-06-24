@@ -59,12 +59,7 @@ header > menu > nav a:hover {
 
 #anuncio {
     width: 600px;
-}
-
-#info {
-    width: 330px;
     height: 450px;
-    margin: 0px 30px;
 }
 
 #whatsapp {
@@ -73,5 +68,5 @@ header > menu > nav a:hover {
 }
 
 #maps {
-    width: 25%;
+    height: 450px;
 }
