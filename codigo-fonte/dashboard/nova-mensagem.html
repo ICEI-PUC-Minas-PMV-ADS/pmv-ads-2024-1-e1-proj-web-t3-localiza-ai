@@ -2,7 +2,7 @@
 <html lang="pt-BR" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <title>Caixa de Entrada | Localiza Ai</title>
+  <title>Nova Mensagem | Localiza Ai</title>
   <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,7 @@
         </a>
       </li>
       <li>
-        <a href="caixa-de-entrada.html" class="active">
+        <a href="caixa-de-entrada.html">
           <i class='bx bx-envelope'></i>
           <span class="links_name">Caixa de Entrada</span>
         </a>
@@ -74,7 +74,7 @@
     <nav>
       <div class="sidebar-button">
         <i class='bx bx-menu sidebarBtn'></i>
-        <span class="dashboard">Caixa de Entrada</span>
+        <span class="dashboard">Nova Mensagem</span>
       </div>
       <div class="search-box">
         <input type="text" placeholder="Pesquisar...">
@@ -88,54 +88,42 @@
     </nav>
 
     <div class="home-content">
-      <div class="overview-boxes">
-        <div class="box">
-          <div class="right-side">
-            <div class="box-topic">Mensagens Não Lidas</div>
-            <div class="number">8</div>
-          </div>
-          <i class='bx bx-message cart'></i>
+      <div class="email-container">
+        <h2>Enviar mensagem para cliente</h2>
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Buscar por Nome, CPF ou ID">
+          <button id="search-button">Buscar</button>
         </div>
-      </div>
-
-      <div class="sales-boxes">
-        <div class="recent-messages box">
-          <div class="title">Mensagens Recentes</div>
-          <div class="messages-details">
-            <div class="message">
-              <div class="message-date">23 Jun 2024</div>
-              <div class="message-client">Alanis Tavares</div>
-              <div class="message-content">Gostaria de saber mais sobre os serviços...</div>
-            </div>
-            <div class="message">
-              <div class="message-date">22 Jun 2024</div>
-              <div class="message-client">Felipe Oliveira</div>
-              <div class="message-content">Quero fazer uma consulta de orçamento...</div>
-            </div>
-            <div class="message">
-              <div class="message-date">21 Jun 2024</div>
-              <div class="message-client">Tais Rocha</div>
-              <div class="message-content">Como funciona o atendimento remoto?</div>
-            </div>
+        <div class="client-details" id="client-details">
+          <!-- Client details will be displayed here -->
+        </div>
+        <form id="email-form">
+          <div class="input-group">
+            <label for="email-to">Para:</label>
+            <input type="email" id="email-to" placeholder="E-mail do Cliente" required>
+          </div>
+          <div class="input-group">
+            <label for="email-subject">Assunto:</label>
+            <input type="text" id="email-subject" placeholder="Assunto da mensagem.." required>
+          </div>
+          <div class="input-group">
+            <label for="email-body">Mensagem:</label>
+            <textarea id="email-body" placeholder="Escreva sua mensagem aqui..." required></textarea>
+          </div>
+          <div class="input-group">
+            <label for="email-attachments">Anexos:</label>
+            <input type="file" id="email-attachments" multiple>
           </div>
           <div class="button-group">
-            <a href="nova-mensagem.html" class="btn">Nova Mensagem</a>
+            <button type="button" id="send-email"><i class='bx bx-envelope'></i> Enviar E-mail</button>
+            <button type="button" id="send-whatsapp"><i class='bx bxl-whatsapp'></i> Enviar WhatsApp</button>
+            <a href="caixa-de-entrada.html" class="btn"><i class='bx bx-arrow-back'></i> Voltar</a>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   </section>
 
-  <script>
-    let sidebar = document.querySelector(".sidebar");
-    let sidebarBtn = document.querySelector(".sidebarBtn");
-    sidebarBtn.onclick = function() {
-      sidebar.classList.toggle("active");
-      if(sidebar.classList.contains("active")){
-        sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
-      }else
-        sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
