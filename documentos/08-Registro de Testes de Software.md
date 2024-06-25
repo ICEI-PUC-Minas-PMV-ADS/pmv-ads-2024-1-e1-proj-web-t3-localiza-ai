@@ -1,4 +1,4 @@
-# Plano de Testes de Software
+# Registro de Testes de Software
 
 Os requisitos para realização dos testes de software são:
 
