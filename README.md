@@ -37,7 +37,7 @@ O projeto visa desenvolver uma aplicação web que funcione como uma plataforma 
 
 # Hospedagem
 
-* Insira o endereço eletrônico público de acesso ao conteúdo publicado. 
+* [Acessar Localiza.Ai](https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/) 
 
 # Código-Fonte
 
