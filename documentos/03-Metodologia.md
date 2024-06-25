@@ -13,7 +13,7 @@ A equipe utiliza o Scrum como base para definição do processo de desenvolvimen
 - Scrum Master: [Lucas de Araújo](https://github.com/lucas-arl)
 - Product Owner: [Tais Rocha](https://github.com/taisrochan)
 - Equipe de Desenvolvimento: [Alanis Graciele](https://github.com/alanis-tavares), [Felipe Oliveira](https://github.com/Felipe0liveira14), [Lucas de Araújo](https://github.com/lucas-arl), [Tais Rocha](https://github.com/taisrochan)
-- Equipe de Design: [Alanis Graciele](https://github.com/alanis-tavares), [Felipe Oliveira](https://github.com/Felipe0liveira14), [Lucas de Araújo](https://github.com/lucas-arl), [Tais Rocha](https://github.com/taisrochan)
+- Equipe de Design:[Lucas de Araújo](https://github.com/lucas-arl)
 
 ### Processo
 
