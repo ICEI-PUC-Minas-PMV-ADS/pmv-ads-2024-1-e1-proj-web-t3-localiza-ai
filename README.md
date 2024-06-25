@@ -37,7 +37,7 @@ O projeto visa desenvolver uma aplicação web que funcione como uma plataforma 
 
 # Hospedagem
 
-* [Acessar Localiza.Ai](https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/) 
+* [Acessar Localiza.Ai](https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/codigo-fonte/dashboard/index.html) 
 
 # Código-Fonte
 
