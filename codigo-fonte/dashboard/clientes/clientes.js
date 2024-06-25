@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const fisicaFields = document.getElementById('fisica-fields');
   const juridicaFields = document.getElementById('juridica-fields');
   const form = document.getElementById('client-form');
+  const clientIdField = document.getElementById('client-id'); // Adicionado
 
   clientTypeSelect.addEventListener('change', function () {
     if (this.value === 'fisica') {
@@ -35,21 +36,28 @@ document.addEventListener('DOMContentLoaded', function () {
       telefone: document.getElementById('telefone').value
     };
     
-    saveClient(client);
+    const clientId = clientIdField.value; // Adicionado
+    saveClient(client, clientId); // Modificado
     renderClients();
     form.reset();
     fisicaFields.style.display = 'block';
     juridicaFields.style.display = 'none';
   });
 
-  function saveClient(client) {
+  function saveClient(client, clientId) {
     let clients = localStorage.getItem('clients');
     if (!clients) {
       clients = [];
     } else {
       clients = JSON.parse(clients);
     }
-    clients.push(client);
+    
+    if (clientId === "") {
+      clients.push(client); // Adiciona novo cliente
+    } else {
+      clients[clientId] = client; // Atualiza cliente existente
+    }
+    
     localStorage.setItem('clients', JSON.stringify(clients));
   }
 
@@ -65,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <td>${client.email}</td>
         <td>${client.telefone}</td>
         <td>${client.type === 'fisica' ? 'Pessoa Física' : 'Pessoa Jurídica'}</td>
-        <td><button class="edit" onclick="editClient(${index})">Editar</button><button class="delete" onclick="deleteClient(${index})">Excluir</button></td>
+        <td><button class="edit" onclick="editClient(${index})">Editar</button><button class="delete" onclick="confirmDeleteClient(${index})">Excluir</button></td>
       `;
       clientsTableBody.appendChild(row);
     });
@@ -74,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.editClient = function (index) {
     const clients = JSON.parse(localStorage.getItem('clients'));
     const client = clients[index];
-    document.getElementById('client-id').value = index;
+    clientIdField.value = index; // Adicionado
     clientTypeSelect.value = client.type;
     if (client.type === 'fisica') {
       fisicaFields.style.display = 'block';
@@ -98,6 +106,14 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('estado').value = client.estado;
     document.getElementById('email').value = client.email;
     document.getElementById('telefone').value = client.telefone;
+  };
+
+  window.confirmDeleteClient = function (index) {
+    const confirmDelete = confirm("Tem certeza que deseja excluir este cliente?");
+    if (confirmDelete) {
+      deleteClient(index);
+      alert("Cliente excluído com sucesso.");
+    }
   };
 
   window.deleteClient = function (index) {
