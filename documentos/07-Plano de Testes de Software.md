@@ -14,7 +14,7 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | Objetivo do Teste   | Verificar se o usuário consegue selecionar qual o tipo de cliente e se as informações mudam para cadastro |
 | Passos | 1) Acessar o navegador <br> 2) Informar a URL [Localiza.Ai](https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/)<br> 3) Dentro da dashboard <br> 4) Clicar em "Clientes" |
 |  Critérios de Êxito | Após a seleção do usuário, os dados de cadastro alternam conforme cadastro |
-|  Responsável | Lucas de Araújo |
+|  Responsável | [Lucas de Araújo](https://github.com/lucas-arl) |
 
 
 [Inserir aqui as evidências de teste que podem ser apresentadas por print de telas ou por .gif de execução de teste]
@@ -25,7 +25,7 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | Objetivo do Teste   | Verificar se o usuário consegue editar as informações inseridas e salvas no site |
 | Passos | 1) Acessar o navegador <br> 2) Informar a URL [Localiza.Ai](https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/)<br> 3) Na lista de Clientes <br> 4) Clicar em "Editar" |
 |  Critérios de Êxito | Após o usuário clicar em editar, as informações são liberadas para editar |
-|  Responsável | Lucas de Araújo |
+|  Responsável | [Lucas de Araújo](https://github.com/lucas-arl) |
 
 
 [Inserir aqui as evidências de teste que podem ser apresentadas por print de telas ou por .gif de execução de teste]
@@ -36,7 +36,7 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | Objetivo do Teste   | Verificar se o usuário consegue apagar o cadastro do cliente no site |
 | Passos | 1) Acessar o navegador <br> 2) Informar a URL [Localiza.Ai](https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/)<br> 3) Na lista de Clientes <br> 4) Clicar em "Excluir" |
 |  Critérios de Êxito | Após o usuário clicar em excluir, o cliente será removido da lista |
-|  Responsável | Lucas de Araújo |
+|  Responsável | [Lucas de Araújo](https://github.com/lucas-arl) |
 
 [Inserir aqui as evidências de teste que podem ser apresentadas por print de telas ou por .gif de execução de teste]
 
@@ -46,7 +46,7 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | Objetivo do Teste   | Verificar se o usuário consegue visualizar o histórico de mensagens e enviar uma nova mensagem |
 | Passos | 1) Acessar o navegador <br> 2) Informar a URL [Localiza.Ai](https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/)<br> 3) No menu de Caixa de Entrada <br> 4) Clicar em "Nova mensagem" |
 |  Critérios de Êxito | Após o usuário clicar em nova mensagem, o usuário será direcionado para a página de nova mensagem |
-|  Responsável | Lucas de Araújo |
+|  Responsável | [Lucas de Araújo](https://github.com/lucas-arl) |
 
 
 [Inserir aqui as evidências de teste que podem ser apresentadas por print de telas ou por .gif de execução de teste]
@@ -57,7 +57,7 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | Objetivo do Teste   | Verificar se o usuário consegue buscar o cliente por meio do ID de cadastro, nome ou CPF para enviar uma nova mensagem |
 | Passos | 1) Acessar o navegador <br> 2) Informar a URL [Localiza.Ai](https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/)<br> 3) Na página de nova mensagem <br> 4) Digitar o filtro desejado e "Buscar" |
 |  Critérios de Êxito | Após o usuário inserir a informação de cadastro como ID, CPF, ou Nome, o sistema buscará as informações básicas de comunicação e preencherá os campos, deixando apenas o assunto, mensagem e anexo se desejável. |
-|  Responsável | Lucas de Araújo |
+|  Responsável | [Lucas de Araújo](https://github.com/lucas-arl) |
 
 
 [Inserir aqui as evidências de teste que podem ser apresentadas por print de telas ou por .gif de execução de teste]
@@ -68,7 +68,7 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | Objetivo do Teste   | Verificar se o usuário consegue visualizar arquivos no seu computador e anexar para envio |
 | Passos | 1) Acessar o navegador <br> 2) Informar a URL [Localiza.Ai](https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/)<br> 3) Na página de nova mensagem <br> 4) Clicar em "anexar arquivo" |
 |  Critérios de Êxito | Após o usuário clicar em "anexar arquivo", o sistema carregará o item selecionado para upload/envio de e-mail ou mensagem. |
-|  Responsável | Lucas de Araújo |
+|  Responsável | [Lucas de Araújo](https://github.com/lucas-arl) |
 
 
 [Inserir aqui as evidências de teste que podem ser apresentadas por print de telas ou por .gif de execução de teste]
@@ -79,7 +79,7 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 | Objetivo do Teste   | Verificar se o usuário consegue enviar uma mensagem para o cliente via e-mail ou WhatsApp. |
 | Passos | 1) Acessar o navegador <br> 2) Informar a URL [Localiza.Ai](https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/)<br> 3) Na página de nova mensagem <br> 4) Clicar em "Enviar e-mail" ou "Enviar WhatsApp" |
 |  Critérios de Êxito | Após o usuário clicar em "Enviar e-mail" o site irá direcionar para o serviço de e-mail do computador. Se o usuário clicar em "Enviar WhatsApp" o site irá direcionar para uma nova mensagem via WhatsApp com o número de cadastro do cliente. |
-|  Responsável | Lucas de Araújo |
+|  Responsável | [Lucas de Araújo](https://github.com/lucas-arl) |
 
 
 [Inserir aqui as evidências de teste que podem ser apresentadas por print de telas ou por .gif de execução de teste]
