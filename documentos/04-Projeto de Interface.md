@@ -26,6 +26,8 @@ Figura 1 - Fluxograma
 
 ### Protótipo de alta fidelidade
 
+Responsável: [Lucas de Araújo](https://github.com/lucas-arl)
+
 >Nosso protótipo possui funcionalidades e estética muito próximas do modelo final. Os protótipos de alta fidelidade abrangem não apenas a interface da pessoa usuária (UI) do produto em termos visuais e estéticos, mas também os aspectos da experiência do(a) usuário(a) (UX) em termos de interações, fluxo e comportamento.
 - Interface do Usuário (UI): Design visual e estético detalhado.
 - Experiência do Usuário (UX): Interações, fluxo e comportamento refinados.
