@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Clientes | Localiza Ai</title>
+  <link rel="stylesheet" href="clientes.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="icon" href="../images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-html5'></i>
+      <span class="logo_name">Localiza Ai</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index/index.html"><i class='bx bx-grid-alt'></i><span class="links_name">Dashboard</span></a></li>
+      <li><a href="#"><i class='bx bx-box'></i><span class="links_name">Serviços</span></a></li>
+      <li><a href="../caixa de entrada/caixa-de-entrada.html"><i class='bx bx-envelope'></i><span class="links_name">Caixa de Entrada</span></a></li>
+      <li><a href="#"><i class='bx bx-file'></i><span class="links_name">Orçamentos</span></a></li>
+      <li><a href="clientes.html" class="active"><i class='bx bx-user'></i><span class="links_name">Clientes</span></a></li>
+      <li><a href="#"><i class='bx bx-book-alt'></i><span class="links_name">Central de Ajuda</span></a></li>
+      <li><a href="#"><i class='bx bx-heart'></i><span class="links_name">Favoritos</span></a></li>
+      <li><a href="#"><i class='bx bx-cog'></i><span class="links_name">Configurações</span></a></li>
+      <li class="log_out"><a href="#"><i class='bx bx-log-out'></i><span class="links_name">Sair</span></a></li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button"><i class='bx bx-menu sidebarBtn'></i><span class="dashboard">Clientes</span></div>
+      <div class="profile-details"><img src="../images/user.jpg" alt=""><span class="admin_name">Nome da Empresa</span><i class='bx bx-chevron-down' id="profile-icon"></i>
+        <ul class="dropdown-menu">
+          <li><a href="#" onclick="setStatus('online')"><i class='bx bx-circle' style="color: green;"></i> Online</a></li>
+          <li><a href="#" onclick="setStatus('busy')"><i class='bx bx-circle' style="color: red;"></i> Ocupado</a></li>
+          <li><a href="#" onclick="setStatus('away')"><i class='bx bx-circle' style="color: orange;"></i> Ausente</a></li>
+          <li><a href="#" onclick="setStatus('offline')"><i class='bx bx-circle' style="color: gray;"></i> Aparecer Offline</a></li>
+          <li><a href="../configuracoes/configuracoes.html"><i class='bx bx-cog'></i> Configurações da conta</a></li>
+          <li><a href="../sair/sair.html"><i class='bx bx-log-out'></i> Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="home-content">
+      <div class="form-container">
+        <h2>Adicionar Cliente</h2>
+        <form id="client-form">
+          <input type="hidden" id="client-id">
+          <div class="input-group">
+            <label for="client-type">Tipo de Cliente:</label>
+            <select id="client-type">
+              <option value="fisica">Pessoa Física</option>
+              <option value="juridica">Pessoa Jurídica</option>
+            </select>
+          </div>
+          <div id="fisica-fields" class="client-fields">
+            <div class="input-group"><label for="nome-completo">Nome Completo:</label><input type="text" id="nome-completo" placeholder="Nome Completo"></div>
+            <div class="input-group"><label for="data-nascimento">Data de Nascimento:</label><input type="date" id="data-nascimento"></div>
+            <div class="input-group"><label for="cpf">CPF:</label><input type="text" id="cpf" placeholder="CPF"></div>
+          </div>
+          <div id="juridica-fields" class="client-fields" style="display: none;">
+            <div class="input-group"><label for="razao-social">Razão Social:</label><input type="text" id="razao-social" placeholder="Razão Social"></div>
+            <div class="input-group"><label for="nome-fantasia">Nome Fantasia:</label><input type="text" id="nome-fantasia" placeholder="Nome Fantasia"></div>
+            <div class="input-group"><label for="cnpj">CNPJ:</label><input type="text" id="cnpj" placeholder="CNPJ"></div>
+          </div>
+          <div class="input-group"><label for="cep">CEP:</label><input type="text" id="cep" placeholder="CEP" required></div>
+          <div class="input-group"><label for="logradouro">Logradouro:</label><input type="text" id="logradouro" placeholder="Logradouro" required></div>
+          <div class="input-group"><label for="numero">Número:</label><input type="text" id="numero" placeholder="Número" required></div>
+          <div class="input-group"><label for="complemento">Complemento:</label><input type="text" id="complemento" placeholder="Complemento"></div>
+          <div class="input-group"><label for="bairro">Bairro:</label><input type="text" id="bairro" placeholder="Bairro" required></div>
+          <div class="input-group"><label for="cidade">Cidade:</label><input type="text" id="cidade" placeholder="Cidade" required></div>
+          <div class="input-group"><label for="estado">Estado:</label><input type="text" id="estado" placeholder="Estado" required></div>
+          <div class="input-group"><label for="email">Email:</label><input type="email" id="email" placeholder="Email" required></div>
+          <div class="input-group"><label for="telefone">Telefone:</label><input type="text" id="telefone" placeholder="Telefone" required></div>
+          <button type="submit">Salvar</button>
+        </form>
+      </div>
+      <div class="table-container">
+        <h2>Lista de Clientes</h2>
+        <table id="clients-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Telefone</th>
+              <th>Tipo</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Rows will be added dynamically -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <script src="clientes.js"></script>
+</body>
+</html>

@@ -2,10 +2,10 @@
 <html lang="pt-BR" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <title>Nova Mensagem | Localiza Ai</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Caixa de Entrada | Localiza Ai</title>
+  <link rel="stylesheet" href="caixa-de-entrada.css">
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="icon" href="images/favicon.ico">
+  <link rel="icon" href="../images/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -16,7 +16,7 @@
     </div>
     <ul class="nav-links">
       <li>
-        <a href="index.html">
+        <a href="../index/index.html">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
         </a>
@@ -28,7 +28,7 @@
         </a>
       </li>
       <li>
-        <a href="caixa-de-entrada.html">
+        <a href="caixa-de-entrada.html" class="active">
           <i class='bx bx-envelope'></i>
           <span class="links_name">Caixa de Entrada</span>
         </a>
@@ -40,7 +40,7 @@
         </a>
       </li>
       <li>
-        <a href="clientes.html">
+        <a href="../clientes/clientes.html">
           <i class='bx bx-user'></i>
           <span class="links_name">Clientes</span>
         </a>
@@ -75,14 +75,14 @@
     <nav>
       <div class="sidebar-button">
         <i class='bx bx-menu sidebarBtn'></i>
-        <span class="dashboard">Nova Mensagem</span>
+        <span class="dashboard">Caixa de Entrada</span>
       </div>
       <div class="search-box">
         <input type="text" placeholder="Pesquisar...">
         <i class='bx bx-search'></i>
       </div>
       <div class="profile-details">
-        <img src="images/user.jpg" alt="">
+        <img src="../images/user.jpg" alt="">
         <span class="admin_name">Nome da Empresa</span>
         <i class='bx bx-chevron-down' id="profile-icon"></i>
         <ul class="dropdown-menu">
@@ -90,49 +90,55 @@
           <li><a href="#" onclick="setStatus('busy')"><i class='bx bx-circle' style="color: red;"></i> Ocupado</a></li>
           <li><a href="#" onclick="setStatus('away')"><i class='bx bx-circle' style="color: orange;"></i> Ausente</a></li>
           <li><a href="#" onclick="setStatus('offline')"><i class='bx bx-circle' style="color: gray;"></i> Aparecer Offline</a></li>
-          <li><a href="configuracoes.html"><i class='bx bx-cog'></i> Configurações da conta</a></li>
-          <li><a href="sair.html"><i class='bx bx-log-out'></i> Logout</a></li>
+          <li><a href="../configuracoes/configuracoes.html"><i class='bx bx-cog'></i> Configurações da conta</a></li>
+          <li><a href="../sair/sair.html"><i class='bx bx-log-out'></i> Logout</a></li>
         </ul>
       </div>
     </nav>
 
     <div class="home-content">
-      <div class="email-container">
-        <h2>Enviar mensagem para cliente</h2>
-        <div class="search-container">
-          <input type="text" id="search-input" placeholder="Buscar por Nome, CPF ou ID">
-          <button id="search-button">Buscar</button>
+      <div class="overview-boxes">
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Mensagens Não Lidas</div>
+            <div class="number">8</div>
+          </div>
+          <i class='bx bx-message cart'></i>
         </div>
-        <div class="client-details" id="client-details">
-          <!-- Client details will be displayed here -->
+      </div>
+
+      <div class="messages-section">
+        <div class="title">Mensagens Recentes</div>
+        <div class="messages-details">
+          <div class="message">
+            <div class="message-info">
+              <div class="message-date">23 Jun 2024</div>
+              <div class="message-client">Alanis Tavares</div>
+            </div>
+            <div class="message-content">Gostaria de saber mais sobre os serviços...</div>
+          </div>
+          <div class="message">
+            <div class="message-info">
+              <div class="message-date">22 Jun 2024</div>
+              <div class="message-client">Felipe Oliveira</div>
+            </div>
+            <div class="message-content">Quero fazer uma consulta de orçamento...</div>
+          </div>
+          <div class="message">
+            <div class="message-info">
+              <div class="message-date">21 Jun 2024</div>
+              <div class="message-client">Tais Rocha</div>
+            </div>
+            <div class="message-content">Como funciona o atendimento remoto?</div>
+          </div>
         </div>
-        <form id="email-form">
-          <div class="input-group">
-            <label for="email-to">Para:</label>
-            <input type="email" id="email-to" placeholder="E-mail do Cliente" required>
-          </div>
-          <div class="input-group">
-            <label for="email-subject">Assunto:</label>
-            <input type="text" id="email-subject" placeholder="Assunto da mensagem.." required>
-          </div>
-          <div class="input-group">
-            <label for="email-body">Mensagem:</label>
-            <textarea id="email-body" placeholder="Escreva sua mensagem aqui..." required></textarea>
-          </div>
-          <div class="input-group">
-            <label for="email-attachments">Anexos:</label>
-            <input type="file" id="email-attachments" multiple>
-          </div>
-          <div class="button-group">
-            <button type="button" id="send-email"><i class='bx bx-envelope'></i> Enviar E-mail</button>
-            <button type="button" id="send-whatsapp"><i class='bx bxl-whatsapp'></i> Enviar WhatsApp</button>
-            <a href="caixa-de-entrada.html" class="btn"><i class='bx bx-arrow-back'></i> Voltar</a>
-          </div>
-        </form>
+        <div class="button-group">
+          <a href="../nova mensagem/nova-mensagem.html" class="btn"><i class='bx bx-message-add'></i> Nova Mensagem</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <script src="caixa-de-entrada.js"></script>
 </body>
 </html>
