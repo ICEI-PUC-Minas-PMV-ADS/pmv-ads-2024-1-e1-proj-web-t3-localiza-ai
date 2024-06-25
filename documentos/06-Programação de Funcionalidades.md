@@ -38,14 +38,14 @@ RF-06	O sistema deve pedir para o cliente mencionar sua localidade, o problema e
 
 ![1-caixa de entrada](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/blob/c4bd24d11860e9a5eb2a95298b45b343f12a9f9c/codigo-fonte/dashboard/images/Tela%2002%20-%20Caixa%20de%20Entrada.png)
 #### Artefatos da funcionalidade
-- `Código-fonte:` [Aqui](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/blob/c4bd24d11860e9a5eb2a95298b45b343f12a9f9c/codigo-fonte/dashboard/caixa-de-entrada.html)
+- `Código-fonte:` [Aqui](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/tree/80fcf705932b5d7068e8eac2982775933fda948d/codigo-fonte/dashboard/caixa%20de%20entrada)
 #### Requisito atendido
 - `RF-01` - A aplicação deve permitir ao usuário visualizar o histórico de mensagens enviadas/recebidas com os clientes.
 - 
 ### Envio de mensagens
 ![2-nova mensagem](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/blob/c4bd24d11860e9a5eb2a95298b45b343f12a9f9c/codigo-fonte/dashboard/images/Tela%2003%20-%20Enviar%20mensagem.png)
 #### Artefatos da funcionalidade
-- `Código-fonte:` [Aqui](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/blob/c4bd24d11860e9a5eb2a95298b45b343f12a9f9c/codigo-fonte/dashboard/nova-mensagem.html)
+- `Código-fonte:` [Aqui](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/tree/80fcf705932b5d7068e8eac2982775933fda948d/codigo-fonte/dashboard/nova%20mensagem)
 #### Requisito atendido
 - `RF-01` - A aplicação deve permitir ao usuário criar novas mensagens e enviar por e-mail ou WhatsApp conforme solicitação.
 - `RF-02` - A aplicação deve permitir ao usuário buscar o cliente já cadastrado por ID, CPF ou Nome e preencher os campos de comunicação.
@@ -54,7 +54,7 @@ RF-06	O sistema deve pedir para o cliente mencionar sua localidade, o problema e
  ### Cadastro de Clientes
  ![3-cadastro de clientes](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/blob/c4bd24d11860e9a5eb2a95298b45b343f12a9f9c/codigo-fonte/dashboard/images/Tela%2004%20-%20Clientes.png)
 #### Artefatos da funcionalidade
-- `Código-fonte:` [Aqui](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/blob/c4bd24d11860e9a5eb2a95298b45b343f12a9f9c/codigo-fonte/dashboard/clientes.html)
+- `Código-fonte:` [Aqui](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t3-localiza-ai/tree/80fcf705932b5d7068e8eac2982775933fda948d/codigo-fonte/dashboard/clientes)
 #### Requisito atendido
 - `RF-01` - A aplicação deve permitir ao usuário selecionar se o usuário é pessoa física ou pessoa jurídica.
 - `RF-02` - A aplicação deve permitir ao usuário preencher os dados necessários do usuário para cadastro e envio de e-mail/mensagem.
